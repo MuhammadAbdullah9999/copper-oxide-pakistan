@@ -17,7 +17,7 @@ export default function ContactSection() {
     {
       icon: <Mail className="h-6 w-6 text-amber-700" />,
       title: "Email Address",
-      details: ['hafizzabdullah999@gmail.com'],
+      details: ['hafizzabdullah999@gmail.com '],
     },
     {
       icon: <MapPin className="h-6 w-6 text-amber-700" />,
