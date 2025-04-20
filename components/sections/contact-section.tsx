@@ -12,12 +12,12 @@ export default function ContactSection() {
     {
       icon: <Phone className="h-6 w-6 text-amber-700" />,
       title: "Phone Number",
-      details: ["+92 42 1234 5678"],
+      details: ["+92 3214248968", "+92 3101404487"],
     },
     {
       icon: <Mail className="h-6 w-6 text-amber-700" />,
       title: "Email Address",
-      details: ['info@copperoxidepakistan.com"],pakistan.com'],
+      details: ['hafizzabdullah999@gmail.com'],
     },
     {
       icon: <MapPin className="h-6 w-6 text-amber-700" />,
