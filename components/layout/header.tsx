@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { FlaskRoundIcon as Flask } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -11,23 +10,23 @@ export default function Header() {
           <span className="text-xl font-bold">CopperOxide Pakistan</span>
         </div>
         <nav className="hidden md:flex gap-6">
-          <Link href="#home" className="text-sm font-medium hover:text-amber-700 transition-colors">
+          <Link href="/#home" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Home
           </Link>
-          <Link href="#about" className="text-sm font-medium hover:text-amber-700 transition-colors">
+          <Link href="/#about" className="text-sm font-medium hover:text-amber-700 transition-colors">
             About Us
           </Link>
-          <Link href="#products" className="text-sm font-medium hover:text-amber-700 transition-colors">
+          <Link href="/#products" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Products
           </Link>
-          <Link href="#manufacturing" className="text-sm font-medium hover:text-amber-700 transition-colors">
+          <Link href="/#manufacturing" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Manufacturing
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-amber-700 transition-colors">
+          <Link href="/#contact" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Contact
           </Link>
         </nav>
-        <Button className="hidden md:inline-flex bg-amber-700 hover:bg-amber-800">Request Quote</Button>
+        <Link href="/#contact"><Button className="hidden md:inline-flex bg-amber-700 hover:bg-amber-800">Request Quote</Button></Link>
         <Button variant="outline" size="icon" className="md:hidden">
           <span className="sr-only">Toggle menu</span>
           <svg

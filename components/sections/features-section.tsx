@@ -6,7 +6,7 @@ export default function FeaturesSection() {
     {
       icon: <Award className="h-6 w-6 text-amber-700" />,
       title: "Premium Quality",
-      description: "Our copper oxide meets international quality standards",
+      description: "Our copper oxide meets quality standards",
     },
     {
       icon: <Factory className="h-6 w-6 text-amber-700" />,
@@ -16,7 +16,7 @@ export default function FeaturesSection() {
     {
       icon: <Truck className="h-6 w-6 text-amber-700" />,
       title: "Nationwide Delivery",
-      description: "Reliable delivery across Pakistan and international shipping",
+      description: "Reliable delivery across Pakistan",
     },
     {
       icon: <Shield className="h-6 w-6 text-amber-700" />,

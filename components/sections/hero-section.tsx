@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 export default function HeroSection() {
   return (
     <section id="home" className="relative">
@@ -19,17 +19,23 @@ export default function HeroSection() {
             Premium Copper Oxide Manufacturer in Pakistan
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            High-quality copper oxide products for industrial applications, manufactured in Lahore, Pakistan with
-            international standards.
+            High-quality copper oxide products for industrial applications,
+            manufactured in Lahore, Pakistan with international standards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-amber-700 hover:bg-amber-800 text-white">Our Products</Button>
-            <Button variant="outline" className="bg-black text-white">
-              Contact Us
-            </Button>
+            <Link href="/#products">
+              <Button className="bg-amber-700 hover:bg-amber-800 text-white">
+                Our Products
+              </Button>
+            </Link>
+            <Link href="/#contact">
+              <Button variant="outline" className="bg-black text-white">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

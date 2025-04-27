@@ -10,7 +10,6 @@ export const metadata = {
   title: "CopperOxide Pakistan - Premium Copper Oxide Manufacturer in Lahore",
   description:
     "Leading manufacturer of high-quality copper oxide products in Pakistan. We provide premium copper oxide for various industrial applications.",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-
+import Link from "next/link"
 export default function CtaSection() {
   return (
     <section className="py-12 bg-amber-700">
@@ -10,7 +10,7 @@ export default function CtaSection() {
             <p className="text-amber-100">Contact us today for pricing and product information.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-white text-amber-700 hover:bg-gray-100">Request a Quote</Button>
+            <Link href="/#contact"><Button className="bg-white text-amber-700 hover:bg-gray-100">Request a Quote</Button></Link>
           </div>
         </div>
       </div>

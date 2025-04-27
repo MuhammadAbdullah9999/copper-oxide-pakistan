@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 
 export default function AboutSection() {
   const features = [
-    "ISO certified manufacturing facility",
     "Experienced team of chemical engineers",
     "Serving clients across multiple industries",
     "Commitment to environmental responsibility",
@@ -30,7 +29,7 @@ export default function AboutSection() {
               serving various industries across Pakistan and internationally.
             </p>
             <p className="text-gray-700 mb-6">
-              With years of experience and expertise in copper oxide production, our state-of-the-art facility employs
+              With 50+ years of experience and expertise in copper oxide production, our state-of-the-art facility employs
               advanced manufacturing techniques to ensure consistent quality and purity in all our products.
             </p>
             <div className="space-y-3">

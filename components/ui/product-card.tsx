@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-
+import Link from "next/link"
 interface Spec {
   name: string
   value: string
@@ -30,9 +30,9 @@ export default function ProductCard({ title, description, specs, image }: Produc
             </div>
           ))}
         </div>
-        <Button variant="outline" className="w-full border-amber-700 text-amber-700 hover:bg-amber-50">
+        <Link href="/copper-oxide"><Button variant="outline" className="w-full border-amber-700 text-amber-700 hover:bg-amber-50">
           Product Details
-        </Button>
+        </Button></Link>
       </div>
     </div>
   )
