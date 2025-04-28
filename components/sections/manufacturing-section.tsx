@@ -52,9 +52,9 @@ export default function ManufacturingSection() {
                 control procedures. We maintain international standards in our production process to ensure consistent
                 quality in all our copper oxide products.
               </p>
-              <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-amber-50">
+              {/* <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-amber-50">
                 Schedule a Facility Tour
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
