@@ -59,7 +59,7 @@ const products: Record<string, Product> = {
   'silver-nitrate': {
     name: 'Silver Nitrate (AgNO₃)',
     image: '/silver-nitrate.png',
-    description: 'Premium quality silver nitrate for analytical and industrial applications. Our Silver Nitrate is available in 99.9% purity and has been manufactured by Sulman Traders in Pakistan for over 10 years, ensuring consistent quality and reliability for our clients. Silver Nitrate (AgNO₃) is a versatile chemical compound widely used in laboratories, industry, and healthcare. Our product is trusted for its high purity, excellent solubility, and strict quality control, making it ideal for demanding applications.',
+    description: 'Premium quality silver nitrate for analytical and industrial applications.',
     purity: '99.9%+',
     specifications: {
       'Chemical Formula': 'AgNO₃',
