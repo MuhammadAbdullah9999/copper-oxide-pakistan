@@ -45,7 +45,7 @@ export default function HeroCarousel() {
       link: "/products/copper-oxide"
     },
     {
-      image: "/silver-nitrate-banner.png",
+      image: "/silver-nitrate-banner-2.png",
       title: "Pure Silver Nitrate",
       description: "Laboratory grade AgNO₃ for analytical and industrial use",
       link: "/products/silver-nitrate"
