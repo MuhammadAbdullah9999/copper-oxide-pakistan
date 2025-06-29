@@ -39,29 +39,29 @@ export default function HeroCarousel() {
 
   const slides = [
     {
-      image: "/banner.png",
+      image: "/copper-oxide-banner.png",
       title: "Premium Copper Oxide",
       description: "High-quality copper oxide products for industrial applications, manufactured in Lahore, Pakistan with international standards. ",
       link: "/products/copper-oxide"
     },
     {
-      image: "/silver-nitrate-banner-2.png",
+      image: "/silver-nitrate-banner.png",
       title: "Pure Silver Nitrate",
       description: "Laboratory grade AgNO₃ for analytical and industrial use",
       link: "/products/silver-nitrate"
     },
     {
-      image: "/copper-sulphate-banner.png",
+      image: "/copper-sulphate-banner-2.png",
       title: "Copper Sulphate",
       description: "High-quality CuSO₄ for agricultural and industrial applications",
       link: "/products/copper-sulphate"
     },
-    {
-      image: "/silver-chloride-banner.png",
-      title: "Silver Chloride",
-      description: "Premium AgCl for photographic and technical applications",
-      link: "/products/silver-chloride"
-    }
+    // {
+    //   image: "/silver-chloride-banner.png",
+    //   title: "Silver Chloride",
+    //   description: "Premium AgCl for photographic and technical applications",
+    //   link: "/products/silver-chloride"
+    // }
   ]
 
   return (
