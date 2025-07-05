@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
+import { generateProductMetadata } from '@/lib/metadata'
+import Script from 'next/script'
 
 // Product data
 type Product = {
@@ -219,18 +221,21 @@ export async function generateMetadata({ params }: { params: { productId: string
   const product = products[params.productId as keyof typeof products]
   if (!product) return { title: 'Product Not Found' }
 
-  return {
-    title: `${product.name} - Sulman Traders`,
-    description: product.description,
-    keywords: [
-      product.name.toLowerCase(),
-      'pakistan',
-      'chemical manufacturer',
-      'industrial chemicals',
-      'high purity chemicals',
-      'lahore chemicals'
-    ]
-  }
+  // Use the utility to generate consistent metadata with additional keywords
+  const specificKeywords = params.productId === 'copper-oxide' 
+    ? ['copper oxide powder', 'black copper oxide', 'CuO manufacturer Pakistan'] 
+    : params.productId === 'silver-nitrate'
+    ? ['silver nitrate crystals', 'AgNO3 supplier Pakistan', 'high purity silver nitrate']
+    : params.productId === 'copper-sulphate'
+    ? ['blue vitriol', 'CuSO4 agricultural', 'copper sulphate pentahydrate']
+    : ['high purity chemicals', 'technical grade chemicals'];
+
+  return generateProductMetadata(
+    product.name,
+    product.description,
+    params.productId,
+    specificKeywords
+  );
 }
 
 export async function generateStaticParams() {
@@ -243,111 +248,203 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ProductPage({ params }: { params: { productId: string } }) {
-  const product = products[params.productId as keyof typeof products]
+export default function ProductDetail({ params }: { params: { productId: string } }) {
+  const product = products[params.productId as keyof typeof products];
   
-  if (!product) {
-    notFound()
-  }
+  if (!product) notFound();
+  
+  // Define breadcrumb structure for structured data and UI
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://www.sulmantraders.com/' },
+    { name: 'Products', url: 'https://www.sulmantraders.com/products' },
+    { name: product.name, url: `https://www.sulmantraders.com/products/${params.productId}` },
+  ];
+  
+  // Extract application areas for LD+JSON
+  const applicationAreas = product.applications.map(app => app.title);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        {/* Hero Section */}
-        <div className="relative h-[300px] md:h-[400px]">
-          <div className="absolute inset-0 bg-black/60 z-10" />
-          <Image
-            src={product.image}
-            alt={product.name}
-            // fill
-            width={100}
-            height={100}
-            className="w-full h-full object-cover"
-            priority
-          />
-          <div className="absolute inset-0 z-20 flex items-center">
+    <>
+      {/* Product JSON-LD Schema */}
+      <Script id="product-schema" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: product.name,
+          image: `https://www.sulmantraders.com${product.image}`,
+          description: product.description,
+          brand: {
+            '@type': 'Brand',
+            name: 'Sulman Traders'
+          },
+          manufacturer: {
+            '@type': 'Organization',
+            name: 'Sulman Traders',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Lahore',
+              addressRegion: 'Punjab',
+              addressCountry: 'PK'
+            }
+          },
+          offers: {
+            '@type': 'Offer',
+            availability: 'https://schema.org/InStock',
+            priceCurrency: 'PKR',
+            priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+            seller: {
+              '@type': 'Organization',
+              name: 'Sulman Traders'
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'Purity',
+              value: product.purity
+            },
+            ...Object.entries(product.specifications).map(([name, value]) => ({
+              '@type': 'PropertyValue',
+              name,
+              value
+            }))
+          ],
+          category: applicationAreas.join(', ')
+        })}
+      </Script>
+      
+      {/* Breadcrumb JSON-LD Schema */}
+      <Script id="breadcrumb-schema" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: breadcrumbs.map((crumb, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: crumb.name,
+            item: crumb.url
+          }))
+        })}
+      </Script>
+      
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1">
+          {/* Breadcrumbs UI */}
+          <div className="bg-gray-100 py-2">
             <div className="container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                {product.name}
-              </h1>
-              <p className="text-xl text-white/90 max-w-2xl">
-                {product.description}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Product Details */}
-        <div className="container mx-auto px-4 py-12">
-          {/* Specifications */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Technical Specifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {Object.entries(product.specifications).map(([key, value]) => (
-                <div key={key} className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm text-gray-600">{key}</div>
-                  <div className="font-medium">{value}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Applications */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Applications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {product.applications.map((app, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-semibold mb-2">{app.title}</h3>
-                  <p className="text-gray-600">{app.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Uses Section (only for silver-nitrate) */}
-          {params.productId === 'silver-nitrate' && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold mb-6">Uses of Silver Nitrate</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                {product.uses && product.uses.map((use: string, idx: number) => (
-                  <li key={idx}>{use}</li>
+              <div className="text-sm text-gray-600">
+                {breadcrumbs.map((crumb, index) => (
+                  <span key={index}>
+                    {index > 0 && <span className="mx-2">/</span>}
+                    {index === breadcrumbs.length - 1 ? (
+                      <span className="font-medium text-amber-700">{crumb.name}</span>
+                    ) : (
+                      <Link href={crumb.url.replace('https://www.sulmantraders.com', '')} className="hover:text-amber-700">
+                        {crumb.name}
+                      </Link>
+                    )}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
-          )}
-
-          {/* Benefits */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Key Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {product.benefits.map((benefit, index) => (
-                <div key={index} className="bg-amber-50 p-4 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{benefit}</span>
+          </div>
+          
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col md:flex-row gap-8 mb-12">
+                <div className="md:w-1/2">
+                  <div className="rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} - High quality chemical product by Sulman Traders`}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover rounded"
+                      priority
+                    />
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+                <div className="md:w-1/2">
+                  <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
+                  <p className="text-gray-600 mb-6">{product.description}</p>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Interested in {product.name}?</h2>
-            <p className="text-gray-600 mb-6">Contact us for pricing and detailed product information.</p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-amber-700 hover:bg-amber-800">
-                Request a Quote
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div>
+                      <h4 className="text-sm font-semibold text-amber-700 mb-1">Purity</h4>
+                      <p className="text-gray-800">{product.purity}</p>
+                    </div>
+                    {Object.entries(product.specifications).map(([key, value]) => (
+                      <div key={key}>
+                        <h4 className="text-sm font-semibold text-amber-700 mb-1">{key}</h4>
+                        <p className="text-gray-800">{value}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link href="/#contact">
+                    <Button className="bg-amber-700 hover:bg-amber-800">
+                      Request a Quote
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Description Section */}
+              <div className="mt-16">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  About Our {product.name.split('(')[0].trim()}
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  As a leading manufacturer based in Lahore, Pakistan, we have been producing premium {product.name.split('(')[0].trim()} products for over five decades. Our advanced manufacturing processes ensure exceptional product quality, meeting both national and international standards.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Key Applications
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  {product.applications.map((app, index) => (
+                    <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                      <h3 className="text-lg font-semibold text-amber-700 mb-2">{app.title}</h3>
+                      <p className="text-gray-700">{app.description}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Benefits
+                </h2>
+                <ul className="list-disc list-inside text-gray-700 mb-6 grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {product.benefits.map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
+
+                {product.uses && (
+                  <>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                      Common Uses
+                    </h2>
+                    <ul className="list-disc list-inside text-gray-700 mb-6 grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {product.uses.map((use, index) => (
+                        <li key={index}>{use}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Why Choose Us?
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Our commitment to quality, customer satisfaction, and innovation sets us apart. We offer customized solutions, competitive pricing, and reliable delivery nationwide. Partner with us for your {product.name.split('(')[0].trim()} needs and experience the difference built on 50+ years of industry expertise.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 } 

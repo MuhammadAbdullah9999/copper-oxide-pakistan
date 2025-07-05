@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 import Image from 'next/image'
 import Link from 'next/link'
+import { ProductCard } from "@/components/ui/product-card"
 
 const products = [
   {
@@ -15,7 +16,8 @@ const products = [
     description: 'High-purity copper oxide powder for industrial applications. Ideal for ceramics, batteries, and catalysts.',
     purity: '99.5%+',
     applications: ['Ceramics', 'Batteries', 'Catalysts', 'Electronics'],
-    keywords: ['copper oxide', 'CuO', 'copper oxide powder', 'copper oxide pakistan']
+    keywords: ['copper oxide', 'CuO', 'copper oxide powder', 'copper oxide pakistan'],
+    alt: 'High-purity black copper oxide powder manufactured by Sulman Traders'
   },
   {
     id: 'silver-nitrate',
@@ -25,7 +27,8 @@ const products = [
     description: 'Premium quality silver nitrate for laboratory and industrial use. Perfect for analytical chemistry and manufacturing.',
     purity: '99.9%+',
     applications: ['Photography', 'Medicine', 'Electronics', 'Mirror Production'],
-    keywords: ['silver nitrate', 'AgNO3', 'silver nitrate solution', 'silver nitrate pakistan']
+    keywords: ['silver nitrate', 'AgNO3', 'silver nitrate solution', 'silver nitrate pakistan'],
+    alt: 'Pure silver nitrate crystals for laboratory and industrial applications'
   },
   {
     id: 'copper-sulphate',
@@ -35,7 +38,8 @@ const products = [
     description: 'High-grade copper sulphate for agricultural and industrial applications. Essential for farming and manufacturing.',
     purity: '98%+',
     applications: ['Agriculture', 'Mining', 'Electroplating', 'Animal Feed'],
-    keywords: ['copper sulphate', 'CuSO4', 'copper sulfate', 'blue vitriol pakistan']
+    keywords: ['copper sulphate', 'CuSO4', 'copper sulfate', 'blue vitriol pakistan'],
+    alt: 'Blue copper sulphate crystals for agricultural applications'
   },
   {
     id: 'silver-chloride',
@@ -45,7 +49,8 @@ const products = [
     description: 'Pure silver chloride for photographic and technical applications. High-quality for precise requirements.',
     purity: '99.9%+',
     applications: ['Photography', 'Electronics', 'Ceramics'],
-    keywords: ['silver chloride', 'AgCl', 'silver chloride powder', 'silver chloride pakistan']
+    keywords: ['silver chloride', 'AgCl', 'silver chloride powder', 'silver chloride pakistan'],
+    alt: 'Premium silver chloride powder for photographic applications'
   },
   // {
   //   id: 'copper-carbonate',
@@ -55,7 +60,8 @@ const products = [
   //   description: 'Premium copper carbonate for industrial and chemical applications. Superior quality for diverse uses.',
   //   purity: '98%+',
   //   applications: ['Pigments', 'Ceramics', 'Chemical Industry'],
-  //   keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan']
+  //   keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan'],
+  //   alt: 'Premium copper carbonate powder for industrial applications'
   // }
 ]
 
@@ -73,7 +79,7 @@ export default function ProductsSection() {
   })
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="products" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
         
@@ -85,50 +91,42 @@ export default function ProductsSection() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10"
+            aria-label="Search for products"
           />
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  // fill
-                  width={100}
-                  height={100}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-amber-700 font-mono mb-3">{product.chemical}</p>
-                <p className="text-gray-600 mb-4 line-clamp-2">{product.description}</p>
-                <div className="mb-4">
-                  <span className="text-sm font-semibold text-gray-700">Purity: </span>
-                  <span className="text-sm text-gray-600">{product.purity}</span>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {product.applications.map((app, index) => (
-                    <span
-                      key={index}
-                      className="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded-full"
-                    >
-                      {app}
-                    </span>
-                  ))}
-                </div>
-                <Link href={`/products/${product.id}`}>
-                  <Button className="w-full bg-amber-700 hover:bg-amber-800">
-                    View Details
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredProducts.map(product => (
+            <ProductCard
+              key={product.id}
+              name={product.name}
+              description={product.description}
+              image={product.image}
+              imageAlt={product.alt}
+              chemical={product.chemical}
+              applications={product.applications}
+              link={`/products/${product.id}`}
+              purity={product.purity}
+            />
           ))}
+          
+          {filteredProducts.length === 0 && (
+            <div className="col-span-full text-center py-10">
+              <h3 className="text-xl font-medium text-gray-600 mb-2">No products found</h3>
+              <p className="text-gray-500">Try adjusting your search terms</p>
+            </div>
+          )}
+        </div>
+        
+        {/* More Products CTA */}
+        <div className="mt-12 text-center">
+          <Link href="/products">
+            <Button className="bg-amber-700 hover:bg-amber-800" aria-label="View all our chemical products">
+              View All Products
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

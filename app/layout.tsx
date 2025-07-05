@@ -5,13 +5,18 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/gtm";
 import WhatsAppFloat from "@/components/layout/whatsapp-float";
 import { Analytics } from '@vercel/analytics/next';
+import { defaultMetadata } from "@/lib/metadata";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "CopperOxide Pakistan - Premium Copper Oxide Manufacturer in Lahore",
-  description:
-    "Leading manufacturer of high-quality copper oxide products in Pakistan. We provide premium copper oxide for various industrial applications.",
+  ...defaultMetadata,
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +26,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Structured data for organization */}
+        <Script id="organization-schema" type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Sulman Traders',
+            url: 'https://www.sulmantraders.com',
+            logo: 'https://www.sulmantraders.com/logo.png',
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+92-321-4248968',
+              contactType: 'customer service',
+              areaServed: 'PK',
+              availableLanguage: ['en', 'ur']
+            },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Industrial Area',
+              addressLocality: 'Lahore',
+              addressRegion: 'Punjab',
+              postalCode: '54000',
+              addressCountry: 'PK'
+            },
+            sameAs: [
+              'https://facebook.com/sulmantraders',
+              'https://twitter.com/sulmantraders',
+              'https://linkedin.com/company/sulmantraders'
+            ]
+          })}
+        </Script>
+      </head>
       <body className={inter.className}>
         <GoogleTagManagerNoScript />
         <GoogleTagManager />

@@ -7,32 +7,76 @@ import FeaturesSection from "@/components/sections/features-section"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Metadata } from 'next'
+import Script from "next/script"
+import { defaultMetadata } from "@/lib/metadata"
 
+// Use the default metadata for consistency
 export const metadata: Metadata = {
-  title: 'Sulman Traders - Leading Chemical Manufacturer in Pakistan',
-  description: 'Premium manufacturer of Copper Oxide, Silver Nitrate, Silver Chloride, and Copper Sulphate in Pakistan. High-purity chemicals for industrial applications.',
-  keywords: [
-    'copper oxide pakistan',
-    'silver nitrate pakistan',
-    'silver chloride manufacturer',
-    'copper sulphate supplier',
-    'chemical manufacturer lahore',
-    'industrial chemicals pakistan',
-    'copper oxide powder',
-    'silver nitrate supplier',
-    'copper carbonate pakistan',
-    'chemical distributor pakistan'
-  ],
-  openGraph: {
-    title: 'Sulman Traders - Leading Chemical Manufacturer in Pakistan',
-    description: 'Premium manufacturer of industrial chemicals including Copper Oxide, Silver Nitrate, and more. Serving Pakistan with high-quality products.',
-    images: ['/og-image.jpg'],
+  ...defaultMetadata,
+  // Override any specific fields for the homepage
+  alternates: {
+    canonical: 'https://www.sulmantraders.com/',
   }
 }
 
 export default function Home() {
+  // Define company FAQ for structured data
+  const faqItems = [
+    {
+      question: "What products does Sulman Traders manufacture?",
+      answer: "Sulman Traders manufactures high-quality chemical products including Copper Oxide, Silver Nitrate, Silver Chloride, and Copper Sulphate for various industrial applications."
+    },
+    {
+      question: "Where is Sulman Traders located?",
+      answer: "Sulman Traders is based in Lahore, Pakistan, with distribution throughout the country."
+    },
+    {
+      question: "What is the purity level of your chemical products?",
+      answer: "Our products feature high purity levels ranging from 98% to 99.9%, depending on the specific chemical."
+    },
+    {
+      question: "Do you serve international clients?",
+      answer: "Yes, we provide reliable shipping services to clients worldwide with proper documentation and quality assurance."
+    },
+    {
+      question: "How can I request a quote for your products?",
+      answer: "You can request a quote by contacting us through our website contact form, email, or phone. Our team will respond promptly with pricing and product information."
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Structured data for homepage */}
+      <Script id="homepage-schema" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Sulman Traders',
+          url: 'https://www.sulmantraders.com',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://www.sulmantraders.com/products?search={search_term_string}',
+            'query-input': 'required name=search_term_string'
+          }
+        })}
+      </Script>
+
+      {/* FAQ Structured Data */}
+      <Script id="faq-schema" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqItems.map(item => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer
+            }
+          }))
+        })}
+      </Script>
+
       <Header />
       <main className="flex-1">
         {/* Hero Carousel */}
@@ -77,6 +121,21 @@ export default function Home() {
                 <div className="text-4xl font-bold text-amber-700 mb-2">24/7</div>
                 <div className="text-gray-600">Support</div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for Improved SEO */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto space-y-8">
+              {faqItems.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-6">
+                  <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

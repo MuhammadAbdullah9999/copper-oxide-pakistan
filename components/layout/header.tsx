@@ -67,6 +67,9 @@ export default function Header() {
           <Link href="/#manufacturing" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Manufacturing
           </Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-amber-700 transition-colors">
+            Blog
+          </Link>
           <Link href="/contact" className="text-sm font-medium hover:text-amber-700 transition-colors">
             Contact
           </Link>
@@ -152,6 +155,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Manufacturing
+            </Link>
+            <Link 
+              href="/blog" 
+              className="text-sm font-medium hover:text-amber-700 transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link 
               href="/contact" 

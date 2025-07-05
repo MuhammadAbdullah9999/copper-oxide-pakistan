@@ -49,7 +49,7 @@ export default function ContactSection() {
     {
       icon: <Phone className="h-6 w-6 text-amber-700" />,
       title: "Phone Number",
-      details: ["+92 3214248968", "+92 3101404487"],
+      details: ["+92 3214248968 (Muhammad Salman)", "+92 3101404487 (Muhammad Abdullah)"],
     },
     {
       icon: <Mail className="h-6 w-6 text-amber-700" />,
