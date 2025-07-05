@@ -89,8 +89,8 @@ export default function Footer() {
               </a>
             </div>
             <div className="mt-4 text-gray-400">
-              <p itemProp="telephone">Phone: <a href="tel:+92XXXXXXXXX" className="hover:text-white">+92-XXX-XXXXXXX</a></p>
-              <p itemProp="email">Email: <a href="mailto:info@sulmantraders.com" className="hover:text-white">info@sulmantraders.com</a></p>
+              <p itemProp="telephone">Phone: <a href="tel:+923214248968" className="hover:text-white">+92-321-4248968</a></p>
+              {/* <p itemProp="email">Email: <a href="mailto:info@sulmantraders.com" className="hover:text-white">info@sulmantraders.com</a></p> */}
             </div>
           </div>
           
