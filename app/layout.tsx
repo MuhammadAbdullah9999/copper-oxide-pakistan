@@ -13,9 +13,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   ...defaultMetadata,
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon-1.png',
+    shortcut: '/favicon-1.png',
+    apple: '/favicon-1.png',
   },
 };
 

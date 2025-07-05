@@ -355,22 +355,7 @@ export default function CopperOxideBlog() {
                 </div>
                 
                 {/* Author Bio */}
-                <div className="flex items-center mt-12 p-6 bg-gray-50 rounded-lg">
-                  <div className="w-16 h-16 relative mr-4">
-                    <OptimizedImage 
-                      src="/placeholder-user.jpg"
-                      alt="Dr. Ahmed Khan"
-                      fill
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold">Dr. Ahmed Khan</p>
-                    <p className="text-sm text-gray-600">Chemical Engineer with over 15 years of experience in industrial chemical manufacturing. Dr. Khan specializes in metal oxide applications and sustainable production processes.</p>
-                  </div>
-                </div>
-                
-                {/* Related Articles */}
+               
               
                 
               </div>

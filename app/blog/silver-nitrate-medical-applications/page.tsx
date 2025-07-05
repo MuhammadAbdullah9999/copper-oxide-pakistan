@@ -338,20 +338,7 @@ export default function SilverNitrateBlog() {
                 </div>
                 
                 {/* Author Bio */}
-                <div className="flex items-center mt-12 p-6 bg-gray-50 rounded-lg">
-                  <div className="w-16 h-16 relative mr-4">
-                    <OptimizedImage 
-                      src="/placeholder-user.jpg"
-                      alt="Muhammad Salman"
-                      fill
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold">Muhammad Salman</p>
-                    <p className="text-sm text-gray-600">Medical researcher with expertise in pharmacology and antimicrobial agents. Dr. Ahmed specializes in the application of inorganic compounds in modern healthcare settings and has published extensively on silver-based medical treatments.</p>
-                  </div>
-                </div>
+              
                 
                 {/* References */}
                 <div className="mt-12">
