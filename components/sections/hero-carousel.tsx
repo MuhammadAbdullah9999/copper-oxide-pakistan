@@ -42,22 +42,22 @@ export default function HeroCarousel() {
   const slides = [
     {
       image: "/copper-oxide-banner.png",
-      title: "Premium Copper Oxide",
-      description: "High-quality copper oxide products for industrial applications, manufactured in Lahore, Pakistan with international standards. ",
+      title: "Premium Copper Oxide (CuO)",
+      description: "Pakistan's leading manufacturer of high-purity Copper Oxide powder. Ideal for ceramics, batteries, and industrial applications. 99.5%+ purity guaranteed.",
       link: "/products/copper-oxide",
-      alt: "Sulman Traders premium copper oxide manufacturing in Lahore, Pakistan"
+      alt: "High purity Copper Oxide (CuO) powder manufacturing in Pakistan"
     },
     {
       image: "/silver-nitrate-banner.png",
-      title: "Pure Silver Nitrate",
-      description: "Laboratory grade AgNO₃ for analytical and industrial use",
+      title: "Laboratory Grade Silver Nitrate",
+      description: "Premium Silver Nitrate (AgNO₃) crystals with 99.9%+ purity. Trusted by laboratories, medical facilities, and industries across Pakistan.",
       link: "/products/silver-nitrate",
-      alt: "High purity silver nitrate crystals manufactured by Sulman Traders"
+      alt: "Premium Silver Nitrate (AgNO₃) crystals manufactured in Pakistan"
     },
     {
       image: "/copper-sulphate-banner-2.png",
-      title: "Copper Sulphate",
-      description: "High-quality CuSO₄ for agricultural and industrial applications",
+      title: "Industrial Copper Sulphate",
+      description: "High-grade CuSO₄ for agricultural and industrial use",
       link: "/products/copper-sulphate",
       alt: "Industrial grade copper sulphate for agricultural applications"
     },

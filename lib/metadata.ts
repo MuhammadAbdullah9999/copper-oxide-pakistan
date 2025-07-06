@@ -7,21 +7,21 @@ const BASE_URL = 'https://www.sulmantraders.com';
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Sulman Traders - Leading Chemical Manufacturer in Pakistan',
+    default: 'Copper Oxide & Silver Nitrate Manufacturer | Sulman Traders Pakistan',
     template: '%s | Sulman Traders'
   },
-  description: 'Premium manufacturer of Copper Oxide, Silver Nitrate, Silver Chloride, and Copper Sulphate in Pakistan. High-purity chemicals for industrial applications.',
+  description: 'Leading manufacturer of high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃) in Pakistan. Serving industries nationwide with premium quality chemicals for industrial, laboratory, and technical applications.',
   keywords: [
-    'copper oxide pakistan',
-    'silver nitrate pakistan',
-    'silver chloride manufacturer',
-    'copper sulphate supplier',
+    'copper oxide manufacturer pakistan',
+    'silver nitrate manufacturer pakistan',
+    'copper oxide powder lahore',
+    'silver nitrate crystals pakistan',
+    'CuO manufacturer pakistan',
+    'AgNO3 supplier pakistan',
+    'industrial copper oxide pakistan',
+    'laboratory silver nitrate lahore',
     'chemical manufacturer lahore',
-    'industrial chemicals pakistan',
-    'copper oxide powder',
-    'silver nitrate supplier',
-    'copper carbonate pakistan',
-    'chemical distributor pakistan'
+    'industrial chemicals pakistan'
   ],
   authors: [{ name: 'Sulman Traders' }],
   creator: 'Sulman Traders',
@@ -34,16 +34,16 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Sulman Traders',
-    title: 'Sulman Traders - Leading Chemical Manufacturer in Pakistan',
-    description: 'Premium manufacturer of industrial chemicals including Copper Oxide, Silver Nitrate, and more. Serving Pakistan with high-quality products.',
+    title: 'Premium Copper Oxide & Silver Nitrate Manufacturer | Pakistan',
+    description: 'Leading manufacturer of high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃). Serving industries across Pakistan with premium quality chemicals.',
     images: [`${BASE_URL}/og-image.jpg`],
     url: BASE_URL,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sulman Traders - Leading Chemical Manufacturer in Pakistan',
-    description: 'Premium manufacturer of industrial chemicals in Pakistan. High-quality products for various applications.',
+    title: 'Copper Oxide & Silver Nitrate Manufacturer | Pakistan',
+    description: 'Premium manufacturer of Copper Oxide (CuO) and Silver Nitrate (AgNO₃). High-purity chemicals for industrial and laboratory applications across Pakistan.',
     images: [`${BASE_URL}/og-image.jpg`],
   },
   robots: {

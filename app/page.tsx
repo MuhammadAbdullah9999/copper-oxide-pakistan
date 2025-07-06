@@ -23,24 +23,24 @@ export default function Home() {
   // Define company FAQ for structured data
   const faqItems = [
     {
-      question: "What products does Sulman Traders manufacture?",
-      answer: "Sulman Traders manufactures high-quality chemical products including Copper Oxide, Silver Nitrate, Silver Chloride, and Copper Sulphate for various industrial applications."
+      question: "What are your main chemical products?",
+      answer: "We specialize in manufacturing high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃). Our Copper Oxide has 99.5%+ purity for industrial applications, while our Silver Nitrate offers 99.9%+ purity for laboratory and technical use."
     },
     {
-      question: "Where is Sulman Traders located?",
-      answer: "Sulman Traders is based in Lahore, Pakistan, with distribution throughout the country."
+      question: "What are the applications of your Copper Oxide?",
+      answer: "Our Copper Oxide is widely used in ceramics manufacturing, battery production, catalysts, and electronic components. It's known for its consistent particle size and high chemical purity."
     },
     {
-      question: "What is the purity level of your chemical products?",
-      answer: "Our products feature high purity levels ranging from 98% to 99.9%, depending on the specific chemical."
+      question: "What makes your Silver Nitrate special?",
+      answer: "Our Silver Nitrate is laboratory grade with 99.9%+ purity, perfect for medical applications, mirror manufacturing, and analytical chemistry. We ensure consistent quality and excellent solubility."
     },
     {
-      question: "Do you serve international clients?",
-      answer: "Yes, we provide reliable shipping services to clients worldwide with proper documentation and quality assurance."
+      question: "Do you deliver across Pakistan?",
+      answer: "Yes, we provide reliable delivery services throughout Pakistan, including all major cities and industrial areas. We ensure safe and timely delivery with proper documentation and quality assurance."
     },
     {
-      question: "How can I request a quote for your products?",
-      answer: "You can request a quote by contacting us through our website contact form, email, or phone. Our team will respond promptly with pricing and product information."
+      question: "How can I request a product sample or quote?",
+      answer: "Contact us through our website, email, or phone for product samples and pricing. We provide detailed specifications and certificates of analysis for our Copper Oxide and Silver Nitrate products."
     }
   ];
 
