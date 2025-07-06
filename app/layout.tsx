@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/gtm";
 import WhatsAppFloat from "@/components/layout/whatsapp-float";
 import { Analytics } from '@vercel/analytics/next';
-import { defaultMetadata } from "@/lib/metadata";
+import { defaultMetadata, viewport } from "@/lib/metadata";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +18,8 @@ export const metadata = {
     apple: '/favicon-1.png',
   },
 };
+
+export { viewport };
 
 export default function RootLayout({
   children,

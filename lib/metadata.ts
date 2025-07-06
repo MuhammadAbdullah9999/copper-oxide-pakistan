@@ -1,7 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 // Base URL for the site - update this with your production URL
 const BASE_URL = 'https://www.sulmantraders.com';
+
+// Viewport configuration
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 // Default metadata for the entire site
 export const defaultMetadata: Metadata = {
@@ -53,10 +59,6 @@ export const defaultMetadata: Metadata = {
       index: true,
       follow: true,
     },
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
   },
   verification: {
     // Add your verification tokens here
