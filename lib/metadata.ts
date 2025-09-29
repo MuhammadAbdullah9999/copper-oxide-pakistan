@@ -64,12 +64,7 @@ export const defaultMetadata: Metadata = {
     // Add your verification tokens here
     google: 'google-site-verification-token',
   },
-  alternates: {
-    canonical: BASE_URL,
-    languages: {
-      'en': `${BASE_URL}/en`,
-    },
-  },
+  // Removed global canonical to allow correct per-page canonicals
 };
 
 // Helper to generate metadata for specific product pages
@@ -80,6 +75,15 @@ export function generateProductMetadata(
   additionalKeywords: string[] = []
 ): Metadata {
   const url = `${BASE_URL}/products/${productId}`;
+
+  // Map existing images from public/ for accurate social previews
+  const productOgImage: Record<string, string> = {
+    'copper-oxide': '/black-powder.jpeg',
+    'silver-nitrate': '/silver-nitrate-product.png',
+    'copper-sulphate': '/copper-sulphate-product.png',
+    'silver-chloride': '/silver-chloride-product.png',
+  };
+  const imageUrl = `${BASE_URL}${productOgImage[productId] || '/og-image.jpg'}`;
   
   return {
     title: `${productName} - Sulman Traders`,
@@ -97,12 +101,12 @@ export function generateProductMetadata(
       title: `${productName} - Sulman Traders`,
       description: description,
       url: url,
-      images: [`${BASE_URL}/${productId}.jpg`],
+      images: [imageUrl],
     },
     twitter: {
       title: `${productName} - Sulman Traders`,
       description: description,
-      images: [`${BASE_URL}/${productId}.jpg`],
+      images: [imageUrl],
     },
     alternates: {
       canonical: url,

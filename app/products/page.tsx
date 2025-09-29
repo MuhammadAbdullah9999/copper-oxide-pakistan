@@ -6,7 +6,10 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Our Products - Sulman Traders',
   description: 'Browse our range of high-quality chemical products including Copper Oxide, Silver Nitrate, Copper Sulphate, and more.',
-  keywords: ['chemical products', 'copper oxide', 'silver nitrate', 'copper sulphate', 'industrial chemicals', 'pakistan chemicals']
+  keywords: ['chemical products', 'copper oxide', 'silver nitrate', 'copper sulphate', 'industrial chemicals', 'pakistan chemicals'],
+  alternates: {
+    canonical: 'https://www.sulmantraders.com/products',
+  }
 }
 
 export default function ProductsPage() {

@@ -31,6 +31,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/terms-of-service`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    },
   ];
 
   // Define product pages
@@ -49,5 +67,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...standardRoutes, ...productRoutes];
+  // Define blog posts
+  const blogPosts = [
+    {
+      id: 'top-industrial-applications-copper-oxide',
+      date: '2024-04-10',
+    },
+    {
+      id: 'silver-nitrate-medical-applications',
+      date: '2024-04-02',
+    },
+    {
+      id: 'copper-sulphate-agriculture-benefits',
+      date: '2024-03-28',
+    },
+  ];
+
+  const blogRoutes = blogPosts.map(post => ({
+    url: `${BASE_URL}/blog/${post.id}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...standardRoutes, ...productRoutes, ...blogRoutes];
 } 

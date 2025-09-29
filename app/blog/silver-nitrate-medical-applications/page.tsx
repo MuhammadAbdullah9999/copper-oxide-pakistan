@@ -159,7 +159,7 @@ export default function SilverNitrateBlog() {
                   <div className="md:w-1/3">
                     <div className="relative h-60 w-full rounded-lg overflow-hidden">
                       <OptimizedImage
-                        src="/silver-nitrate-product.png" 
+                        src="/silver-nitrate-pan.jpg" 
                         alt="Dermatological applications of silver nitrate"
                         fill
                         className="object-cover"
@@ -271,6 +271,13 @@ export default function SilverNitrateBlog() {
                 </p>
                 <p className="mt-4">
                   The story of silver nitrate reminds us that sometimes the most effective solutions have deep historical roots—a testament to human ingenuity across centuries of medical advancement. While modern medicine continues to develop sophisticated treatments, there remains a place for well-established remedies that have proven their worth through decades of clinical experience.
+                </p>
+                <p className="mt-4">
+                  Looking for reliable supply? Learn more about our high‑purity product on the{' '}
+                  <Link href="/products/silver-nitrate" className="text-amber-700 underline hover:no-underline">
+                    Silver Nitrate (AgNO₃) product page
+                  </Link>
+                  .
                 </p>
 
                 {/* FAQ Section with Schema */}

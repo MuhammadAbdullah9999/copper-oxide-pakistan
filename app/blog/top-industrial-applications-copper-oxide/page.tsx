@@ -289,6 +289,10 @@ export default function CopperOxideBlog() {
                 <p className="mt-4">
                   For industries seeking high-quality copper oxide products in Pakistan, Sulman Traders offers premium-grade materials manufactured to exacting specifications, supporting innovation and excellence across various sectors.
                 </p>
+                <p className="mt-4">
+                  Explore specifications, applications and availability on our{' '}
+                  <Link href="/products/copper-oxide" className="text-amber-700 underline hover:no-underline">Copper Oxide (CuO) product page</Link>.
+                </p>
 
                 {/* FAQ Section with Schema */}
                 <div className="mt-12 p-6 bg-gray-50 rounded-lg">

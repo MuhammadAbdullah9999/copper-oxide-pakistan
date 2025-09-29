@@ -34,7 +34,7 @@ const products = [
     id: 'copper-sulphate',
     name: 'Copper Sulphate',
     chemical: 'CuSO₄',
-    image: '/copper-sulphate-product.png',
+    image: '/images/products/copper sulphate-placed-on-paper-4.jpg',
     description: 'High-grade copper sulphate for agricultural and industrial applications. Essential for farming and manufacturing.',
     purity: '98%+',
     applications: ['Agriculture', 'Mining', 'Electroplating', 'Animal Feed'],

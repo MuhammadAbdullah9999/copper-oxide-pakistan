@@ -9,6 +9,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/copper-oxide',
+        destination: '/products/copper-oxide',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;

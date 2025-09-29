@@ -106,7 +106,7 @@ const products: Record<string, Product> = {
   },
   'copper-sulphate': {
     name: 'Copper Sulphate (CuSO₄)',
-    image: '/copper-sulphate-product.png',
+    image: '/images/products/copper-sulphate-in-bowl 1.png',
     description: 'High-grade copper sulphate pentahydrate for agricultural and industrial use.',
     purity: '98%+',
     specifications: {
@@ -244,7 +244,6 @@ export async function generateStaticParams() {
     { productId: 'silver-nitrate' },
     { productId: 'copper-sulphate' },
     { productId: 'silver-chloride' },
-    { productId: 'copper-carbonate' },
   ];
 }
 
