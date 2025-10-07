@@ -13,21 +13,51 @@ export const viewport: Viewport = {
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Copper Oxide & Silver Nitrate Manufacturer | Sulman Traders Pakistan',
+    default: 'Copper Oxide, Silver Nitrate & Copper Sulphate Manufacturer Pakistan | Sulman Traders',
     template: '%s | Sulman Traders'
   },
-  description: 'Leading manufacturer of high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃) in Pakistan. Serving industries nationwide with premium quality chemicals for industrial, laboratory, and technical applications.',
+  description: 'Leading manufacturer of Copper Oxide (CuO), Silver Nitrate (AgNO₃), Copper Sulphate (CuSO₄), and Silver Chloride (AgCl) in Pakistan. Premium quality chemicals for industrial, agricultural, laboratory, and medical applications. Lahore-based manufacturer since 1974.',
   keywords: [
+    // Copper Oxide Keywords
     'copper oxide manufacturer pakistan',
-    'silver nitrate manufacturer pakistan',
     'copper oxide powder lahore',
-    'silver nitrate crystals pakistan',
     'CuO manufacturer pakistan',
-    'AgNO3 supplier pakistan',
     'industrial copper oxide pakistan',
+    'copper oxide supplier pakistan',
+    'black copper oxide pakistan',
+    'copper oxide price pakistan',
+    'buy copper oxide pakistan',
+    // Silver Nitrate Keywords
+    'silver nitrate manufacturer pakistan',
+    'silver nitrate crystals pakistan',
+    'AgNO3 supplier pakistan',
     'laboratory silver nitrate lahore',
+    'silver nitrate price pakistan',
+    'buy silver nitrate pakistan',
+    'pure silver nitrate pakistan',
+    'silver nitrate medical grade pakistan',
+    'silver nitrate photography pakistan',
+    // Copper Sulphate Keywords
+    'copper sulphate manufacturer pakistan',
+    'copper sulphate pakistan',
+    'CuSO4 pakistan',
+    'blue vitriol pakistan',
+    'copper sulphate agriculture pakistan',
+    'copper sulphate lahore',
+    'copper sulphate price pakistan',
+    'buy copper sulphate pakistan',
+    'copper sulfate pakistan',
+    'copper sulphate fungicide pakistan',
+    'agricultural copper sulphate pakistan',
+    // Silver Chloride Keywords
+    'silver chloride pakistan',
+    'AgCl pakistan',
+    'silver chloride manufacturer pakistan',
+    // General Keywords
     'chemical manufacturer lahore',
-    'industrial chemicals pakistan'
+    'industrial chemicals pakistan',
+    'laboratory chemicals pakistan',
+    'chemical supplier pakistan'
   ],
   authors: [{ name: 'Sulman Traders' }],
   creator: 'Sulman Traders',
@@ -40,17 +70,17 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Sulman Traders',
-    title: 'Premium Copper Oxide & Silver Nitrate Manufacturer | Pakistan',
-    description: 'Leading manufacturer of high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃). Serving industries across Pakistan with premium quality chemicals.',
-    images: [`${BASE_URL}/og-image.jpg`],
+    title: 'Copper Oxide, Silver Nitrate & Copper Sulphate Manufacturer | Pakistan',
+    description: 'Leading manufacturer of Copper Oxide (CuO), Silver Nitrate (AgNO₃), Copper Sulphate (CuSO₄), and Silver Chloride (AgCl). Premium quality chemicals for industrial, agricultural, and laboratory applications across Pakistan.',
+    images: [`${BASE_URL}/copper-oxide-banner.png`],
     url: BASE_URL,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Copper Oxide & Silver Nitrate Manufacturer | Pakistan',
-    description: 'Premium manufacturer of Copper Oxide (CuO) and Silver Nitrate (AgNO₃). High-purity chemicals for industrial and laboratory applications across Pakistan.',
-    images: [`${BASE_URL}/og-image.jpg`],
+    title: 'Chemical Manufacturer Pakistan | Copper Oxide, Silver Nitrate, Copper Sulphate',
+    description: 'Premium manufacturer of Copper Oxide, Silver Nitrate, Copper Sulphate & Silver Chloride in Pakistan. High-purity chemicals for industrial, agricultural, and laboratory applications.',
+    images: [`${BASE_URL}/copper-oxide-banner.png`],
   },
   robots: {
     index: true,

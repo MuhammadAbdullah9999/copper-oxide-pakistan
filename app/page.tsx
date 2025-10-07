@@ -23,24 +23,28 @@ export default function Home() {
   // Define company FAQ for structured data
   const faqItems = [
     {
-      question: "What are your main chemical products?",
-      answer: "We specialize in manufacturing high-purity Copper Oxide (CuO) and Silver Nitrate (AgNO₃). Our Copper Oxide has 99.5%+ purity for industrial applications, while our Silver Nitrate offers 99.9%+ purity for laboratory and technical use."
+      question: "What chemical products do you manufacture in Pakistan?",
+      answer: "We manufacture high-purity Copper Oxide (CuO) at 99.9% purity, Silver Nitrate (AgNO₃) at 99.9% purity, Copper Sulphate (CuSO₄) blue vitriol at 99.9% purity, and Silver Chloride (AgCl) at 99.9%+ purity. All products are manufactured in Lahore, Pakistan and meet international quality standards."
+    },
+    {
+      question: "What is Copper Sulphate (Blue Vitriol) used for in Pakistan?",
+      answer: "Our Copper Sulphate is widely used in agriculture as a fungicide and soil amendment, in mining for ore processing, in water treatment for algae control, and in animal feed as a nutritional supplement. It's especially popular among Pakistani farmers for crop protection and disease prevention."
+    },
+    {
+      question: "Do you supply Silver Nitrate for medical and laboratory use?",
+      answer: "Yes, our Silver Nitrate is pharmaceutical and laboratory grade with 99.9%+ purity. It's used in medical applications for antimicrobial treatments, in photography, in laboratory analysis and research, and in electronics manufacturing. We supply to hospitals, research labs, and industries across Pakistan."
     },
     {
       question: "What are the applications of your Copper Oxide?",
-      answer: "Our Copper Oxide is widely used in ceramics manufacturing, battery production, catalysts, and electronic components. It's known for its consistent particle size and high chemical purity."
+      answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production for high-performance applications, as catalysts in chemical reactions, and in electronic components. It's known for its consistent particle size and high chemical purity."
     },
     {
-      question: "What makes your Silver Nitrate special?",
-      answer: "Our Silver Nitrate is laboratory grade with 99.9%+ purity, perfect for medical applications, mirror manufacturing, and analytical chemistry. We ensure consistent quality and excellent solubility."
+      question: "Do you deliver chemicals across Pakistan?",
+      answer: "Yes, we provide reliable delivery services throughout Pakistan, including Lahore, Karachi, Islamabad, Faisalabad, and all major cities. We ensure safe packaging, timely delivery, proper documentation, and quality assurance certificates with every order."
     },
     {
-      question: "Do you deliver across Pakistan?",
-      answer: "Yes, we provide reliable delivery services throughout Pakistan, including all major cities and industrial areas. We ensure safe and timely delivery with proper documentation and quality assurance."
-    },
-    {
-      question: "How can I request a product sample or quote?",
-      answer: "Contact us through our website, email, or phone for product samples and pricing. We provide detailed specifications and certificates of analysis for our Copper Oxide and Silver Nitrate products."
+      question: "How can I buy Copper Sulphate or Silver Nitrate from you?",
+      answer: "Contact us through our website contact form, email, or call +92-321-4248968 for product samples, technical specifications, and pricing. We provide detailed product specifications, certificates of analysis, and Material Safety Data Sheets (MSDS) for all our chemicals including Copper Oxide, Silver Nitrate, Copper Sulphate, and Silver Chloride."
     }
   ];
 

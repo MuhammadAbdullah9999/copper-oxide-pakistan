@@ -223,11 +223,13 @@ export async function generateMetadata({ params }: { params: { productId: string
 
   // Use the utility to generate consistent metadata with additional keywords
   const specificKeywords = params.productId === 'copper-oxide' 
-    ? ['copper oxide powder', 'black copper oxide', 'CuO manufacturer Pakistan'] 
+    ? ['copper oxide powder', 'black copper oxide', 'CuO manufacturer Pakistan', 'copper oxide ceramics', 'copper oxide batteries', 'copper oxide catalyst'] 
     : params.productId === 'silver-nitrate'
-    ? ['silver nitrate crystals', 'AgNO3 supplier Pakistan', 'high purity silver nitrate']
+    ? ['silver nitrate crystals', 'AgNO3 supplier Pakistan', 'high purity silver nitrate', 'silver nitrate medical', 'silver nitrate photography', 'silver nitrate laboratory']
     : params.productId === 'copper-sulphate'
-    ? ['blue vitriol', 'CuSO4 agricultural', 'copper sulphate pentahydrate']
+    ? ['blue vitriol', 'CuSO4 agricultural', 'copper sulphate pentahydrate', 'copper sulphate fungicide', 'agricultural copper sulphate', 'copper sulphate mining']
+    : params.productId === 'silver-chloride'
+    ? ['silver chloride powder', 'AgCl Pakistan', 'silver chloride photography', 'silver chloride electrodes']
     : ['high purity chemicals', 'technical grade chemicals'];
 
   return generateProductMetadata(
