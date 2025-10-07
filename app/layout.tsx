@@ -7,6 +7,8 @@ import WhatsAppFloat from "@/components/layout/whatsapp-float";
 import { Analytics } from '@vercel/analytics/next';
 import { defaultMetadata, viewport } from "@/lib/metadata";
 import Script from "next/script";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,6 +84,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleTagManagerNoScript />
         <GoogleTagManager />
+        <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -90,6 +93,7 @@ export default function RootLayout({
         >
           {children}
           <WhatsAppFloat />
+          <CookieConsent />
         </ThemeProvider>
         <Analytics />
       </body>
