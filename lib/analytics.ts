@@ -3,7 +3,7 @@
 // Track page views
 export const pageview = (url: string) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+    (window as any).gtag('config', 'G-5MBRGK5MJX', {
       page_path: url,
     });
   }

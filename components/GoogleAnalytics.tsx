@@ -16,7 +16,7 @@ export default function GoogleAnalytics() {
   }, [pathname, searchParams]);
 
   // Only load in production
-  if (process.env.NODE_ENV !== 'production' || !process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) {
+  if (process.env.NODE_ENV !== 'production' || 'G-5MBRGK5MJX') {
     return null;
   }
 
@@ -24,7 +24,7 @@ export default function GoogleAnalytics() {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-5MBRGK5MJX`}
       />
       <Script
         id="google-analytics"
@@ -34,7 +34,7 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+            gtag('config', 'G-5MBRGK5MJX', {
               page_path: window.location.pathname,
             });
           `,
