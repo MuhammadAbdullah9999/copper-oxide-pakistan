@@ -5,7 +5,7 @@ import Script from "next/script"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12" itemScope itemType="https://schema.org/WPFooter">
+    <footer className="bg-gradient-to-br from-amber-900 via-orange-900 to-amber-950 text-gray-200 py-12" itemScope itemType="https://schema.org/WPFooter">
       {/* Local Business Schema.org markup */}
       <Script id="local-business-schema" type="application/ld+json">
         {JSON.stringify({
@@ -51,11 +51,11 @@ export default function Footer() {
               <Flask className="h-6 w-6 text-amber-500" />
               <span className="text-xl font-bold text-white" itemProp="name">Sulman Traders</span>
             </div>
-            <p className="text-gray-400 mb-4" itemProp="description">
+            <p className="text-gray-300 mb-4" itemProp="description">
               Leading manufacturer of high-quality chemical products in Pakistan.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com/sulmantraders" className="text-gray-400 hover:text-white" aria-label="Facebook" rel="noopener" target="_blank" itemProp="sameAs">
+              <a href="https://facebook.com/sulmantraders" className="text-gray-300 hover:text-white" aria-label="Facebook" rel="noopener" target="_blank" itemProp="sameAs">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
@@ -64,7 +64,7 @@ export default function Footer() {
                   />
                 </svg>
               </a>
-              <a href="https://instagram.com/sulmantraders" className="text-gray-400 hover:text-white" aria-label="Instagram" rel="noopener" target="_blank" itemProp="sameAs">
+              <a href="https://instagram.com/sulmantraders" className="text-gray-300 hover:text-white" aria-label="Instagram" rel="noopener" target="_blank" itemProp="sameAs">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
@@ -73,12 +73,12 @@ export default function Footer() {
                   />
                 </svg>
               </a>
-              <a href="https://twitter.com/sulmantraders" className="text-gray-400 hover:text-white" aria-label="Twitter" rel="noopener" target="_blank" itemProp="sameAs">
+              <a href="https://twitter.com/sulmantraders" className="text-gray-300 hover:text-white" aria-label="Twitter" rel="noopener" target="_blank" itemProp="sameAs">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
               </a>
-              <a href="https://linkedin.com/company/sulmantraders" className="text-gray-400 hover:text-white" aria-label="LinkedIn" rel="noopener" target="_blank" itemProp="sameAs">
+              <a href="https://linkedin.com/company/sulmantraders" className="text-gray-300 hover:text-white" aria-label="LinkedIn" rel="noopener" target="_blank" itemProp="sameAs">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
@@ -88,9 +88,9 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <div className="mt-4 text-gray-400">
-              <p itemProp="telephone">Phone: <a href="tel:+923214248968" className="hover:text-white">+92-321-4248968</a></p>
-              {/* <p itemProp="email">Email: <a href="mailto:info@sulmantraders.com" className="hover:text-white">info@sulmantraders.com</a></p> */}
+            <div className="mt-4 text-gray-300">
+              <p itemProp="telephone">Phone: <a href="tel:+923214248968" className="hover:text-amber-200">+92-321-4248968</a></p>
+              {/* <p itemProp="email">Email: <a href="mailto:info@sulmantraders.com" className="hover:text-amber-200">info@sulmantraders.com</a></p> */}
             </div>
           </div>
           
@@ -99,27 +99,27 @@ export default function Footer() {
             <nav>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="text-gray-400 hover:text-white">
+                  <Link href="/" className="text-gray-300 hover:text-amber-200">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white">
+                  <Link href="/about" className="text-gray-300 hover:text-amber-200">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products" className="text-gray-400 hover:text-white">
+                  <Link href="/products" className="text-gray-300 hover:text-amber-200">
                     Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#manufacturing" className="text-gray-400 hover:text-white">
+                  <Link href="/#manufacturing" className="text-gray-300 hover:text-amber-200">
                     Manufacturing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white">
+                  <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Contact
                   </Link>
                 </li>
@@ -132,27 +132,27 @@ export default function Footer() {
             <nav>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/products/copper-oxide" className="text-gray-400 hover:text-white">
+                  <Link href="/products/copper-oxide" className="text-gray-300 hover:text-amber-200">
                     Copper Oxide
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/silver-nitrate" className="text-gray-400 hover:text-white">
+                  <Link href="/products/silver-nitrate" className="text-gray-300 hover:text-amber-200">
                     Silver Nitrate
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/copper-sulphate" className="text-gray-400 hover:text-white">
+                  <Link href="/products/copper-sulphate" className="text-gray-300 hover:text-amber-200">
                     Copper Sulphate
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/silver-chloride" className="text-gray-400 hover:text-white">
+                  <Link href="/products/silver-chloride" className="text-gray-300 hover:text-amber-200">
                     Silver Chloride
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white">
+                  <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Custom Products
                   </Link>
                 </li>
@@ -162,7 +162,7 @@ export default function Footer() {
           
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-300 mb-4">
               Subscribe to our newsletter for the latest product updates and industry news.
             </p>
             <form className="space-y-2" action="/api/subscribe" method="post">
@@ -171,24 +171,24 @@ export default function Footer() {
                 type="email"
                 id="email-input"
                 name="email"
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-white"
+                className="w-full px-3 py-2 bg-amber-950/50 border border-amber-700 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-white placeholder:text-gray-400"
                 placeholder="Your email address"
                 required
                 aria-required="true"
               />
-              <Button className="w-full bg-amber-700 hover:bg-amber-800" type="submit">
+              <Button className="w-full bg-amber-600 hover:bg-amber-700" type="submit">
                 Subscribe
               </Button>
             </form>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center">
+        <div className="border-t border-amber-800 mt-8 pt-8 text-sm text-gray-300 text-center">
           <p>&copy; {new Date().getFullYear()} Sulman Traders. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
-            <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link>
-            <Link href="/sitemap.xml" className="hover:text-white">Sitemap</Link>
+            <Link href="/privacy-policy" className="hover:text-amber-200">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-amber-200">Terms of Service</Link>
+            <Link href="/sitemap.xml" className="hover:text-amber-200">Sitemap</Link>
           </div>
         </div>
       </div>

@@ -1,10 +1,9 @@
-import ModernHero from "@/components/sections/modern-hero"
-import ProductsShowcase from "@/components/sections/products-showcase"
-import WhyChooseUs from "@/components/sections/why-choose-us"
-import SocialProof from "@/components/sections/social-proof"
-import CTAModern from "@/components/sections/cta-modern"
+import HeroCarousel from "@/components/sections/hero-carousel"
+import ProductsSection from "@/components/sections/products-section"
 import AboutSection from "@/components/sections/about-section"
 import ManufacturingSection from "@/components/sections/manufacturing-section"
+import TestimonialsSection from "@/components/sections/testimonials-section"
+import FeaturesSection from "@/components/sections/features-section"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Metadata } from 'next'
@@ -84,28 +83,53 @@ export default function Home() {
 
       <Header />
       <main className="flex-1">
-        {/* Modern Hero Section */}
-        <ModernHero />
+        {/* Hero Carousel */}
+        <HeroCarousel />
         
-        {/* Products Showcase */}
-        <ProductsShowcase />
-        
-        {/* Why Choose Us */}
-        <WhyChooseUs />
-
-        {/* Manufacturing Process */}
-        <ManufacturingSection />
-        
-        {/* Social Proof & Testimonials */}
-        <SocialProof />
+        {/* Features Section */}
+        <FeaturesSection />
 
         {/* About Section */}
         <AboutSection />
 
-        {/* CTA Section */}
-        <CTAModern />
+        {/* Products Section */}
+        <ProductsSection />
+
+        {/* Manufacturing Section */}
+        <ManufacturingSection />
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
         
-        {/* FAQ Section for SEO */}
+        {/* Trust Section */}
+        <section className="py-16 bg-amber-50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-8">Trusted by Industries Across Pakistan</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+              With over 50 years of experience in chemical manufacturing, we serve diverse industries with high-quality products and reliable service.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="p-4">
+                <div className="text-4xl font-bold text-amber-700 mb-2">500+</div>
+                <div className="text-gray-600">Active Clients</div>
+              </div>
+              <div className="p-4">
+                <div className="text-4xl font-bold text-amber-700 mb-2">50+</div>
+                <div className="text-gray-600">Years Experience</div>
+              </div>
+              <div className="p-4">
+                <div className="text-4xl font-bold text-amber-700 mb-2">99%</div>
+                <div className="text-gray-600">Quality Rate</div>
+              </div>
+              <div className="p-4">
+                <div className="text-4xl font-bold text-amber-700 mb-2">24/7</div>
+                <div className="text-gray-600">Support</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for Improved SEO */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
@@ -124,4 +148,3 @@ export default function Home() {
     </div>
   )
 }
-
