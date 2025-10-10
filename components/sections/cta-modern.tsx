@@ -103,7 +103,7 @@ export default function CTAModern() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl backdrop-blur-sm"
+                className="border-2 border-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl backdrop-blur-sm"
               >
                 Browse Products
               </Button>
