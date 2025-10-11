@@ -37,8 +37,8 @@ export default function WhyChooseUs() {
     },
     {
       icon: HeartHandshake,
-      title: "24/7 Expert Support",
-      description: "Our chemical engineers are available round-the-clock to answer technical questions, provide guidance, and ensure proper usage.",
+      title: "Dedicated Customer Service",
+      description: "Our experienced team is ready to answer your questions, provide product information, and assist with your orders during business hours.",
       color: "from-indigo-500 to-indigo-600"
     }
   ]

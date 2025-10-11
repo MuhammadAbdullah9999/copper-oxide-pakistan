@@ -39,8 +39,8 @@ export default function CTAModern() {
             </h2>
             
             <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get instant pricing, free samples, and technical consultation from Pakistan's #1 chemical manufacturer. 
-              <span className="block mt-2 font-semibold">Same-day dispatch • Nationwide delivery • Lab certified</span>
+              Get competitive pricing, product samples, and detailed specifications from Pakistan's trusted chemical supplier. 
+              <span className="block mt-2 font-semibold">Fast dispatch • Nationwide delivery • Lab certified</span>
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function CTAModern() {
                 <Phone className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us Now</h3>
-              <p className="text-gray-600 mb-3">Speak with our chemical experts</p>
+              <p className="text-gray-600 mb-3">Discuss your chemical requirements</p>
               <div className="text-amber-600 font-bold text-lg">+92-321-4248968</div>
             </a>
 
@@ -70,7 +70,7 @@ export default function CTAModern() {
                 <MessageCircle className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">WhatsApp</h3>
-              <p className="text-gray-600 mb-3">Quick response in 5 minutes</p>
+              <p className="text-gray-600 mb-3">Get quick response during business hours</p>
               <div className="text-amber-600 font-bold text-lg">Message Us</div>
             </a>
 

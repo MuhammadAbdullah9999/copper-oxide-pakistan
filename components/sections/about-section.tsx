@@ -7,7 +7,7 @@ export default function AboutSection() {
     {
       icon: <Award className="h-6 w-6 text-amber-700" />, title: "50+ Years of Excellence", desc: "A legacy of quality and trust in chemical manufacturing." },
     {
-      icon: <Users className="h-6 w-6 text-amber-700" />, title: "Expert Team", desc: "Skilled chemical engineers and dedicated staff." },
+      icon: <Users className="h-6 w-6 text-amber-700" />, title: "Expert Team", desc: "Experienced professionals and dedicated staff." },
     {
       icon: <Leaf className="h-6 w-6 text-amber-700" />, title: "Eco-Conscious", desc: "Commitment to sustainable and responsible practices." },
     {
@@ -39,7 +39,7 @@ export default function AboutSection() {
               <b>Sulman Traders</b> is a leading manufacturer and supplier of high-quality <b>copper oxide</b> <b>silver nitrate</b> ,  <b>silver chloride</b>  and specialty chemicals, proudly based in Lahore, Pakistan. For over five decades, we have been at the forefront of chemical innovation, serving a diverse range of industries both locally and internationally.
             </p>
             <p className="text-gray-700 mb-4">
-              Our journey began in the 1970s with a vision to deliver reliable, pure, and consistent chemical products to the Pakistani market. Today, we are recognized for our commitment to quality, customer satisfaction, and sustainable practices. Our modern facility is equipped with advanced technology and operated by a team of experienced chemical engineers and professionals.
+              Our journey began in the 1970s with a vision to deliver reliable, pure, and consistent chemical products to the Pakistani market. Today, we are recognized for our commitment to quality, customer satisfaction, and sustainable practices. Our modern facility is equipped with advanced technology and operated by a team of experienced professionals.
             </p>
             <p className="text-gray-700 mb-4">
               We believe in continuous improvement, investing in research and development to meet the evolving needs of our clients. Our products are trusted by manufacturers in ceramics, electronics, agriculture, pharmaceuticals, and more.

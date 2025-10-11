@@ -4,8 +4,56 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Award, CheckCircle, TrendingUp } from 'lucide-react'
+import { useState, useEffect } from 'react'
+
+// Product images for carousel
+const productImages = [
+  {
+    src: "/images/products/copper sulphate-placed-on-paper-4.jpg",
+    alt: "High purity Copper Sulphate (CuSO₄) manufactured in Pakistan by Sulman Traders",
+    title: "Copper Sulphate (CuSO₄)",
+    description: "98% Agricultural Grade"
+  },
+  {
+    src: "/copper-oxide-in-plate.jpeg",
+    alt: "High purity Copper Oxide (CuO) manufactured in Pakistan by Sulman Traders",
+    title: "Copper Oxide (CuO)",
+    description: "99.9% Pure"
+  },
+  {
+    src: "/silver-nitrate-in-pan.jpg",
+    alt: "High purity Silver Nitrate (AgNO₃) manufactured in Pakistan by Sulman Traders",
+    title: "Silver Nitrate (AgNO₃)",
+    description: "99.9% Pure"
+  },
+  {
+    src: "/copper-oxide-pigment.jpg",
+    alt: "Copper Oxide Pigment for industrial applications in Pakistan",
+    title: "Copper Oxide Pigment",
+    description: "Industrial Grade"
+  }
+]
 
 export default function ModernHero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [direction, setDirection] = useState<'left' | 'right'>('right')
+
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection('right')
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length)
+    }, 4000) // Change image every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const handleDotClick = (index: number) => {
+    setDirection(index > currentImageIndex ? 'right' : 'left')
+    setCurrentImageIndex(index)
+  }
+
+  const currentProduct = productImages[currentImageIndex]
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Animated Background Gradient */}
@@ -88,8 +136,8 @@ export default function ModernHero() {
                 <div className="text-sm text-gray-600 mt-1">Purity Rate</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-amber-600">24/7</div>
-                <div className="text-sm text-gray-600 mt-1">Support</div>
+                <div className="text-3xl font-bold text-amber-600">50+</div>
+                <div className="text-sm text-gray-600 mt-1">Years Experience</div>
               </div>
             </div>
           </div>
@@ -97,20 +145,76 @@ export default function ModernHero() {
           {/* Right Column - Product Images */}
           <div className="relative hidden lg:block">
             <div className="relative">
-              {/* Main Product Image */}
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                <Image
-                  src="/images/products/copper sulphate-placed-on-paper-4.jpg"
-                  alt="High purity Copper Oxide (CuO) manufactured in Pakistan by Sulman Traders"
-                  width={600}
-                  height={600}
-                  className="object-cover w-full h-[500px]"
-                  priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <h3 className="text-white text-2xl font-bold">Copper Sulphate (CuSO₄)</h3>
-                  <p className="text-white/90 text-sm mt-1">98% Agricultural Grade</p>
+              {/* Main Product Image with Sliding Carousel */}
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative w-full h-[500px] overflow-hidden">
+                  {/* Sliding Images Container */}
+                  <div 
+                    className="flex transition-transform duration-700 ease-in-out h-full"
+                    style={{ 
+                      transform: `translateX(-${currentImageIndex * 100}%)`,
+                    }}
+                  >
+                    {productImages.map((product, index) => (
+                      <div key={index} className="min-w-full h-full relative">
+                        <Image
+                          src={product.src}
+                          alt={product.alt}
+                          width={600}
+                          height={600}
+                          className="object-cover w-full h-full"
+                          priority={index === 0}
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                          <h3 className="text-white text-2xl font-bold">{product.title}</h3>
+                          <p className="text-white/90 text-sm mt-1">{product.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+                
+                {/* Carousel Indicators */}
+                <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
+                  {productImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleDotClick(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-white w-8' 
+                          : 'bg-white/50 hover:bg-white/70'
+                      }`}
+                      aria-label={`View product ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={() => {
+                    setDirection('left')
+                    setCurrentImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length)
+                  }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-300 group"
+                  aria-label="Previous image"
+                >
+                  <svg className="w-6 h-6 text-gray-800 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => {
+                    setDirection('right')
+                    setCurrentImageIndex((prev) => (prev + 1) % productImages.length)
+                  }}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-300 group"
+                  aria-label="Next image"
+                >
+                  <svg className="w-6 h-6 text-gray-800 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
 
               {/* Floating Product Cards */}
