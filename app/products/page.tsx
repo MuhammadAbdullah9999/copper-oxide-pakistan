@@ -238,7 +238,10 @@ export default function ProductsPage() {
                   </Button>
                 </Link>
                 <Link href="tel:+923214248968">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm">
+                  <Button
+                    size="lg"
+                    className="border-2 border-white bg-white text-amber-700 shadow-xl transition-all hover:bg-gray-50 hover:text-amber-800 font-bold"
+                  >
                     Call: +92-321-4248968
                   </Button>
                 </Link>
