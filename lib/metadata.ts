@@ -13,10 +13,10 @@ export const viewport: Viewport = {
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Copper Oxide, Silver Nitrate & Copper Sulphate Manufacturer Pakistan | Sulman Traders',
+    default: 'Copper Sulphate Manufacturer Pakistan | Copper Oxide, Silver Nitrate - Sulman Traders',
     template: '%s | Sulman Traders'
   },
-  description: 'Leading manufacturer of Copper Oxide (CuO), Silver Nitrate (AgNO₃), Copper Sulphate (CuSO₄), and Silver Chloride (AgCl) in Pakistan. Premium quality chemicals for industrial, agricultural, laboratory, and medical applications. Lahore-based manufacturer since 1974.',
+  description: 'Leading Copper Sulphate manufacturer in Pakistan. Buy high-purity Copper Sulphate (CuSO₄), Copper Oxide (CuO), Silver Nitrate (AgNO₃) in Lahore, Karachi, Islamabad. Agricultural & industrial grade available. 98%+ purity. Fast delivery across Pakistan since 1974.',
   keywords: [
     // Copper Oxide Keywords
     'copper oxide manufacturer pakistan',
@@ -70,17 +70,17 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Sulman Traders',
-    title: 'Copper Oxide, Silver Nitrate & Copper Sulphate Manufacturer | Pakistan',
-    description: 'Leading manufacturer of Copper Oxide (CuO), Silver Nitrate (AgNO₃), Copper Sulphate (CuSO₄), and Silver Chloride (AgCl). Premium quality chemicals for industrial, agricultural, and laboratory applications across Pakistan.',
-    images: [`${BASE_URL}/copper-oxide-banner.png`],
+    title: 'Copper Sulphate Manufacturer Pakistan | Buy Copper Oxide, Silver Nitrate',
+    description: 'Leading Copper Sulphate manufacturer in Pakistan. High-purity agricultural & industrial grade Copper Sulphate (CuSO₄), Copper Oxide (CuO), Silver Nitrate (AgNO₃). Available in Lahore, Karachi, Islamabad. 98%+ purity.',
+    images: [`${BASE_URL}/copper-sulphate-banner.png`],
     url: BASE_URL,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chemical Manufacturer Pakistan | Copper Oxide, Silver Nitrate, Copper Sulphate',
-    description: 'Premium manufacturer of Copper Oxide, Silver Nitrate, Copper Sulphate & Silver Chloride in Pakistan. High-purity chemicals for industrial, agricultural, and laboratory applications.',
-    images: [`${BASE_URL}/copper-oxide-banner.png`],
+    title: 'Copper Sulphate Manufacturer Pakistan | Sulman Traders',
+    description: 'Buy high-purity Copper Sulphate (CuSO₄), Copper Oxide, Silver Nitrate in Pakistan. Agricultural & industrial grade. 98%+ purity. Fast delivery across Pakistan.',
+    images: [`${BASE_URL}/copper-sulphate-banner.png`],
   },
   robots: {
     index: true,

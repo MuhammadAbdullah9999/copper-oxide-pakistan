@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
+import Cuso4ProductGallery from '@/components/sections/cuso4-product-gallery'
+import { CUSO4_GALLERY_IMAGES } from '@/lib/cuso4-gallery-images'
 import { generateProductMetadata } from '@/lib/metadata'
 import Script from 'next/script'
 
@@ -108,7 +110,7 @@ const products: Record<string, Product> = {
     name: 'Copper Sulphate (CuSO₄)',
     image: '/images/products/copper-sulphate-in-bowl 1.png',
     description: 'High-grade copper sulphate pentahydrate for agricultural and industrial use.',
-    purity: '98%+',
+    purity: '99%',
     specifications: {
       'Chemical Formula': 'CuSO₄·5H₂O',
       'Appearance': 'Blue Crystalline Solid',
@@ -272,7 +274,13 @@ export default function ProductDetail({ params }: { params: { productId: string 
           '@context': 'https://schema.org',
           '@type': 'Product',
           name: product.name,
-          image: `https://www.sulmantraders.com${product.image}`,
+          image:
+            params.productId === 'copper-sulphate'
+              ? [
+                  `https://www.sulmantraders.com${product.image}`,
+                  ...CUSO4_GALLERY_IMAGES.map((img) => `https://www.sulmantraders.com${img.src}`),
+                ]
+              : `https://www.sulmantraders.com${product.image}`,
           description: product.description,
           brand: {
             '@type': 'Brand',
@@ -390,6 +398,15 @@ export default function ProductDetail({ params }: { params: { productId: string 
                   </Link>
                 </div>
               </div>
+
+              {params.productId === 'copper-sulphate' && (
+                <div className="mx-auto mt-12 w-full max-w-5xl border-t border-gray-100 pt-12">
+                  <Cuso4ProductGallery
+                    heading="Product gallery"
+                    subheading="Copper sulphate pentahydrate (CuSO₄·5H₂O), blue vitriol — as supplied across Pakistan."
+                  />
+                </div>
+              )}
 
               {/* Description Section */}
               <div className="mt-16">

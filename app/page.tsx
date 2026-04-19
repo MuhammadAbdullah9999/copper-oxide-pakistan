@@ -24,12 +24,20 @@ export default function Home() {
   // Define company FAQ for structured data
   const faqItems = [
     {
-      question: "What chemical products do you manufacture in Pakistan?",
-      answer: "We manufacture high-purity Copper Oxide (CuO) at 99.9% purity, Silver Nitrate (AgNO₃) at 99.9% purity, Copper Sulphate (CuSO₄) blue vitriol at 99.9% purity, and Silver Chloride (AgCl) at 99.9%+ purity. All products are manufactured in Lahore, Pakistan and meet international quality standards."
+      question: "Where can I buy Copper Sulphate in Pakistan?",
+      answer: "You can buy high-quality Copper Sulphate (CuSO₄) directly from Sulman Traders in Lahore, Pakistan. We supply agricultural and industrial grade copper sulphate to Lahore, Karachi, Islamabad, Faisalabad, and all major cities across Pakistan. Contact us at +92-321-4248968 for pricing and bulk orders. We offer same-day delivery in Lahore."
+    },
+    {
+      question: "What is the price of Copper Sulphate in Pakistan?",
+      answer: "Copper Sulphate prices in Pakistan vary based on grade (agricultural 98%+ or industrial 99%+), quantity, and delivery location. We offer competitive wholesale rates with bulk discounts for orders over 1000kg. Contact us for current pricing at +92-321-4248968. We manufacture in Lahore and deliver nationwide."
     },
     {
       question: "What is Copper Sulphate (Blue Vitriol) used for in Pakistan?",
-      answer: "Our Copper Sulphate is widely used in agriculture as a fungicide and soil amendment, in mining for ore processing, in water treatment for algae control, and in animal feed as a nutritional supplement. It's especially popular among Pakistani farmers for crop protection and disease prevention."
+      answer: "Copper Sulphate is widely used in Pakistan for agriculture as a fungicide and fertilizer, in mining for ore processing, in water treatment for algae control, and in animal feed as a copper supplement. Pakistani farmers use it extensively for rice, wheat, and fruit crop protection. We supply agricultural-grade copper sulphate throughout Pakistan."
+    },
+    {
+      question: "What chemical products do you manufacture in Pakistan?",
+      answer: "We manufacture high-purity Copper Sulphate (CuSO₄) at 98-99% purity, Copper Oxide (CuO) at 99.9% purity, Silver Nitrate (AgNO₃) at 99.9% purity, and Silver Chloride (AgCl) at 99.9%+ purity. All products are manufactured in our Lahore facility and meet international quality standards. Copper Sulphate is our most popular product for agricultural use."
     },
     {
       question: "Do you supply Silver Nitrate for medical and laboratory use?",
@@ -86,8 +94,8 @@ export default function Home() {
       <main className="flex-1">
         {/* Modern Hero Section */}
         <ModernHero />
-        
-        {/* Products Showcase */}
+
+        {/* Products — homepage stays balanced; deep CuSO₄ content is on /copper-sulphate */}
         <ProductsShowcase />
         
         {/* Why Choose Us */}

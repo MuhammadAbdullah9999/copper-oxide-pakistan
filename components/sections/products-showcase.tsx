@@ -45,7 +45,7 @@ export default function ProductsShowcase() {
       id: 'copper-sulphate',
       name: 'Copper Sulphate',
       formula: 'CuSO₄·5H₂O',
-      purity: '98%+',
+      purity: '99%',
       image: '/copper-sulphate-product.png',
       description: 'Blue vitriol for agriculture, water treatment, mining, and animal feed supplement.',
       applications: ['Agriculture', 'Mining', 'Water Treatment', 'Animal Feed'],
@@ -80,6 +80,42 @@ export default function ProductsShowcase() {
           <p className="text-xl text-gray-600">
             Manufactured in Pakistan with international quality standards. All products are lab-tested, certified, and delivered with complete documentation.
           </p>
+        </div>
+
+        {/* Featured product — compact spotlight; full story stays on dedicated pages */}
+        <div className="max-w-5xl mx-auto mb-14 rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/90 via-white to-amber-50/40 p-6 md:p-8 shadow-sm md:flex md:items-stretch md:gap-8">
+          <div className="relative mb-5 h-44 w-full shrink-0 overflow-hidden rounded-xl md:mb-0 md:h-auto md:min-h-[11rem] md:w-56 lg:w-64">
+            <Image
+              src="/copper-sulphate-product.png"
+              alt="Copper sulphate (CuSO₄) blue vitriol — Sulman Traders Pakistan"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 256px"
+            />
+          </div>
+          <div className="flex min-w-0 flex-1 flex-col justify-center text-left">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
+              Featured product
+            </p>
+            <h3 className="mb-2 text-2xl font-bold text-gray-900">
+              Copper Sulphate (CuSO₄)
+            </h3>
+            <p className="mb-5 text-sm text-gray-600 md:text-base leading-relaxed">
+              Agricultural and industrial blue vitriol — widely used for crop protection, water treatment, and mining. Photos, specs, and pricing live on our product pages.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/copper-sulphate">
+                <Button size="sm" className="bg-amber-700 hover:bg-amber-800">
+                  Overview &amp; gallery
+                </Button>
+              </Link>
+              <Link href="/products/copper-sulphate">
+                <Button size="sm" variant="outline" className="border-amber-600 text-amber-800 hover:bg-amber-50">
+                  Technical details
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Products Grid */}
