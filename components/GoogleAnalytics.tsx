@@ -2,40 +2,28 @@
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { pageview } from '@/lib/analytics';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-5MBRGK5MJX';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const [hasConsent, setHasConsent] = useState(false);
-
-  useEffect(() => {
-    const updateConsent = () => {
-      setHasConsent(localStorage.getItem('cookie-consent') === 'accepted');
-    };
-
-    updateConsent();
-    window.addEventListener('cookie-consent-updated', updateConsent);
-
-    return () => window.removeEventListener('cookie-consent-updated', updateConsent);
-  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('consent', 'update', {
-        analytics_storage: hasConsent ? 'granted' : 'denied',
+        analytics_storage: 'granted',
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
       });
     }
 
-    if (pathname && hasConsent) {
+    if (pathname) {
       pageview(pathname);
     }
-  }, [pathname, hasConsent]);
+  }, [pathname]);
 
   if (!GA_MEASUREMENT_ID) {
     return null;
@@ -56,7 +44,7 @@ export default function GoogleAnalytics() {
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('consent', 'default', {
-              analytics_storage: localStorage.getItem('cookie-consent') === 'accepted' ? 'granted' : 'denied',
+              analytics_storage: 'granted',
               ad_storage: 'denied',
               ad_user_data: 'denied',
               ad_personalization: 'denied'
