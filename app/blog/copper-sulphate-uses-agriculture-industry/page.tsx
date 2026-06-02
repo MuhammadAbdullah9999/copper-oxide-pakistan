@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import ChemicalBlogArticle from '@/components/sections/chemical-blog-article';
 
 export const metadata: Metadata = {
-  title: 'Copper Sulphate Uses in Agriculture & Industry | Sulman Traders Pakistan',
+  title: 'Copper Sulphate CuSO4 Supplier Pakistan | Uses, Price & COA',
   description:
-    'Complete copper sulphate guide: agriculture, water treatment, electroplating, mining, animal nutrition, safe handling, and how to buy copper sulphate in Pakistan.',
+    'Buy Copper Sulphate (CuSO4) in Pakistan. Agriculture, water treatment, electroplating, mining, animal nutrition, safe handling, COA/SDS, and buyer checks.',
   keywords: [
     'copper sulphate',
     'copper sulfate',

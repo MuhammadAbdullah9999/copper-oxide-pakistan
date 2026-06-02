@@ -112,12 +112,46 @@ export function generateProductMetadata(
     'silver-nitrate': '/silver-nitrate-product.png',
     'copper-sulphate': '/copper-sulphate-product.png',
     'silver-chloride': '/silver-chloride-product.png',
+    'copper-carbonate': '/copper-carbonate-powder.png',
   };
   const imageUrl = `${BASE_URL}${productOgImage[productId] || '/og-image.jpg'}`;
+
+  const ctrMetadata: Record<string, { title: string; description: string }> = {
+    'copper-oxide': {
+      title: 'Copper Oxide CuO Supplier Pakistan | 99.9% Black Powder',
+      description:
+        'Buy Copper Oxide (CuO) in Pakistan from Sulman Traders. High-purity black powder for ceramics, glass, electroplating, pigments, and industry. COA/SDS available.',
+    },
+    'silver-nitrate': {
+      title: 'Silver Nitrate AgNO3 Supplier Pakistan | 99.9% Pure Crystals',
+      description:
+        'Buy Silver Nitrate (AgNO3) in Pakistan for lab, pharmaceutical, water treatment, and industrial use. High purity, secure packaging, COA/SDS available.',
+    },
+    'copper-sulphate': {
+      title: 'Copper Sulphate CuSO4 Supplier Pakistan | Blue Vitriol Price',
+      description:
+        'Buy Copper Sulphate (CuSO4) blue vitriol in Pakistan for agriculture, dairy footbaths, mining, water treatment, and industry. COA/SDS available.',
+    },
+    'silver-chloride': {
+      title: 'AgCl Silver Chloride Supplier Pakistan | 99.9% Pure Powder',
+      description:
+        'Buy high-purity AgCl / Silver Chloride in Pakistan. Uses include electrodes, photography, lab chemistry, and silver recovery. COA/SDS and quote support available.',
+    },
+    'copper-carbonate': {
+      title: 'Copper Carbonate Supplier Pakistan | Basic Copper Carbonate Powder',
+      description:
+        'Buy basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Blue-green powder with COA/SDS available.',
+    },
+  };
+
+  const snippet = ctrMetadata[productId] || {
+    title: `${productName} Supplier Pakistan | Sulman Traders`,
+    description,
+  };
   
   return {
-    title: `${productName} - Sulman Traders`,
-    description: description,
+    title: snippet.title,
+    description: snippet.description,
     keywords: [
       productName.toLowerCase(),
       'pakistan',
@@ -128,14 +162,14 @@ export function generateProductMetadata(
       ...additionalKeywords
     ],
     openGraph: {
-      title: `${productName} - Sulman Traders`,
-      description: description,
+      title: snippet.title,
+      description: snippet.description,
       url: url,
       images: [imageUrl],
     },
     twitter: {
-      title: `${productName} - Sulman Traders`,
-      description: description,
+      title: snippet.title,
+      description: snippet.description,
       images: [imageUrl],
     },
     alternates: {

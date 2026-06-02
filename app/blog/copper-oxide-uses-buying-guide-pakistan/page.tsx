@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import ChemicalBlogArticle from '@/components/sections/chemical-blog-article';
 
 export const metadata: Metadata = {
-  title: 'Copper Oxide Uses, Grades & Buying Guide | Sulman Traders Pakistan',
+  title: 'Copper Oxide CuO Supplier Pakistan | Uses, Grades & COA',
   description:
-    'Copper oxide guide for Pakistan: what CuO is, major uses in ceramics, glass, electroplating, coatings, catalysts, handling, and how to choose the right grade.',
+    'Buy Copper Oxide (CuO) in Pakistan. Uses in ceramics, glass, electroplating, coatings, catalysts, handling, purity checks, COA/SDS, and supplier guide.',
   keywords: [
     'copper oxide',
     'copper oxide uses',

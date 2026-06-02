@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import ChemicalBlogArticle from '@/components/sections/chemical-blog-article';
 
 export const metadata: Metadata = {
-  title: 'Silver Chloride Uses in Photography, Labs & Industry | Sulman Traders Pakistan',
+  title: 'AgCl Silver Chloride Supplier Pakistan | Uses, Price & COA',
   description:
-    'Silver chloride guide: what AgCl is, why it is light-sensitive, uses in photography, electrodes, laboratory chemistry, silver recovery, and buying checks.',
+    'Buy high-purity AgCl / Silver Chloride in Pakistan. Learn uses, storage, purity checks, COA/SDS, packaging, and request a quote from Sulman Traders.',
   keywords: [
     'silver chloride',
     'silver chloride uses',

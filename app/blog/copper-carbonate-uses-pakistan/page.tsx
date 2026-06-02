@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import ChemicalBlogArticle from '@/components/sections/chemical-blog-article';
 
 export const metadata: Metadata = {
-  title: 'Copper Carbonate Uses, Applications & Buying Guide | Sulman Traders Pakistan',
+  title: 'Copper Carbonate Supplier Pakistan | Uses, Price & COA',
   description:
-    'Learn what copper carbonate is, where it is used, how to handle it safely, and how to buy basic copper carbonate for pigments, ceramics, agriculture, and industry in Pakistan.',
+    'Buy basic Copper Carbonate in Pakistan. Uses in pigments, ceramics, agriculture-related formulations, copper salts, safe handling, COA/SDS, and buyer checks.',
   keywords: [
     'copper carbonate',
     'basic copper carbonate',
