@@ -57,6 +57,23 @@ export default function ProductsShowcase() {
         'Agricultural certified',
         'Wholesale pricing'
       ]
+    },
+    {
+      id: 'copper-carbonate',
+      name: 'Copper Carbonate',
+      formula: 'CuCO₃·Cu(OH)₂',
+      purity: '98%+',
+      image: '/copper-carbonate-powder.png',
+      description: 'Blue-green basic copper carbonate powder for ceramic glazes, pigments, and copper salt manufacturing.',
+      applications: ['Ceramics', 'Pigments', 'Chemical Manufacturing', 'Formulations'],
+      color: 'from-emerald-500 to-teal-700',
+      highlight: 'Pigment & Ceramic',
+      features: [
+        'Blue-green powder',
+        'Useful copper source',
+        'Bulk packaging',
+        'Technical documents available'
+      ]
     }
   ]
 

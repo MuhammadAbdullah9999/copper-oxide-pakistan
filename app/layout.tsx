@@ -1,16 +1,13 @@
 import type React from "react";
 import "@/app/globals.css";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/gtm";
 import WhatsAppFloat from "@/components/layout/whatsapp-float";
-import { Analytics } from '@vercel/analytics/next';
 import { defaultMetadata, viewport } from "@/lib/metadata";
 import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieConsent from "@/components/CookieConsent";
-
-const inter = Inter({ subsets: ["latin"] });
+import VisitorIntelligence from "@/components/VisitorIntelligence";
 
 export const metadata = {
   ...defaultMetadata,
@@ -81,10 +78,11 @@ export default function RootLayout({
           })}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className="font-sans">
         <GoogleTagManagerNoScript />
         <GoogleTagManager />
         <GoogleAnalytics />
+        <VisitorIntelligence />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -95,7 +93,6 @@ export default function RootLayout({
           <WhatsAppFloat />
           <CookieConsent />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );

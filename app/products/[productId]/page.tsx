@@ -180,64 +180,71 @@ const products: Record<string, Product> = {
       'Pure composition'
     ]
   },
-  // 'copper-carbonate': {
-  //   name: 'Copper Carbonate (CuCO₃)',
-  //   image: '/copper-oxide-in-plate.jpeg',
-  //   description: 'Premium quality basic copper carbonate for industrial and chemical applications.',
-  //   purity: '98%+',
-  //   specifications: {
-  //     'Chemical Formula': 'CuCO₃·Cu(OH)₂',
-  //     'Appearance': 'Green-Blue Powder',
-  //     'Molecular Weight': '221.12 g/mol',
-  //     'Decomposition': '200°C',
-  //     'Solubility': 'Insoluble in water'
-  //   },
-  //   applications: [
-  //     {
-  //       title: 'Pigments',
-  //       description: 'Used in the production of pigments and colorants.'
-  //     },
-  //     {
-  //       title: 'Ceramics',
-  //       description: 'Component in ceramic glazes and decorative applications.'
-  //     },
-  //     {
-  //       title: 'Chemical Industry',
-  //       description: 'Precursor in various chemical synthesis processes.'
-  //     },
-  //     {
-  //       title: 'Wood Preservation',
-  //       description: 'Used in wood treatment and preservation applications.'
-  //     }
-  //   ],
-  //   benefits: [
-  //     'Stable composition',
-  //     'Uniform particle size',
-  //     'Environmental friendly',
-  //     'Versatile applications'
-  //   ]
-  // }
+  'copper-carbonate': {
+    name: 'Copper Carbonate (Basic)',
+    image: '/copper-carbonate-powder.png',
+    description: 'Basic copper carbonate powder for ceramic glazes, pigments, agriculture-related formulations, and chemical manufacturing.',
+    purity: '98%+',
+    specifications: {
+      'Chemical Formula': 'CuCO₃·Cu(OH)₂',
+      'Appearance': 'Green-Blue Powder',
+      'Molecular Weight': '221.12 g/mol',
+      'Decomposition': '200°C',
+      'Solubility': 'Insoluble in water'
+    },
+    applications: [
+      {
+        title: 'Pigments',
+        description: 'Used in the production of green and blue-green pigment systems.'
+      },
+      {
+        title: 'Ceramics',
+        description: 'Copper source for ceramic glazes, pottery, tiles, and decorative finishes.'
+      },
+      {
+        title: 'Chemical Industry',
+        description: 'Intermediate for preparing copper salts and specialty copper compounds.'
+      },
+      {
+        title: 'Agriculture Formulations',
+        description: 'Copper source in selected formulations where the correct grade is specified.'
+      }
+    ],
+    benefits: [
+      'Stable basic copper carbonate composition',
+      'Useful blue-green colour profile',
+      'Suitable for multiple industrial applications',
+      'Available with technical documentation on request'
+    ]
+  }
 }
 
-export async function generateMetadata({ params }: { params: { productId: string } }): Promise<Metadata> {
-  const product = products[params.productId as keyof typeof products]
+type ProductPageProps = {
+  params: Promise<{ productId: string }>;
+};
+
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { productId } = await params;
+  const product = products[productId as keyof typeof products]
   if (!product) return { title: 'Product Not Found' }
 
   // Use the utility to generate consistent metadata with additional keywords
-  const specificKeywords = params.productId === 'copper-oxide' 
+  const specificKeywords = productId === 'copper-oxide'
     ? ['copper oxide powder', 'black copper oxide', 'CuO manufacturer Pakistan', 'copper oxide ceramics', 'copper oxide batteries', 'copper oxide catalyst'] 
-    : params.productId === 'silver-nitrate'
+    : productId === 'silver-nitrate'
     ? ['silver nitrate crystals', 'AgNO3 supplier Pakistan', 'high purity silver nitrate', 'silver nitrate medical', 'silver nitrate photography', 'silver nitrate laboratory']
-    : params.productId === 'copper-sulphate'
+    : productId === 'copper-sulphate'
     ? ['blue vitriol', 'CuSO4 agricultural', 'copper sulphate pentahydrate', 'copper sulphate fungicide', 'agricultural copper sulphate', 'copper sulphate mining']
-    : params.productId === 'silver-chloride'
+    : productId === 'silver-chloride'
     ? ['silver chloride powder', 'AgCl Pakistan', 'silver chloride photography', 'silver chloride electrodes']
+    : productId === 'copper-carbonate'
+    ? ['copper carbonate powder', 'basic copper carbonate', 'copper carbonate Pakistan', 'copper carbonate ceramics', 'copper carbonate pigment']
     : ['high purity chemicals', 'technical grade chemicals'];
 
   return generateProductMetadata(
     product.name,
     product.description,
-    params.productId,
+    productId,
     specificKeywords
   );
 }
@@ -248,11 +255,13 @@ export async function generateStaticParams() {
     { productId: 'silver-nitrate' },
     { productId: 'copper-sulphate' },
     { productId: 'silver-chloride' },
+    { productId: 'copper-carbonate' },
   ];
 }
 
-export default function ProductDetail({ params }: { params: { productId: string } }) {
-  const product = products[params.productId as keyof typeof products];
+export default async function ProductDetail({ params }: ProductPageProps) {
+  const { productId } = await params;
+  const product = products[productId as keyof typeof products];
   
   if (!product) notFound();
   
@@ -260,7 +269,7 @@ export default function ProductDetail({ params }: { params: { productId: string 
   const breadcrumbs = [
     { name: 'Home', url: 'https://www.sulmantraders.com/' },
     { name: 'Products', url: 'https://www.sulmantraders.com/products' },
-    { name: product.name, url: `https://www.sulmantraders.com/products/${params.productId}` },
+    { name: product.name, url: `https://www.sulmantraders.com/products/${productId}` },
   ];
   
   // Extract application areas for LD+JSON
@@ -275,7 +284,7 @@ export default function ProductDetail({ params }: { params: { productId: string 
           '@type': 'Product',
           name: product.name,
           image:
-            params.productId === 'copper-sulphate'
+            productId === 'copper-sulphate'
               ? [
                   `https://www.sulmantraders.com${product.image}`,
                   ...CUSO4_GALLERY_IMAGES.map((img) => `https://www.sulmantraders.com${img.src}`),
@@ -399,7 +408,7 @@ export default function ProductDetail({ params }: { params: { productId: string 
                 </div>
               </div>
 
-              {params.productId === 'copper-sulphate' && (
+              {productId === 'copper-sulphate' && (
                 <div className="mx-auto mt-12 w-full max-w-5xl border-t border-gray-100 pt-12">
                   <Cuso4ProductGallery
                     heading="Product gallery"

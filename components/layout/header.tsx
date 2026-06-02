@@ -20,7 +20,7 @@ export default function Header() {
     { name: "Silver Nitrate", href: "/products/silver-nitrate" },
     { name: "Copper Sulphate", href: "/products/copper-sulphate" },
     { name: "Silver Chloride", href: "/products/silver-chloride" },
-    // { name: "Copper Carbonate", href: "/products/copper-carbonate" },
+    { name: "Copper Carbonate", href: "/products/copper-carbonate" },
   ]
   const phone = "+92 321 4248968"
   const phoneHref = "tel:+923214248968"

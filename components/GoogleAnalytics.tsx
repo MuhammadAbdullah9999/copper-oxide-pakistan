@@ -2,20 +2,36 @@
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { pageview } from '@/lib/analytics';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
+  const [hasConsent, setHasConsent] = useState(false);
 
   useEffect(() => {
-    if (pathname) {
+    const updateConsent = () => {
+      setHasConsent(localStorage.getItem('cookie-consent') === 'accepted');
+    };
+
+    updateConsent();
+    window.addEventListener('cookie-consent-updated', updateConsent);
+
+    return () => window.removeEventListener('cookie-consent-updated', updateConsent);
+  }, []);
+
+  useEffect(() => {
+    if (pathname && hasConsent) {
       pageview(pathname);
     }
-  }, [pathname]);
+  }, [pathname, hasConsent]);
 
   // Only load in production
-  if (process.env.NODE_ENV !== 'production' || !process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) {
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    !process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
+    !hasConsent
+  ) {
     return null;
   }
 

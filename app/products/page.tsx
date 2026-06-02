@@ -74,6 +74,18 @@ export default function ProductsPage() {
       color: 'from-amber-400 to-amber-600',
       badge: 'Technical Grade',
       badgeColor: 'bg-amber-600'
+    },
+    {
+      id: 'copper-carbonate',
+      name: 'Copper Carbonate',
+      formula: 'CuCO₃·Cu(OH)₂',
+      purity: '98%+',
+      image: '/copper-carbonate-powder.png',
+      shortDesc: 'Blue-green basic copper carbonate powder',
+      applications: ['Ceramic Glazes', 'Pigments', 'Copper Salts', 'Formulations'],
+      color: 'from-emerald-500 to-teal-700',
+      badge: 'Pigment & Ceramic',
+      badgeColor: 'bg-emerald-600'
     }
   ]
 

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { blogPosts } from '@/lib/blog-posts';
 
 export const dynamic = 'force-static';
 
@@ -75,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'silver-nitrate',
     'copper-sulphate',
     'silver-chloride',
-    // 'copper-carbonate',
+    'copper-carbonate',
   ];
 
   const productRoutes = productIds.map(id => ({
@@ -85,25 +86,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Define blog posts
-  const blogPosts = [
-    {
-      id: 'top-industrial-applications-copper-oxide',
-      date: '2024-04-10',
-    },
-    {
-      id: 'silver-nitrate-medical-applications',
-      date: '2024-04-02',
-    },
-    {
-      id: 'copper-sulphate-agriculture-benefits',
-      date: '2024-03-28',
-    },
-  ];
-
   const blogRoutes = blogPosts.map(post => ({
     url: `${BASE_URL}/blog/${post.id}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.isoDate),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));

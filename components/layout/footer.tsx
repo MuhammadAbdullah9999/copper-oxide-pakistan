@@ -152,6 +152,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/products/copper-carbonate" className="text-gray-300 hover:text-amber-200">
+                    Copper Carbonate
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Custom Products
                   </Link>

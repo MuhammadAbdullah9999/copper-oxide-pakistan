@@ -52,17 +52,17 @@ const products = [
     keywords: ['silver chloride', 'AgCl', 'silver chloride powder', 'silver chloride pakistan'],
     alt: 'Premium silver chloride powder for photographic applications'
   },
-  // {
-  //   id: 'copper-carbonate',
-  //   name: 'Copper Carbonate',
-  //   chemical: 'CuCO₃',
-  //   image: '/copper-oxide-in-plate.jpeg',
-  //   description: 'Premium copper carbonate for industrial and chemical applications. Superior quality for diverse uses.',
-  //   purity: '98%+',
-  //   applications: ['Pigments', 'Ceramics', 'Chemical Industry'],
-  //   keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan'],
-  //   alt: 'Premium copper carbonate powder for industrial applications'
-  // }
+  {
+    id: 'copper-carbonate',
+    name: 'Copper Carbonate',
+    chemical: 'CuCO₃·Cu(OH)₂',
+    image: '/copper-carbonate-powder.png',
+    description: 'Basic copper carbonate powder for pigments, ceramic glazes, formulations, and chemical manufacturing.',
+    purity: '98%+',
+    applications: ['Pigments', 'Ceramics', 'Chemical Industry', 'Formulations'],
+    keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan'],
+    alt: 'Blue-green copper carbonate powder for industrial applications'
+  }
 ]
 
 export default function ProductsSection() {

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { OptimizedImage } from '@/components/ui/optimized-image';
 import { Button } from '@/components/ui/button';
+import { blogPosts } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Chemical Industry Blog - Sulman Traders',
@@ -23,60 +23,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/blog',
   }
 };
-
-// Blog post data
-const blogPosts = [
-  {
-    id: 'top-industrial-applications-copper-oxide',
-    title: 'Top 10 Industrial Applications of Copper Oxide in 2024',
-    excerpt: 'Discover the most important industrial applications of copper oxide and how this versatile chemical is transforming manufacturing processes.',
-    date: 'April 10, 2024',
-    category: 'Industry Insights',
-    image: '/copper-oxide-thumbnail.png',
-    author: 'Muhammad Salman',
-    tags: ['copper oxide', 'industrial applications', 'manufacturing'],
-  },
-  {
-    id: 'silver-nitrate-medical-applications',
-    title: 'The Revolutionary Medical Applications of Silver Nitrate',
-    excerpt: 'Explore how silver nitrate continues to be an essential chemical in modern medicine, from wound care to specialized treatments.',
-    date: 'April 2, 2024',
-    category: 'Healthcare',
-    image: '/silver-nitrate-thumbnail.jpg',
-    author: 'Muhammad Salman',
-    tags: ['silver nitrate', 'medical applications', 'healthcare'],
-  },
-  {
-    id: 'copper-sulphate-agriculture-benefits',
-    title: 'How Copper Sulphate is Revolutionizing Agricultural Practices',
-    excerpt: 'Learn about the numerous benefits of copper sulphate in agriculture and how its improving crop yields and plant health worldwide.',
-    date: 'March 28, 2024',
-    category: 'Agriculture',
-    image: '/copper-sulphate-thumbnail.jpg',
-    author: 'Muhammad Salman',
-    tags: ['copper sulphate', 'agriculture', 'crop management'],
-  },
-  // {
-  //   id: 'quality-control-chemical-manufacturing',
-  //   title: 'Essential Quality Control Measures in Chemical Manufacturing',
-  //   excerpt: 'A comprehensive guide to quality control practices that are critical for producing high-purity chemical compounds.',
-  //   date: 'March 15, 2024',
-  //   category: 'Manufacturing',
-  //   image: '/copper-oxide-banner.png',
-  //   author: 'Eng. Zainab Qureshi',
-  //   tags: ['quality control', 'chemical manufacturing', 'industry standards'],
-  // },
-  // {
-  //   id: 'sustainable-practices-chemical-industry',
-  //   title: 'Sustainable Manufacturing Practices in the Chemical Industry',
-  //   excerpt: 'How chemical manufacturers are implementing sustainable practices to reduce environmental impact while maintaining product quality.',
-  //   date: 'March 8, 2024',
-  //   category: 'Sustainability',
-  //   image: '/silver-nitrate-banner-1.png',
-  //   author: 'Dr. Ahmed Khan',
-  //   tags: ['sustainability', 'green manufacturing', 'environmental impact'],
-  // }
-];
 
 export default function BlogPage() {
   return (
@@ -100,7 +46,7 @@ export default function BlogPage() {
             '@type': 'BlogPosting',
             headline: post.title,
             description: post.excerpt,
-            datePublished: post.date,
+            datePublished: post.isoDate,
             author: {
               '@type': 'Person',
               name: post.author

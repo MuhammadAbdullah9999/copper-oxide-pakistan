@@ -21,6 +21,9 @@ export default function ContactSection() {
       newErrors.email = "Invalid email format.";
     }
     if (!formData.get("message")) newErrors.message = "Message is required.";
+    if (!formData.get("marketingConsent")) {
+      newErrors.marketingConsent = "Please confirm consent so we can reply to your inquiry.";
+    }
   
     return newErrors;
   };
@@ -70,8 +73,8 @@ export default function ContactSection() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Us</h2>
             <p className="text-gray-700 mb-8">
-              Get in touch with our team for inquiries about our copper oxide products, custom formulations, or to
-              request a quote.
+              Get in touch with our team for inquiries about copper oxide, copper sulphate, copper carbonate,
+              silver nitrate, silver chloride, custom formulations, or to request a quote.
             </p>
             <div className="space-y-6">
               {contactDetails.map((item, index) => (
@@ -131,6 +134,39 @@ export default function ContactSection() {
                       placeholder="Enter your company name"
                     />
                   </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-sm font-medium text-gray-700">
+                        Phone / WhatsApp
+                      </label>
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        placeholder="+92..."
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="product" className="text-sm font-medium text-gray-700">
+                        Product Interest
+                      </label>
+                      <select
+                        id="product"
+                        name="product"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>Select a product</option>
+                        <option value="Copper Oxide">Copper Oxide</option>
+                        <option value="Copper Sulphate">Copper Sulphate</option>
+                        <option value="Copper Carbonate">Copper Carbonate</option>
+                        <option value="Silver Nitrate">Silver Nitrate</option>
+                        <option value="Silver Chloride">Silver Chloride</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium text-gray-700">
                       Subject
@@ -156,6 +192,21 @@ export default function ContactSection() {
                     ></textarea>
                     {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                     <ValidationError prefix="Message" field="message" errors={state.errors} />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="flex items-start gap-3 text-sm text-gray-700">
+                      <input
+                        type="checkbox"
+                        name="marketingConsent"
+                        value="yes"
+                        className="mt-1 h-4 w-4 rounded border-gray-300 text-amber-700 focus:ring-amber-500"
+                      />
+                      <span>
+                        I agree that Sulman Traders may use my submitted contact details to respond to this
+                        inquiry and send relevant product or quotation follow-ups.
+                      </span>
+                    </label>
+                    {errors.marketingConsent && <p className="text-red-500 text-sm">{errors.marketingConsent}</p>}
                   </div>
                   <Button className="w-full bg-amber-700 hover:bg-amber-800" type="submit" disabled={state.submitting}>
                     {state.submitting ? (
