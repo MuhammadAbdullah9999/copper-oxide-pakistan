@@ -1,6 +1,5 @@
 'use client';
 
-import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import { GA_MEASUREMENT_ID, pageview } from '@/lib/analytics';
@@ -18,6 +17,10 @@ export default function GoogleAnalytics() {
 
     const trackedPath = `${pathname}${window.location.search || ''}`;
     if (lastTrackedPath.current === trackedPath) return;
+    if ((window as any).__gaInitialPagePath === trackedPath) {
+      lastTrackedPath.current = trackedPath;
+      return;
+    }
 
     const sendWhenReady = (attempt = 0) => {
       if ((window as any).gtag) {
@@ -45,37 +48,5 @@ export default function GoogleAnalytics() {
     sendWhenReady();
   }, [pathname]);
 
-  if (!GA_MEASUREMENT_ID) {
-    return null;
-  }
-
-  return (
-    <>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('consent', 'default', {
-              analytics_storage: 'granted',
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied'
-            });
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              send_page_view: false,
-            });
-          `,
-        }}
-      />
-    </>
-  );
+  return null;
 }

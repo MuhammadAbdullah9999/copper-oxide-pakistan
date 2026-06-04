@@ -9,6 +9,8 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieConsent from "@/components/CookieConsent";
 import VisitorIntelligence from "@/components/VisitorIntelligence";
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-5MBRGK5MJX";
+
 export const metadata = {
   ...defaultMetadata,
   icons: {
@@ -47,6 +49,28 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#b45309" />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script
+          id="google-analytics-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              window.__gaInitialPagePath = window.location.pathname + window.location.search;
+              gtag('consent', 'default', {
+                analytics_storage: 'granted',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+              });
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.__gaInitialPagePath
+              });
+            `,
+          }}
+        />
         {/* Structured data for organization */}
         <Script id="organization-schema" type="application/ld+json">
           {JSON.stringify({
