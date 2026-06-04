@@ -1,11 +1,19 @@
 // Google Analytics 4 tracking functions
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-5MBRGK5MJX';
+
+const isDebugMode = process.env.NODE_ENV !== 'production';
 
 // Track page views
 export const pageview = (url: string) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('config', 'G-5MBRGK5MJX', {
+    (window as any).gtag('config', GA_MEASUREMENT_ID, {
       page_path: url,
+      debug_mode: isDebugMode,
     });
+
+    if (isDebugMode) {
+      console.info('[GA4] page_view sent', { measurementId: GA_MEASUREMENT_ID, page_path: url });
+    }
   }
 };
 
@@ -21,7 +29,12 @@ export const event = ({ action, category, label, value }: {
       event_category: category,
       event_label: label,
       value: value,
+      debug_mode: isDebugMode,
     });
+
+    if (isDebugMode) {
+      console.info('[GA4] event sent', { measurementId: GA_MEASUREMENT_ID, action, category, label, value });
+    }
   }
 };
 

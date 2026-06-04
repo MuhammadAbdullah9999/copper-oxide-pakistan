@@ -35,8 +35,8 @@ export default function CookieConsent() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex-1">
             <p className="text-sm text-gray-700">
-              We use cookies to improve your experience and analyze site traffic. 
-              By clicking "Accept", you consent to our use of cookies.{' '}
+              We use analytics to understand website traffic and improve our products. Optional cookie
+              preferences are saved in your browser.{' '}
               <a href="/privacy-policy" className="text-amber-700 underline hover:text-amber-800">
                 Learn more
               </a>

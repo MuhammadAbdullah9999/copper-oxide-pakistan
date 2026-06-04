@@ -44,6 +44,9 @@ type ChemicalBlogArticleProps = {
     href: string;
     label: string;
   };
+  checklistTitle?: string;
+  checklistItems?: string[];
+  conclusion?: string[];
 };
 
 const accentClasses = {
@@ -89,6 +92,16 @@ export default function ChemicalBlogArticle({
   secondaryImages = [],
   faq,
   productLink,
+  checklistTitle = 'Buyer Checklist',
+  checklistItems = [
+    'Request a current Certificate of Analysis and Safety Data Sheet.',
+    'Confirm assay, impurity limits, moisture level, particle size, and packaging size.',
+    'Ask whether the grade matches your use: ceramic, lab, agriculture, electroplating, or general industrial.',
+    'Run a small production trial before scaling to full batch use.',
+  ],
+  conclusion = [
+    'The best chemical purchase is not only about price per kilogram. It is about purity, consistency, documentation, and choosing the grade that matches your process. Sulman Traders supplies industrial chemicals across Pakistan with practical support for manufacturers, traders, laboratories, and production teams.',
+  ],
 }: ChemicalBlogArticleProps) {
   const styles = accentClasses[accent];
   const canonical = `https://www.sulmantraders.com/blog/${slug}`;
@@ -228,22 +241,20 @@ export default function ChemicalBlogArticle({
                 ))}
 
                 <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
-                  <h2 className="mb-3 text-xl font-bold text-gray-900">Buyer Checklist</h2>
+                  <h2 className="mb-3 text-xl font-bold text-gray-900">{checklistTitle}</h2>
                   <ul className="list-disc space-y-2 pl-6 text-gray-700">
-                    <li>Request a current Certificate of Analysis and Safety Data Sheet.</li>
-                    <li>Confirm assay, impurity limits, moisture level, particle size, and packaging size.</li>
-                    <li>Ask whether the grade matches your use: ceramic, lab, agriculture, electroplating, or general industrial.</li>
-                    <li>Run a small production trial before scaling to full batch use.</li>
+                    {checklistItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
 
                 <h2 className="mt-10 mb-4 text-2xl font-bold text-gray-800">Conclusion</h2>
-                <p>
-                  The best chemical purchase is not only about price per kilogram. It is about purity,
-                  consistency, documentation, and choosing the grade that matches your process.
-                  Sulman Traders supplies industrial chemicals across Pakistan with practical support
-                  for manufacturers, traders, laboratories, and production teams.
-                </p>
+                {conclusion.map((paragraph) => (
+                  <p key={paragraph} className="mt-4">
+                    {paragraph}
+                  </p>
+                ))}
                 <p className="mt-4">
                   {productLink ? (
                     <>

@@ -3,7 +3,7 @@
 import Image, { ImageProps } from 'next/image';
 import { useState } from 'react';
 
-interface OptimizedImageProps extends Omit<ImageProps, 'onLoadingComplete' | 'onError'> {
+interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
   fallbackSrc?: string;
 }
 
@@ -34,7 +34,7 @@ export function OptimizedImage({
           } ${className || ''}`}
           loading={priority ? 'eager' : 'lazy'}
           quality={80}
-          onLoadingComplete={() => setIsLoading(false)}
+          onLoad={() => setIsLoading(false)}
           onError={() => {
             setError(true);
             setIsLoading(false);
@@ -60,7 +60,7 @@ export function OptimizedImage({
         } object-cover`}
         loading={priority ? 'eager' : 'lazy'}
         quality={80}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
         onError={() => {
           setError(true);
           setIsLoading(false);

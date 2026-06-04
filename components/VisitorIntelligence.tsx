@@ -17,7 +17,6 @@ function VisitorIntelligenceInner() {
 
   useEffect(() => {
     if (!pathname) return;
-    if (localStorage.getItem('cookie-consent') !== 'accepted') return;
 
     const key = `visitor-intelligence:${pathname}:${searchParams.toString()}`;
     if (sessionStorage.getItem(key)) return;
@@ -28,15 +27,23 @@ function VisitorIntelligenceInner() {
       headers: { 'Content-Type': 'application/json' },
       keepalive: true,
       body: JSON.stringify({
-        consent: true,
         path: `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`,
         title: document.title,
         referrer: document.referrer,
         language: navigator.language,
+        languages: navigator.languages?.join(', ') || '',
         device: getDevice(),
+        platform: navigator.platform,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        viewport: `${window.innerWidth}x${window.innerHeight}`,
+        pixelRatio: String(window.devicePixelRatio || 1),
+        cookiePreference: localStorage.getItem('cookie-consent') || 'unset',
         utmSource: searchParams.get('utm_source') || '',
         utmMedium: searchParams.get('utm_medium') || '',
         utmCampaign: searchParams.get('utm_campaign') || '',
+        utmTerm: searchParams.get('utm_term') || '',
+        utmContent: searchParams.get('utm_content') || '',
       }),
     }).catch(() => {
       sessionStorage.removeItem(key);

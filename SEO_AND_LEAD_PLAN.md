@@ -21,9 +21,10 @@ These pages target direct product searches, use-case searches, Pakistan supplier
 
 Do not try to silently collect phone numbers, email addresses, age, or identity. A website cannot reliably know those details unless a visitor submits them, and using hidden collection for cold outreach creates trust and compliance risk.
 
-Use this compliant approach:
+Use this analytics approach:
 
-- Google Analytics or Vercel Analytics for consent-based page views, traffic source, device, city/country-level location, and product-page interest.
+- Google Analytics for page views, traffic source, device, city/country-level location, and product-page interest.
+- Internal visitor intelligence endpoint for page URL, referrer, UTM tags, browser language, device type, platform, screen/viewport size, timezone, approximate country/region/city headers, and user agent.
 - Contact form for submitted name, company, email, phone/WhatsApp, product interest, and message.
 - Consent checkbox before using submitted contact information for quote follow-ups or relevant product marketing.
 - Export Formspree submissions to Google Sheets using Formspree integrations, Zapier, Make, or a Google Apps Script webhook.
@@ -86,4 +87,6 @@ The site now loads the correct GA4 script:
 
 - `https://www.googletagmanager.com/gtag/js?id=G-5MBRGK5MJX`
 
-It also uses consent mode defaults. Analytics storage is denied until cookie consent is accepted, then updated to granted.
+It also uses consent mode defaults with analytics storage granted and ad storage/personalization denied.
+
+The internal visitor intelligence endpoint can save to Google Sheets when `GOOGLE_SHEETS_WEBHOOK_URL` is configured. It does not collect passwords, hidden credentials, phone, email, or identity unless the visitor submits a form.

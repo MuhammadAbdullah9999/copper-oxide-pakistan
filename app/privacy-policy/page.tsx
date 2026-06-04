@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-3">Information We Collect</h2>
             <p className="text-gray-700 mb-4">
-              We may collect personal information that you voluntarily provide to us, such as your name, company name, email address, phone or WhatsApp number, product interest, and any details submitted through contact or inquiry forms. We also collect limited analytics information when you consent to cookies, such as browser type, device information, approximate location, and pages visited.
+              We may collect personal information that you voluntarily provide to us, such as your name, company name, email address, phone or WhatsApp number, product interest, and any details submitted through contact or inquiry forms. We also collect analytics information such as browser type, device information, approximate location, referrer, campaign tags, screen size, language, pages visited, and user agent.
             </p>
             <p className="text-gray-700 mb-4">
               We do not automatically know a visitor&apos;s age, phone number, email address, or identity unless the visitor chooses to submit those details through a form or direct communication.
@@ -47,10 +47,10 @@ export default function PrivacyPolicyPage() {
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-3">Cookies and Tracking</h2>
             <p className="text-gray-700 mb-4">
-              We use cookies and similar tracking technologies to analyze website traffic and improve our services after consent is accepted. You can decline cookies on the website banner or control cookies through your browser settings.
+              We use analytics and similar tracking technologies to analyze website traffic and improve our services. You can control cookies through your browser settings.
             </p>
             <p className="text-gray-700 mb-4">
-              When analytics consent is accepted, we may record non-sensitive visit context such as page URL, referrer, UTM campaign tags, browser language, device type, approximate country/region/city, and user agent in analytics tools or an internal reporting spreadsheet. We do not use this feature to collect passwords, hidden credentials, or a visitor&apos;s personal identity.
+              We may record non-sensitive visit context such as page URL, referrer, UTM campaign tags, browser language, device type, approximate country/region/city, screen size, timezone, and user agent in analytics tools or an internal reporting spreadsheet. We do not use this feature to collect passwords, hidden credentials, or a visitor&apos;s personal identity.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-3">Data Sharing</h2>

@@ -7,11 +7,19 @@ type VisitorPayload = {
   referrer?: string;
   title?: string;
   language?: string;
+  languages?: string;
   device?: string;
+  platform?: string;
+  timezone?: string;
+  screen?: string;
+  viewport?: string;
+  pixelRatio?: string;
+  cookiePreference?: string;
   utmSource?: string;
   utmMedium?: string;
   utmCampaign?: string;
-  consent?: boolean;
+  utmTerm?: string;
+  utmContent?: string;
 };
 
 const clean = (value: unknown) => {
@@ -28,10 +36,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 
-  if (!payload.consent) {
-    return NextResponse.json({ error: 'Consent required' }, { status: 403 });
-  }
-
   const headers = request.headers;
   const row = {
     timestamp: new Date().toISOString(),
@@ -39,10 +43,19 @@ export async function POST(request: Request) {
     title: clean(payload.title),
     referrer: clean(payload.referrer),
     language: clean(payload.language),
+    languages: clean(payload.languages),
     device: clean(payload.device),
+    platform: clean(payload.platform),
+    timezone: clean(payload.timezone),
+    screen: clean(payload.screen),
+    viewport: clean(payload.viewport),
+    pixelRatio: clean(payload.pixelRatio),
+    cookiePreference: clean(payload.cookiePreference),
     utmSource: clean(payload.utmSource),
     utmMedium: clean(payload.utmMedium),
     utmCampaign: clean(payload.utmCampaign),
+    utmTerm: clean(payload.utmTerm),
+    utmContent: clean(payload.utmContent),
     country: clean(headers.get('x-vercel-ip-country') || headers.get('cf-ipcountry')),
     region: clean(headers.get('x-vercel-ip-country-region')),
     city: clean(headers.get('x-vercel-ip-city')),
