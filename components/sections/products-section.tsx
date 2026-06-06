@@ -62,6 +62,17 @@ const products = [
     applications: ['Pigments', 'Ceramics', 'Chemical Industry', 'Formulations'],
     keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan'],
     alt: 'Blue-green copper carbonate powder for industrial applications'
+  },
+  {
+    id: 'cobalt-oxide',
+    name: 'Black Cobalt Oxide',
+    chemical: 'Co₃O₄',
+    image: '/cobalt-oxide-bulk.png',
+    description: 'Black cobalt(II,III) oxide for ceramic glazes, cobalt blue glass, pigments, catalysts, and technical materials.',
+    purity: '99.9%',
+    applications: ['Ceramics', 'Glass', 'Pigments', 'Catalysts'],
+    keywords: ['cobalt oxide', 'Co3O4', 'black cobalt oxide', 'cobalt oxide pakistan'],
+    alt: 'Black cobalt oxide powder for ceramic, glass, and pigment applications'
   }
 ]
 

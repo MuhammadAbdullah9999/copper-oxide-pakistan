@@ -3,22 +3,34 @@ import Footer from "@/components/layout/footer"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, CheckCircle, Sparkles } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 
 export const metadata: Metadata = {
-  title: 'Chemical Products - Copper Oxide, Silver Nitrate, Copper Sulphate | Sulman Traders Pakistan',
-  description: 'Browse our premium chemical products manufactured in Pakistan: Copper Oxide (CuO) 99.9%, Silver Nitrate (AgNO₃) 99.9%, Copper Sulphate (CuSO₄) 98%+. High purity, lab-tested, nationwide delivery.',
+  title: 'Chemical Products Supplier Pakistan | Copper Oxide, Cobalt Oxide, Silver Nitrate',
+  description: 'Buy industrial chemicals in Pakistan from Sulman Traders: Copper Oxide, Black Cobalt Oxide Co3O4, Silver Nitrate, Copper Sulphate, Silver Chloride, and Copper Carbonate. COA/SDS support, bulk supply, and nationwide delivery.',
   keywords: [
     'chemical products Pakistan',
+    'chemical supplier Pakistan',
+    'industrial chemical supplier Pakistan',
+    'buy chemicals Pakistan',
     'copper oxide Pakistan',
+    'copper oxide supplier Pakistan',
+    'cobalt oxide Pakistan',
+    'black cobalt oxide Pakistan',
+    'Co3O4 supplier Pakistan',
     'silver nitrate Pakistan', 
+    'silver nitrate supplier Pakistan',
     'copper sulphate Pakistan',
+    'copper sulphate supplier Pakistan',
+    'silver chloride Pakistan',
+    'copper carbonate Pakistan',
     'industrial chemicals Pakistan',
     'laboratory chemicals Pakistan',
-    'buy chemicals Pakistan',
-    'chemical manufacturer Lahore'
+    'chemical supplier Lahore',
+    'bulk chemicals Pakistan'
   ],
   alternates: {
     canonical: 'https://www.sulmantraders.com/products',
@@ -86,11 +98,80 @@ export default function ProductsPage() {
       color: 'from-emerald-500 to-teal-700',
       badge: 'Pigment & Ceramic',
       badgeColor: 'bg-emerald-600'
+    },
+    {
+      id: 'cobalt-oxide',
+      name: 'Black Cobalt Oxide',
+      formula: 'Co₃O₄',
+      purity: '99.9%',
+      image: '/cobalt-oxide-bulk.png',
+      shortDesc: 'Black cobalt(II,III) oxide for ceramic glazes, glass, pigments, and technical materials',
+      applications: ['Ceramic Glazes', 'Cobalt Blue Glass', 'Pigments', 'Catalysts'],
+      color: 'from-slate-800 to-blue-900',
+      badge: 'Ceramic Colourant',
+      badgeColor: 'bg-blue-700'
     }
   ]
 
+  const productListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Chemical Products Supplier Pakistan',
+    description:
+      'Industrial chemicals supplied by Sulman Traders in Pakistan, including Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, and Copper Carbonate.',
+    url: 'https://www.sulmantraders.com/products',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: products.map((product, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://www.sulmantraders.com/products/${product.id}`,
+        name: `${product.name} (${product.formula})`,
+        image: `https://www.sulmantraders.com${product.image}`,
+        description: product.shortDesc,
+      })),
+    },
+  }
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Which industrial chemicals does Sulman Traders supply in Pakistan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sulman Traders supplies Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, and related industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, and pigment customers.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you manufacture Black Cobalt Oxide?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Black Cobalt Oxide is traded and supplied by Sulman Traders. It is offered for ceramic glazes, cobalt blue glass, pigments, catalysts, sensors, and selected technical applications where the buyer specification matches the available grade.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I request COA and SDS documents?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Buyers can request Certificate of Analysis and Safety Data Sheet support for available products, along with packaging, grade, and application guidance.',
+        },
+      },
+    ],
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
+      <Script id="products-collection-schema" type="application/ld+json">
+        {JSON.stringify(productListJsonLd)}
+      </Script>
+      <Script id="products-faq-schema" type="application/ld+json">
+        {JSON.stringify(faqJsonLd)}
+      </Script>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
@@ -129,7 +210,7 @@ export default function ProductsPage() {
 
               {/* Description */}
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                High-purity chemicals manufactured in Pakistan. Lab-tested, certified, and trusted by 500+ companies across industries.
+                High-purity industrial chemicals manufactured, sourced, and supplied in Pakistan. Lab-tested, documented, and trusted by 500+ companies across industries.
               </p>
 
               {/* Features */}
@@ -167,7 +248,7 @@ export default function ProductsPage() {
                     <div className="relative h-72 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                       <Image
                         src={product.image}
-                        alt={`${product.name} (${product.formula}) - High purity chemical manufactured in Pakistan`}
+                        alt={`${product.name} (${product.formula}) - High purity chemical supplied by Sulman Traders in Pakistan`}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -216,6 +297,72 @@ export default function ProductsPage() {
                   </div>
                 </FadeIn>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-10">
+                <h2 className="mb-4 text-3xl font-bold text-gray-900">
+                  Industrial Chemical Supplier in Pakistan
+                </h2>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Sulman Traders supplies industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, pigments, and technical applications across Pakistan. Our product range includes Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate (AgNO3), Copper Sulphate (CuSO4), Silver Chloride (AgCl), and Copper Carbonate.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-3">
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-gray-900">Bulk Chemical Supply</h3>
+                  <p className="leading-relaxed text-gray-700">
+                    Order suitable packaging for production use, trading, and repeat industrial supply. We support buyers with product availability, packaging details, quote support, and delivery coordination.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-gray-900">Application Matching</h3>
+                  <p className="leading-relaxed text-gray-700">
+                    Choose the right grade for ceramic glazes, cobalt blue glass, pigments, agriculture, laboratory work, water treatment, electroplating, and selected technical uses.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-gray-900">Documents on Request</h3>
+                  <p className="leading-relaxed text-gray-700">
+                    Ask for COA, SDS, purity, appearance, packaging, and buyer checks before placing a bulk order. For cobalt oxide, we clearly position it as traded and supplied material.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 border-t border-gray-200 pt-10">
+                <h2 className="mb-6 text-2xl font-bold text-gray-900">Product Buying Questions</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                      Which chemicals can I buy from Sulman Traders?
+                    </h3>
+                    <p className="text-gray-700">
+                      You can request Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, and related industrial chemical supply.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                      Is Black Cobalt Oxide manufactured by Sulman Traders?
+                    </h3>
+                    <p className="text-gray-700">
+                      No. Black Cobalt Oxide (Co3O4) is traded and supplied. It is commonly used for ceramic glazes, tile colour, cobalt blue glass, pigment production, catalysts, sensors, and selected technical applications.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                      How do I choose the right product grade?
+                    </h3>
+                    <p className="text-gray-700">
+                      Share your application, required purity, packaging size, and any COA/SDS requirements. Ceramic, agriculture, laboratory, battery, and technical customers often need different grade checks.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

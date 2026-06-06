@@ -157,6 +157,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/products/cobalt-oxide" className="text-gray-300 hover:text-amber-200">
+                    Black Cobalt Oxide
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Custom Products
                   </Link>

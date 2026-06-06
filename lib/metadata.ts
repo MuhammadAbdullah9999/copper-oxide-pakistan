@@ -53,6 +53,12 @@ export const defaultMetadata: Metadata = {
     'silver chloride pakistan',
     'AgCl pakistan',
     'silver chloride manufacturer pakistan',
+    // Cobalt Oxide Keywords
+    'black cobalt oxide pakistan',
+    'cobalt oxide supplier pakistan',
+    'Co3O4 pakistan',
+    'cobalt oxide ceramic glaze',
+    'cobalt oxide pigment pakistan',
     // General Keywords
     'chemical manufacturer lahore',
     'industrial chemicals pakistan',
@@ -113,6 +119,7 @@ export function generateProductMetadata(
     'copper-sulphate': '/copper-sulphate-product.png',
     'silver-chloride': '/silver-chloride-product.png',
     'copper-carbonate': '/copper-carbonate-powder.png',
+    'cobalt-oxide': '/cobalt-oxide-bulk.png',
   };
   const imageUrl = `${BASE_URL}${productOgImage[productId] || '/og-image.jpg'}`;
 
@@ -141,6 +148,11 @@ export function generateProductMetadata(
       title: 'Copper Carbonate Supplier Pakistan | Basic Copper Carbonate Powder',
       description:
         'Buy basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Blue-green powder with COA/SDS available.',
+    },
+    'cobalt-oxide': {
+      title: 'Black Cobalt Oxide Co3O4 Supplier Pakistan | 99.9% Pure',
+      description:
+        'Buy 99.9% pure Black Cobalt Oxide (Co3O4) in Pakistan for ceramic glazes, tiles, cobalt blue glass, pigment manufacturing, catalysts, and technical applications. COA/SDS available.',
     },
   };
 

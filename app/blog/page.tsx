@@ -9,10 +9,12 @@ import { blogPosts } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Chemical Industry Blog - Sulman Traders',
-  description: 'Expert articles on chemical products including Copper Oxide, Silver Nitrate, and Copper Sulphate. Industry insights, applications, and manufacturing best practices.',
+  description: 'Expert articles on chemical products including Copper Oxide, Black Cobalt Oxide, Silver Nitrate, and Copper Sulphate. Industry insights, applications, and manufacturing best practices.',
   keywords: [
     'chemical blog',
     'copper oxide applications',
+    'cobalt oxide uses',
+    'black cobalt oxide',
     'silver nitrate uses',
     'copper sulphate agriculture',
     'industrial chemicals blog',
@@ -32,7 +34,7 @@ export default function BlogPage() {
           '@context': 'https://schema.org',
           '@type': 'Blog',
           name: 'Chemical Industry Blog - Sulman Traders',
-          description: 'Expert articles on chemical products including Copper Oxide, Silver Nitrate, and Copper Sulphate.',
+          description: 'Expert articles on chemical products including Copper Oxide, Black Cobalt Oxide, Silver Nitrate, and Copper Sulphate.',
           url: 'https://www.sulmantraders.com/blog',
           publisher: {
             '@type': 'Organization',
@@ -67,6 +69,7 @@ export default function BlogPage() {
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="bg-amber-700 text-white px-3 py-1 rounded-full text-sm">#CopperOxide</span>
+              <span className="bg-amber-700 text-white px-3 py-1 rounded-full text-sm">#CobaltOxide</span>
               <span className="bg-amber-700 text-white px-3 py-1 rounded-full text-sm">#SilverNitrate</span>
               <span className="bg-amber-700 text-white px-3 py-1 rounded-full text-sm">#CopperSulphate</span>
               <span className="bg-amber-700 text-white px-3 py-1 rounded-full text-sm">#ChemicalManufacturing</span>

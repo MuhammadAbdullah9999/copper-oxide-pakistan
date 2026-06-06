@@ -36,8 +36,8 @@ export default function Home() {
       answer: "Copper Sulphate is widely used in Pakistan for agriculture as a fungicide and fertilizer, in mining for ore processing, in water treatment for algae control, and in animal feed as a copper supplement. Pakistani farmers use it extensively for rice, wheat, and fruit crop protection. We supply agricultural-grade copper sulphate throughout Pakistan."
     },
     {
-      question: "What chemical products do you manufacture in Pakistan?",
-      answer: "We manufacture high-purity Copper Sulphate (CuSO₄) at 98-99% purity, Copper Oxide (CuO) at 99.9% purity, Silver Nitrate (AgNO₃) at 99.9% purity, and Silver Chloride (AgCl) at 99.9%+ purity. All products are manufactured in our Lahore facility and meet international quality standards. Copper Sulphate is our most popular product for agricultural use."
+      question: "What chemical products do you manufacture or supply in Pakistan?",
+      answer: "We manufacture selected industrial chemicals and also trade/supply requested products such as Black Cobalt Oxide (Co₃O₄). Our range includes Copper Sulphate (CuSO₄), Copper Oxide (CuO), Black Cobalt Oxide, Silver Nitrate (AgNO₃), Silver Chloride (AgCl), and Copper Carbonate for agriculture, ceramics, glass, pigments, laboratories, and industrial use. Copper Sulphate is our most popular product for agricultural use."
     },
     {
       question: "Do you supply Silver Nitrate for medical and laboratory use?",
@@ -46,6 +46,10 @@ export default function Home() {
     {
       question: "What are the applications of your Copper Oxide?",
       answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production for high-performance applications, as catalysts in chemical reactions, and in electronic components. It's known for its consistent particle size and high chemical purity."
+    },
+    {
+      question: "What is Black Cobalt Oxide (Co3O4) used for?",
+      answer: "Black Cobalt Oxide is mainly used by ceramic glaze manufacturers, tile factories, pottery suppliers, glass manufacturers, and pigment producers. It creates strong cobalt blue colour in ceramics and glass and is also relevant to cobalt pigments, catalysts, sensors, electronics, and high-spec battery material supply chains where the correct grade is required."
     },
     {
       question: "Do you deliver chemicals across Pakistan?",
@@ -132,4 +136,3 @@ export default function Home() {
     </div>
   )
 }
-

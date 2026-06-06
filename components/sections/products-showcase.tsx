@@ -74,6 +74,23 @@ export default function ProductsShowcase() {
         'Bulk packaging',
         'Technical documents available'
       ]
+    },
+    {
+      id: 'cobalt-oxide',
+      name: 'Black Cobalt Oxide',
+      formula: 'Co₃O₄',
+      purity: '99.9%',
+      image: '/cobalt-oxide-bulk.png',
+      description: 'Black cobalt(II,III) oxide powder for ceramic glazes, cobalt blue glass, pigments, catalysts, and technical materials.',
+      applications: ['Ceramics', 'Glass', 'Pigments', 'Catalysts'],
+      color: 'from-slate-800 to-blue-900',
+      highlight: 'Ceramic Colourant',
+      features: [
+        'Deep blue colour strength',
+        'Black Co3O4 powder',
+        'Bulk orders welcome',
+        'COA/SDS available'
+      ]
     }
   ]
 
@@ -153,7 +170,7 @@ export default function ProductsShowcase() {
               <div className="relative h-72 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                 <Image
                   src={product.image}
-                  alt={`${product.name} (${product.formula}) manufactured in Pakistan`}
+                  alt={`${product.name} (${product.formula}) supplied by Sulman Traders in Pakistan`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />

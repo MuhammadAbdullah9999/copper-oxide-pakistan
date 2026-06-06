@@ -15,6 +15,12 @@ const productImages = [
     description: "98% Agricultural Grade"
   },
   {
+    src: "/cobalt-oxide-bulk.png",
+    alt: "Bulk Black Cobalt Oxide (Co3O4) supplied in Pakistan by Sulman Traders",
+    title: "Black Cobalt Oxide (Co3O4)",
+    description: "99.9% Pure"
+  },
+  {
     src: "/copper-oxide-in-plate.jpeg",
     alt: "High purity Copper Oxide (CuO) manufactured in Pakistan by Sulman Traders",
     title: "Copper Oxide (CuO)",
@@ -25,12 +31,6 @@ const productImages = [
     alt: "High purity Silver Nitrate (AgNO₃) manufactured in Pakistan by Sulman Traders",
     title: "Silver Nitrate (AgNO₃)",
     description: "99.9% Pure"
-  },
-  {
-    src: "/copper-oxide-pigment.jpg",
-    alt: "Copper Oxide Pigment for industrial applications in Pakistan",
-    title: "Copper Oxide Pigment",
-    description: "Industrial Grade"
   }
 ]
 
@@ -81,14 +81,14 @@ export default function ModernHero() {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
               Pakistan's Leading
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 mt-2">
-                Chemical Manufacturer
+                Chemical Manufacturer & Supplier
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-gray-600 leading-relaxed max-w-xl animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
-              High-purity <strong>Copper Oxide</strong>, <strong>Silver Nitrate</strong>, and <strong>Copper Sulphate</strong> for industries across Pakistan. 
-              <span className="block mt-2 text-gray-700 font-medium">99.9% purity guaranteed. Lab-tested. Trusted by 500+ companies.</span>
+              High-purity <strong>Copper Oxide</strong>, <strong>Black Cobalt Oxide</strong>, <strong>Silver Nitrate</strong>, and <strong>Copper Sulphate</strong> for industries across Pakistan. 
+              <span className="block mt-2 text-gray-700 font-medium">Lab-tested products, traded cobalt oxide, and trusted supply for 500+ companies.</span>
             </p>
 
             {/* Trust Indicators */}
@@ -259,4 +259,3 @@ export default function ModernHero() {
     </section>
   )
 }
-

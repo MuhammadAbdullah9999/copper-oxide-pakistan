@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'copper-sulphate',
     'silver-chloride',
     'copper-carbonate',
+    'cobalt-oxide',
   ];
 
   const productRoutes = productIds.map(id => ({

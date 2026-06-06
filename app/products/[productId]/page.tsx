@@ -216,6 +216,62 @@ const products: Record<string, Product> = {
       'Suitable for multiple industrial applications',
       'Available with technical documentation on request'
     ]
+  },
+  'cobalt-oxide': {
+    name: 'Black Cobalt Oxide (Co₃O₄)',
+    image: '/cobalt-oxide-bulk.png',
+    description: 'Black cobalt(II,III) oxide powder for ceramic glazes, tile colour, cobalt blue glass, pigment manufacturing, and selected technical applications.',
+    purity: '99.9%',
+    specifications: {
+      'Chemical Formula': 'Co₃O₄',
+      'Appearance': 'Black Powder',
+      'Molecular Weight': '240.80 g/mol',
+      'Material Type': 'Cobalt(II,III) oxide / spinel cobalt oxide',
+      'Primary Grade': '99.9% pure ceramic and industrial use'
+    },
+    applications: [
+      {
+        title: 'Ceramic & Tile Industry',
+        description: 'A powerful colourant for ceramic glazes, floor tiles, wall tiles, sanitary ware, pottery, and decorative ceramic finishes.'
+      },
+      {
+        title: 'Glass Industry',
+        description: 'Used to produce cobalt blue glass and to correct unwanted yellow tint in selected glass formulations.'
+      },
+      {
+        title: 'Pigment Manufacturing',
+        description: 'Raw material for cobalt blue, cobalt black, and mixed-metal ceramic pigment systems.'
+      },
+      {
+        title: 'Battery Materials',
+        description: 'Used in lithium cobalt oxide and cobalt-containing battery material supply chains where high-purity grades are specified.'
+      },
+      {
+        title: 'Catalysts',
+        description: 'Used in oxidation catalysis, environmental emission-control research, and selected chemical manufacturing processes.'
+      },
+      {
+        title: 'Sensors & Electronics',
+        description: 'Used in gas sensors, electronic ceramic components, and advanced materials research.'
+      }
+    ],
+    benefits: [
+      'Strong cobalt blue colour development in ceramic and glass systems',
+      'Useful black oxide form for pigment and mixed-metal oxide production',
+      'Suitable for ceramic, tile, pottery, glass, and pigment customers',
+      'Bulk supply support for manufacturers and traders',
+      'COA and SDS available on request',
+      'Application guidance for choosing ceramic-grade versus higher-spec technical material'
+    ],
+    uses: [
+      'Deep blue ceramic glazes and tile colour',
+      'Cobalt blue glass and decorative glass products',
+      'Cobalt blue, cobalt black, and mixed-metal ceramic pigment production',
+      'Sanitary ware, pottery, floor tile, and wall tile glaze systems',
+      'Lithium cobalt oxide and battery material production where high-purity cobalt feedstock is required',
+      'Oxidation catalysts, emission-control materials, and process catalyst research',
+      'Gas sensor materials and electronic ceramic components'
+    ]
   }
 }
 
@@ -239,6 +295,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     ? ['silver chloride powder', 'AgCl Pakistan', 'silver chloride photography', 'silver chloride electrodes']
     : productId === 'copper-carbonate'
     ? ['copper carbonate powder', 'basic copper carbonate', 'copper carbonate Pakistan', 'copper carbonate ceramics', 'copper carbonate pigment']
+    : productId === 'cobalt-oxide'
+    ? ['black cobalt oxide', 'Co3O4 supplier Pakistan', 'cobalt oxide ceramic glaze', 'cobalt oxide blue glass', 'cobalt oxide pigment', 'cobalt oxide battery material']
     : ['high purity chemicals', 'technical grade chemicals'];
 
   return generateProductMetadata(
@@ -256,6 +314,7 @@ export async function generateStaticParams() {
     { productId: 'copper-sulphate' },
     { productId: 'silver-chloride' },
     { productId: 'copper-carbonate' },
+    { productId: 'cobalt-oxide' },
   ];
 }
 
@@ -295,16 +354,20 @@ export default async function ProductDetail({ params }: ProductPageProps) {
             '@type': 'Brand',
             name: 'Sulman Traders'
           },
-          manufacturer: {
-            '@type': 'Organization',
-            name: 'Sulman Traders',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Lahore',
-              addressRegion: 'Punjab',
-              addressCountry: 'PK'
-            }
-          },
+          ...(productId === 'cobalt-oxide'
+            ? {}
+            : {
+                manufacturer: {
+                  '@type': 'Organization',
+                  name: 'Sulman Traders',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Lahore',
+                    addressRegion: 'Punjab',
+                    addressCountry: 'PK'
+                  }
+                }
+              }),
           offers: {
             '@type': 'Offer',
             availability: 'https://schema.org/InStock',
@@ -423,7 +486,9 @@ export default async function ProductDetail({ params }: ProductPageProps) {
                   About Our {product.name.split('(')[0].trim()}
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  As a leading manufacturer based in Lahore, Pakistan, we have been producing premium {product.name.split('(')[0].trim()} products for over five decades. Our advanced manufacturing processes ensure exceptional product quality, meeting both national and international standards.
+                  {productId === 'cobalt-oxide'
+                    ? `As a Lahore-based chemical supplier and trader, we source and supply ${product.name.split('(')[0].trim()} for ceramic, glass, pigment, and selected technical customers across Pakistan. We focus on reliable bulk availability, practical documentation, and grade matching for the customer application.`
+                    : `As a leading manufacturer based in Lahore, Pakistan, we have been producing premium ${product.name.split('(')[0].trim()} products for over five decades. Our advanced manufacturing processes ensure exceptional product quality, meeting both national and international standards.`}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">

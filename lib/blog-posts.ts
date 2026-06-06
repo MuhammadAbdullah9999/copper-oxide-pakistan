@@ -1,5 +1,53 @@
 export const blogPosts = [
   {
+    id: 'cobalt-oxide-ceramics-glass-blue-colour',
+    title: 'Black Cobalt Oxide in Ceramics, Tiles & Cobalt Blue Glass',
+    excerpt:
+      'A detailed buyer and supplier guide to Co3O4 for ceramic glazes, floor tiles, wall tiles, sanitary ware, pottery, and cobalt blue glass colour systems.',
+    date: 'June 6, 2026',
+    isoDate: '2026-06-06',
+    category: 'Cobalt Oxide',
+    image: '/cobalt-oxide-ceramics-glass.png',
+    author: 'Muhammad Salman',
+    tags: ['cobalt oxide', 'Co3O4', 'ceramic glaze', 'cobalt blue glass', 'tiles'],
+  },
+  {
+    id: 'cobalt-oxide-pigments-cobalt-blue-black',
+    title: 'Cobalt Oxide for Pigment Manufacturing: Cobalt Blue, Black & Mixed-Metal Pigments',
+    excerpt:
+      'How black cobalt oxide is used as a raw material for cobalt blue pigments, cobalt black pigments, ceramic stains, and mixed-metal oxide colour systems.',
+    date: 'June 6, 2026',
+    isoDate: '2026-06-06',
+    category: 'Pigments',
+    image: '/cobalt-oxide-pigments.png',
+    author: 'Muhammad Salman',
+    tags: ['cobalt oxide pigment', 'cobalt blue', 'cobalt black', 'ceramic pigment', 'Co3O4'],
+  },
+  {
+    id: 'cobalt-oxide-battery-materials-high-purity-guide',
+    title: 'Cobalt Oxide in Lithium-Ion Battery Materials: Uses, Grades & Buyer Reality',
+    excerpt:
+      'A practical guide to cobalt oxide in lithium cobalt oxide and battery materials, including why battery customers require higher purity than ceramic-grade buyers.',
+    date: 'June 6, 2026',
+    isoDate: '2026-06-06',
+    category: 'Battery Materials',
+    image: '/cobalt-oxide-batteries.png',
+    author: 'Muhammad Salman',
+    tags: ['cobalt oxide battery', 'lithium cobalt oxide', 'battery materials', 'Co3O4', 'high purity cobalt'],
+  },
+  {
+    id: 'cobalt-oxide-catalysts-sensors-electronics',
+    title: 'Cobalt Oxide for Catalysts, Gas Sensors & Electronic Ceramics',
+    excerpt:
+      'Where Co3O4 fits in oxidation catalysis, emission-control research, gas sensors, electronic ceramics, and advanced materials development.',
+    date: 'June 6, 2026',
+    isoDate: '2026-06-06',
+    category: 'Technical Applications',
+    image: '/cobalt-oxide-catalysts-sensors.png',
+    author: 'Muhammad Salman',
+    tags: ['cobalt oxide catalyst', 'gas sensors', 'electronic ceramics', 'Co3O4', 'technical materials'],
+  },
+  {
     id: 'copper-carbonate-uses-pakistan',
     title: 'Copper Carbonate: Uses, Applications, Handling & Buying Guide',
     excerpt:
