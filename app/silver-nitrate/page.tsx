@@ -5,10 +5,13 @@ import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Metadata } from 'next';
 import Script from 'next/script';
+import { productSalesInfo } from "@/lib/product-sales";
+
+const silverNitrateSales = productSalesInfo['silver-nitrate'];
 
 export const metadata: Metadata = {
-  title: 'Silver Nitrate (AgNO₃) Manufacturer Pakistan | 99.9% Pure - Sulman Traders',
-  description: 'Premium Silver Nitrate (AgNO₃) manufacturer in Pakistan. 99.9%+ purity for medical, laboratory, photography, and industrial applications. Leading supplier in Lahore since 1974. Buy high-quality silver nitrate crystals.',
+  title: 'Silver Nitrate Pakistan | 25 g Price | 99.9% & 70% Grades',
+  description: 'Buy Silver Nitrate (AgNO₃) in Pakistan. 99.9% grade at PKR 12,000 per 25 g and 70% grade at PKR 8,000 per 25 g. Prices vary with silver market rates.',
   keywords: [
     'silver nitrate pakistan',
     'silver nitrate manufacturer pakistan',
@@ -31,8 +34,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/silver-nitrate',
   },
   openGraph: {
-    title: 'Silver Nitrate (AgNO₃) Manufacturer Pakistan | 99.9% Pure',
-    description: 'Premium 99.9%+ pure Silver Nitrate manufactured in Pakistan for medical, laboratory, and industrial applications.',
+    title: 'Silver Nitrate Pakistan | 25 g Price',
+    description: 'Silver Nitrate in 25 g packaging. 99.9% grade and 70% grade available; prices may vary with silver market rates.',
     url: 'https://www.sulmantraders.com/silver-nitrate',
     images: [
       {
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Silver Nitrate (AgNO₃) Manufacturer Pakistan',
-    description: 'Leading manufacturer of 99.9%+ pure Silver Nitrate in Pakistan for medical and industrial applications.',
+    description: 'Buy Silver Nitrate in Pakistan. 25 g MOQ, 99.9% and 70% grades available.',
     images: ['https://www.sulmantraders.com/silver-nitrate-product.png'],
   },
 };
@@ -61,8 +64,11 @@ export default function SilverNitratePage() {
           '@context': 'https://schema.org',
           '@type': 'Product',
           name: 'Silver Nitrate (AgNO₃)',
-          image: 'https://www.sulmantraders.com/silver-nitrate-product.png',
-          description: 'Premium quality silver nitrate with 99.9%+ purity for medical, laboratory, photography, and industrial applications.',
+          image: [
+            'https://www.sulmantraders.com/silver-nitrate-product.png',
+            'https://www.sulmantraders.com/PXL_20260607_112351830.jpg.jpeg'
+          ],
+          description: 'Premium quality silver nitrate in 99.9% and 70% grades for medical, laboratory, photography, and industrial applications.',
           brand: {
             '@type': 'Brand',
             name: 'Sulman Traders'
@@ -78,9 +84,12 @@ export default function SilverNitratePage() {
             }
           },
           offers: {
-            '@type': 'Offer',
+            '@type': 'AggregateOffer',
             availability: 'https://schema.org/InStock',
             priceCurrency: 'PKR',
+            lowPrice: '8000',
+            highPrice: '12000',
+            offerCount: '2',
             seller: {
               '@type': 'Organization',
               name: 'Sulman Traders'
@@ -90,7 +99,7 @@ export default function SilverNitratePage() {
             {
               '@type': 'PropertyValue',
               name: 'Purity',
-              value: '99.9%+'
+              value: '99.9% and 70% grades available'
             },
             {
               '@type': 'PropertyValue',
@@ -101,6 +110,16 @@ export default function SilverNitratePage() {
               '@type': 'PropertyValue',
               name: 'Appearance',
               value: 'White Crystalline Solid'
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'Packaging',
+              value: silverNitrateSales.packaging
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'Minimum Order Quantity',
+              value: silverNitrateSales.moq
             }
           ],
           category: 'Laboratory Chemicals, Medical Supplies, Industrial Chemicals'
@@ -125,7 +144,7 @@ export default function SilverNitratePage() {
                   Silver Nitrate (AgNO₃) Manufacturer Pakistan
                 </h1>
                 <p className="text-xl text-white max-w-3xl mx-auto">
-                  Premium 99.9%+ pure silver nitrate for medical, laboratory, and industrial applications
+                  25 g silver nitrate packaging with 99.9% and 70% grades available in Pakistan
                 </p>
               </div>
             </div>
@@ -139,7 +158,7 @@ export default function SilverNitratePage() {
                   <div className="rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
                     <Image
                       src="/silver-nitrate-product.png"
-                      alt="High purity silver nitrate crystals Pakistan"
+                      alt="Silver nitrate crystals in labelled bottle"
                       width={600}
                       height={400}
                       className="w-full h-auto object-cover rounded"
@@ -152,13 +171,13 @@ export default function SilverNitratePage() {
                     Premium Silver Nitrate Manufacturer in Pakistan
                   </h2>
                   <p className="text-gray-700 mb-6">
-                    Sulman Traders has been manufacturing high-purity silver nitrate (AgNO₃) in Pakistan since 1974. Our silver nitrate is produced to meet international quality standards, ensuring 99.9%+ purity for critical medical, laboratory, and industrial applications.
+                    Sulman Traders has been manufacturing and supplying silver nitrate (AgNO₃) in Pakistan since 1974. We offer 99.9% grade and 70% grade silver nitrate in 25 g packaging for medical, laboratory, photography, and industrial applications.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="text-sm font-semibold text-amber-700 mb-1">Purity</h3>
-                      <p className="text-lg font-bold text-gray-900">99.9%+</p>
+                      <p className="text-lg font-bold text-gray-900">99.9% / 70%</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="text-sm font-semibold text-amber-700 mb-1">Formula</h3>
@@ -169,8 +188,16 @@ export default function SilverNitratePage() {
                       <p className="text-lg font-bold text-gray-900">White Crystals</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
-                      <h3 className="text-sm font-semibold text-amber-700 mb-1">Solubility</h3>
-                      <p className="text-lg font-bold text-gray-900">High in Water</p>
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">MOQ</h3>
+                      <p className="text-lg font-bold text-gray-900">25 g</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">99.9% Grade</h3>
+                      <p className="text-lg font-bold text-gray-900">PKR 12,000 / 25 g</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">70% Grade</h3>
+                      <p className="text-lg font-bold text-gray-900">PKR 8,000 / 25 g</p>
                     </div>
                   </div>
 
@@ -179,6 +206,49 @@ export default function SilverNitratePage() {
                       Request a Quote
                     </Button>
                   </Link>
+                </div>
+              </div>
+
+              <div className="mt-12 rounded-lg bg-amber-50 p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Silver Nitrate Price, Grades, and Packaging
+                </h2>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <div>
+                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Current prices</h3>
+                    <ul className="space-y-3 text-gray-700">
+                      <li><strong>99.9% grade:</strong> PKR 12,000 per 25 g</li>
+                      <li><strong>70% grade:</strong> PKR 8,000 per 25 g</li>
+                      <li><strong>MOQ:</strong> {silverNitrateSales.moq}</li>
+                      <li><strong>Packaging:</strong> {silverNitrateSales.packaging}</li>
+                    </ul>
+                    <p className="mt-4 text-gray-700">
+                      {silverNitrateSales.note}
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Packaging photos</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="relative h-52 overflow-hidden rounded-lg border border-amber-100 bg-white">
+                        <Image
+                          src="/PXL_20260607_112351830.jpg.jpeg"
+                          alt="Silver nitrate 25 gram box packaging front"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 50vw, 220px"
+                        />
+                      </div>
+                      <div className="relative h-52 overflow-hidden rounded-lg border border-amber-100 bg-white">
+                        <Image
+                          src="/PXL_20260607_112400972.jpg.jpeg"
+                          alt="Silver nitrate 25 gram box packaging close-up"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 50vw, 220px"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -215,7 +285,7 @@ export default function SilverNitratePage() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <li className="flex items-start">
                     <span className="text-amber-700 mr-2">✓</span>
-                    <span className="text-gray-700">99.9%+ pharmaceutical-grade purity</span>
+                    <span className="text-gray-700">99.9% grade and 70% grade available</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-amber-700 mr-2">✓</span>

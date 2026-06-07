@@ -7,6 +7,7 @@ import Script from 'next/script'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, CheckCircle, Sparkles } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
+import { productSalesInfo } from "@/lib/product-sales"
 
 export const metadata: Metadata = {
   title: 'Chemical Products Supplier Pakistan | Copper Oxide, Cobalt Oxide, Silver Nitrate',
@@ -41,6 +42,7 @@ export default function ProductsPage() {
   const products = [
     {
       id: 'copper-oxide',
+      href: '/copper-oxide',
       name: 'Copper Oxide',
       formula: 'CuO',
       purity: '99.9%',
@@ -53,11 +55,12 @@ export default function ProductsPage() {
     },
     {
       id: 'silver-nitrate',
+      href: '/silver-nitrate',
       name: 'Silver Nitrate',
       formula: 'AgNO₃',
-      purity: '99.9%',
+      purity: '99.9% / 70%',
       image: '/silver-nitrate-product.png',
-      shortDesc: 'Pharmaceutical-grade silver nitrate crystals',
+      shortDesc: 'Silver nitrate in 25 g packaging; price varies with silver market rates',
       applications: ['Medical & Healthcare', 'Laboratory Research', 'Photography', 'Electronics'],
       color: 'from-gray-300 to-gray-500',
       badge: 'Medical Grade',
@@ -65,11 +68,12 @@ export default function ProductsPage() {
     },
     {
       id: 'copper-sulphate',
+      href: '/copper-sulphate',
       name: 'Copper Sulphate',
       formula: 'CuSO₄·5H₂O',
-      purity: '98%+',
+      purity: '25% / 20% / 15%',
       image: '/copper-sulphate-product.png',
-      shortDesc: 'Blue vitriol for agricultural and industrial use',
+      shortDesc: 'Blue vitriol / Neela Thotha in 25 kg bags for agriculture, lab, and industry',
       applications: ['Agriculture', 'Mining & Ore Processing', 'Water Treatment', 'Animal Feed'],
       color: 'from-orange-400 to-orange-600',
       badge: 'Best for Agriculture',
@@ -91,9 +95,9 @@ export default function ProductsPage() {
       id: 'copper-carbonate',
       name: 'Copper Carbonate',
       formula: 'CuCO₃·Cu(OH)₂',
-      purity: '98%+',
+      purity: '55%',
       image: '/copper-carbonate-powder.png',
-      shortDesc: 'Blue-green basic copper carbonate powder',
+      shortDesc: '55% blue-green basic copper carbonate powder',
       applications: ['Ceramic Glazes', 'Pigments', 'Copper Salts', 'Formulations'],
       color: 'from-emerald-500 to-teal-700',
       badge: 'Pigment & Ceramic',
@@ -113,6 +117,29 @@ export default function ProductsPage() {
     }
   ]
 
+  const priceGuides = [
+    {
+      title: 'Copper Oxide Price in Pakistan',
+      href: '/copper-oxide-price-in-pakistan',
+      text: productSalesInfo['copper-oxide'].priceLabel,
+    },
+    {
+      title: 'Copper Sulphate Price in Pakistan',
+      href: '/copper-sulphate-price-in-pakistan',
+      text: productSalesInfo['copper-sulphate'].priceLabel,
+    },
+    {
+      title: 'Silver Nitrate Price in Pakistan',
+      href: '/silver-nitrate-price-in-pakistan',
+      text: productSalesInfo['silver-nitrate'].priceLabel,
+    },
+    {
+      title: 'Copper Carbonate Price in Pakistan',
+      href: '/copper-carbonate-price-in-pakistan',
+      text: productSalesInfo['copper-carbonate'].priceLabel,
+    },
+  ]
+
   const productListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -125,10 +152,20 @@ export default function ProductsPage() {
       itemListElement: products.map((product, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        url: `https://www.sulmantraders.com/products/${product.id}`,
+        url: `https://www.sulmantraders.com${product.href || `/products/${product.id}`}`,
         name: `${product.name} (${product.formula})`,
         image: `https://www.sulmantraders.com${product.image}`,
         description: product.shortDesc,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'PKR',
+          availability: 'https://schema.org/InStock',
+          seller: {
+            '@type': 'Organization',
+            name: 'Sulman Traders',
+          },
+          description: productSalesInfo[product.id]?.priceLabel,
+        },
       })),
     },
   }
@@ -159,6 +196,14 @@ export default function ProductsPage() {
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes. Buyers can request Certificate of Analysis and Safety Data Sheet support for available products, along with packaging, grade, and application guidance.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the current product prices and MOQ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Current listed prices include Copper Oxide at PKR 3,000 per kg with 10 kg MOQ, Copper Sulphate at PKR 750-1,200 per kg in 25 kg bags, Silver Nitrate at PKR 12,000 per 25 g for 99.9% and PKR 8,000 per 25 g for 70%, and Copper Carbonate at PKR 2,000 per kg. Silver Nitrate prices may vary with silver market rates.',
         },
       },
     ],
@@ -221,7 +266,7 @@ export default function ProductsPage() {
                 </div>
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700 font-medium">99.9% Purity</span>
+                  <span className="text-gray-700 font-medium">Declared Grades</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
                   <CheckCircle className="w-5 h-5 text-green-600" />
@@ -274,6 +319,21 @@ export default function ProductsPage() {
                       {/* Description */}
                       <p className="text-gray-600 mb-6">{product.shortDesc}</p>
 
+                      <div className="mb-6 space-y-1 rounded-lg bg-gray-50 p-4 text-sm text-gray-700">
+                        <p>
+                          <span className="font-semibold text-gray-900">Price: </span>
+                          {productSalesInfo[product.id]?.priceLabel}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-gray-900">Packaging: </span>
+                          {productSalesInfo[product.id]?.packaging}
+                        </p>
+                        <p>
+                          <span className="font-semibold text-gray-900">MOQ: </span>
+                          {productSalesInfo[product.id]?.moq}
+                        </p>
+                      </div>
+
                       {/* Applications */}
                       <div className="mb-6">
                         <div className="text-sm font-semibold text-gray-700 mb-3">Key Applications:</div>
@@ -287,7 +347,7 @@ export default function ProductsPage() {
                       </div>
 
                       {/* CTA Button */}
-                      <Link href={`/products/${product.id}`}>
+                      <Link href={product.href || `/products/${product.id}`}>
                         <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white group-hover:shadow-lg transition-all">
                           View Details & Pricing
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -297,6 +357,24 @@ export default function ProductsPage() {
                   </div>
                 </FadeIn>
               ))}
+            </div>
+
+            <div className="mx-auto mt-14 max-w-6xl rounded-2xl bg-gray-50 p-6">
+              <h2 className="mb-5 text-2xl font-bold text-gray-900">
+                Chemical Price Guides in Pakistan
+              </h2>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                {priceGuides.map((guide) => (
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    className="rounded-lg border border-gray-200 bg-white p-4 transition-colors hover:border-amber-300 hover:bg-amber-50"
+                  >
+                    <h3 className="mb-2 font-semibold text-gray-900">{guide.title}</h3>
+                    <p className="text-sm text-gray-700">{guide.text}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -351,6 +429,14 @@ export default function ProductsPage() {
                     </h3>
                     <p className="text-gray-700">
                       No. Black Cobalt Oxide (Co3O4) is traded and supplied. It is commonly used for ceramic glazes, tile colour, cobalt blue glass, pigment production, catalysts, sensors, and selected technical applications.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                      What are your current product prices and MOQ?
+                    </h3>
+                    <p className="text-gray-700">
+                      Copper Oxide is PKR 3,000/kg with 10 kg MOQ and 25 kg recommended packaging. Copper Sulphate is PKR 750-1,200/kg in 25 kg bags depending on grade. Silver Nitrate is sold in 25 g packs at PKR 12,000 for 99.9% and PKR 8,000 for 70%, with prices varying by silver market rates. Copper Carbonate 55% is PKR 2,000/kg. Cobalt Oxide and Silver Chloride prices are confirmed at quotation.
                     </p>
                   </div>
                   <div>

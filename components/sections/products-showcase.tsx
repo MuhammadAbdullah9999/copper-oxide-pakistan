@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, CheckCircle, Star } from 'lucide-react'
+import { productSalesInfo } from '@/lib/product-sales'
 
 export default function ProductsShowcase() {
   const products = [
     {
       id: 'copper-oxide',
+      href: '/copper-oxide',
       name: 'Copper Oxide',
       formula: 'CuO',
       purity: '99.9%',
@@ -20,41 +22,43 @@ export default function ProductsShowcase() {
       features: [
         'Consistent particle size',
         'High thermal stability',
-        'Food grade available',
-        'Bulk orders welcome'
+        '10 kg MOQ',
+        '25 kg recommended'
       ]
     },
     {
       id: 'silver-nitrate',
+      href: '/silver-nitrate',
       name: 'Silver Nitrate',
       formula: 'AgNO₃',
-      purity: '99.9%',
+      purity: '99.9% / 70%',
       image: '/silver-nitrate-product.png',
-      description: 'Pharmaceutical-grade silver nitrate crystals for medical, laboratory, and photographic applications.',
+      description: 'Silver nitrate in 25 g packaging for medical, laboratory, and photographic applications.',
       applications: ['Medical', 'Laboratory', 'Photography', 'Electronics'],
       color: 'from-gray-300 to-gray-500',
       highlight: 'Medical Grade',
       features: [
-        'USP/BP grade',
+        '25 g MOQ',
         'Light-protected packaging',
-        'MSDS included',
-        'Small batches available'
+        '99.9% grade available',
+        '70% grade available'
       ]
     },
     {
       id: 'copper-sulphate',
+      href: '/copper-sulphate',
       name: 'Copper Sulphate',
       formula: 'CuSO₄·5H₂O',
-      purity: '99%',
+      purity: '25% / 20% / 15%',
       image: '/copper-sulphate-product.png',
-      description: 'Blue vitriol for agriculture, water treatment, mining, and animal feed supplement.',
+      description: 'Blue vitriol / Neela Thotha in 25 kg bags for agriculture, water treatment, mining, and industry.',
       applications: ['Agriculture', 'Mining', 'Water Treatment', 'Animal Feed'],
       color: 'from-blue-400 to-blue-600',
       highlight: 'Best for Agriculture',
       features: [
-        'Fungicide grade',
+        'Lab and agri grades',
         'Soluble in water',
-        'Agricultural certified',
+        '25 kg packaging',
         'Wholesale pricing'
       ]
     },
@@ -62,9 +66,9 @@ export default function ProductsShowcase() {
       id: 'copper-carbonate',
       name: 'Copper Carbonate',
       formula: 'CuCO₃·Cu(OH)₂',
-      purity: '98%+',
+      purity: '55%',
       image: '/copper-carbonate-powder.png',
-      description: 'Blue-green basic copper carbonate powder for ceramic glazes, pigments, and copper salt manufacturing.',
+      description: '55% blue-green basic copper carbonate powder for ceramic glazes, pigments, and copper salt manufacturing.',
       applications: ['Ceramics', 'Pigments', 'Chemical Manufacturing', 'Formulations'],
       color: 'from-emerald-500 to-teal-700',
       highlight: 'Pigment & Ceramic',
@@ -143,7 +147,7 @@ export default function ProductsShowcase() {
                   Overview &amp; gallery
                 </Button>
               </Link>
-              <Link href="/products/copper-sulphate">
+              <Link href="/copper-sulphate">
                 <Button size="sm" variant="outline" className="border-amber-600 text-amber-800 hover:bg-amber-50">
                   Technical details
                 </Button>
@@ -198,6 +202,21 @@ export default function ProductsShowcase() {
                   {product.description}
                 </p>
 
+                <div className="mb-6 space-y-1 rounded-lg bg-gray-50 p-4 text-sm text-gray-700">
+                  <p>
+                    <span className="font-semibold text-gray-900">Price: </span>
+                    {productSalesInfo[product.id]?.priceLabel}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-gray-900">Packaging: </span>
+                    {productSalesInfo[product.id]?.packaging}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-gray-900">MOQ: </span>
+                    {productSalesInfo[product.id]?.moq}
+                  </p>
+                </div>
+
                 {/* Applications */}
                 <div className="mb-6">
                   <div className="text-sm font-semibold text-gray-700 mb-3">Key Applications:</div>
@@ -221,7 +240,7 @@ export default function ProductsShowcase() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href={`/products/${product.id}`}>
+                <Link href={product.href || `/products/${product.id}`}>
                   <Button className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white group-hover:shadow-lg transition-all">
                     View Details
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

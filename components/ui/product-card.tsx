@@ -12,6 +12,9 @@ interface ProductCardProps {
   applications: string[];
   link: string;
   purity: string;
+  priceLabel?: string;
+  packaging?: string;
+  moq?: string;
 }
 
 export function ProductCard({
@@ -23,6 +26,9 @@ export function ProductCard({
   applications,
   link,
   purity,
+  priceLabel,
+  packaging,
+  moq,
 }: ProductCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transition-transform hover:translate-y-[-4px]">
@@ -44,6 +50,28 @@ export function ProductCard({
           <span className="text-sm font-semibold text-gray-700">Purity: </span>
           <span className="text-sm text-gray-600">{purity}</span>
         </div>
+        {(priceLabel || packaging || moq) && (
+          <div className="mb-4 space-y-1 rounded-md bg-gray-50 p-3 text-sm text-gray-700">
+            {priceLabel && (
+              <p>
+                <span className="font-semibold text-gray-900">Price: </span>
+                {priceLabel}
+              </p>
+            )}
+            {packaging && (
+              <p>
+                <span className="font-semibold text-gray-900">Pack: </span>
+                {packaging}
+              </p>
+            )}
+            {moq && (
+              <p>
+                <span className="font-semibold text-gray-900">MOQ: </span>
+                {moq}
+              </p>
+            )}
+          </div>
+        )}
         <div className="flex flex-wrap gap-2 mb-4">
           {applications.map((app, index) => (
             <span

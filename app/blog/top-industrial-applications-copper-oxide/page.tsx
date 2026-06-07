@@ -291,7 +291,7 @@ export default function CopperOxideBlog() {
                 </p>
                 <p className="mt-4">
                   Explore specifications, applications and availability on our{' '}
-                  <Link href="/products/copper-oxide" className="text-amber-700 underline hover:no-underline">Copper Oxide (CuO) product page</Link>.
+                  <Link href="/copper-oxide" className="text-amber-700 underline hover:no-underline">Copper Oxide (CuO) product page</Link>.
                 </p>
 
                 {/* FAQ Section with Schema */}

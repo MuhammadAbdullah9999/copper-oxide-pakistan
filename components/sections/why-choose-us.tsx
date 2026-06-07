@@ -8,7 +8,7 @@ export default function WhyChooseUs() {
     {
       icon: Award,
       title: "Premium Quality",
-      description: "All our chemicals meet international quality standards with 99.9% purity guaranteed. Lab-tested and certified with every batch.",
+      description: "Products are supplied by declared grade with lab checks, packaging details, and COA/SDS support available on request.",
       color: "from-amber-500 to-amber-600"
     },
     {
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     {
       icon: TrendingUp,
       title: "Competitive Pricing",
-      description: "Best prices in Pakistan with bulk discounts available. No hidden costs. Direct from manufacturer saves you 30-40%.",
+      description: "Clear buyer pricing for available grades, MOQ guidance, and packaging details before you place an order.",
       color: "from-red-500 to-red-600"
     },
     {
@@ -108,10 +108,10 @@ export default function WhyChooseUs() {
             </div>
             <div className="text-center">
               <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 mb-4">
-                <div className="text-3xl font-bold text-blue-700">99.9%</div>
-                <div className="text-sm text-blue-600">Purity</div>
+                <div className="text-3xl font-bold text-blue-700">COA</div>
+                <div className="text-sm text-blue-600">Support</div>
               </div>
-              <div className="text-sm text-gray-600 font-medium">Lab Verified</div>
+              <div className="text-sm text-gray-600 font-medium">On Request</div>
             </div>
             <div className="text-center">
               <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6 mb-4">

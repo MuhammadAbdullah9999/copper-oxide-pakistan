@@ -274,7 +274,7 @@ export default function SilverNitrateBlog() {
                 </p>
                 <p className="mt-4">
                   Looking for reliable supply? Learn more about our high‑purity product on the{' '}
-                  <Link href="/products/silver-nitrate" className="text-amber-700 underline hover:no-underline">
+                  <Link href="/silver-nitrate" className="text-amber-700 underline hover:no-underline">
                     Silver Nitrate (AgNO₃) product page
                   </Link>
                   .

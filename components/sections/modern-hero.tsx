@@ -12,7 +12,7 @@ const productImages = [
     src: "/images/products/copper sulphate-placed-on-paper-4.jpg",
     alt: "High purity Copper Sulphate (CuSO₄) manufactured in Pakistan by Sulman Traders",
     title: "Copper Sulphate (CuSO₄)",
-    description: "98% Agricultural Grade"
+    description: "25 kg Bags • Lab & Agri Grades"
   },
   {
     src: "/cobalt-oxide-bulk.png",
@@ -24,13 +24,13 @@ const productImages = [
     src: "/copper-oxide-in-plate.jpeg",
     alt: "High purity Copper Oxide (CuO) manufactured in Pakistan by Sulman Traders",
     title: "Copper Oxide (CuO)",
-    description: "99.9% Pure"
+    description: "PKR 3,000/kg • 25 kg Pack"
   },
   {
-    src: "/silver-nitrate-in-pan.jpg",
+    src: "/silver-nitrate-product.png",
     alt: "High purity Silver Nitrate (AgNO₃) manufactured in Pakistan by Sulman Traders",
     title: "Silver Nitrate (AgNO₃)",
-    description: "99.9% Pure"
+    description: "25 g Pack • 99.9% & 70%"
   }
 ]
 
@@ -132,8 +132,8 @@ export default function ModernHero() {
                 <div className="text-sm text-gray-600 mt-1">Active Clients</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-amber-600">99.9%</div>
-                <div className="text-sm text-gray-600 mt-1">Purity Rate</div>
+                <div className="text-3xl font-bold text-amber-600">25 kg</div>
+                <div className="text-sm text-gray-600 mt-1">Bulk Packs</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-amber-600">50+</div>
@@ -227,19 +227,19 @@ export default function ModernHero() {
                   className="rounded-lg mb-2"
                 />
                 <h4 className="font-semibold text-sm">Copper Oxide</h4>
-                <p className="text-xs text-gray-500">CuO • 99.9% Pure</p>
+                <p className="text-xs text-gray-500">CuO • PKR 3,000/kg</p>
               </div>
 
               <div className="absolute -right-6 bottom-32 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-[200px] z-20">
                 <Image
-                  src="/silver-nitrate.png"
+                  src="/silver-nitrate-product.png"
                   alt="Silver Nitrate Pakistan"
                   width={100}
                   height={100}
                   className="rounded-lg mb-2"
                 />
                 <h4 className="font-semibold text-sm">Silver Nitrate</h4>
-                <p className="text-xs text-gray-500">AgNO₃ • 99.9% Pure</p>
+                <p className="text-xs text-gray-500">AgNO₃ • 25 g Pack</p>
               </div>
 
               {/* Decorative Elements */}

@@ -12,8 +12,18 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/copper-oxide',
-        destination: '/products/copper-oxide',
+        source: '/products/copper-oxide',
+        destination: '/copper-oxide',
+        permanent: true,
+      },
+      {
+        source: '/products/silver-nitrate',
+        destination: '/silver-nitrate',
+        permanent: true,
+      },
+      {
+        source: '/products/copper-sulphate',
+        destination: '/copper-sulphate',
         permanent: true,
       },
     ]

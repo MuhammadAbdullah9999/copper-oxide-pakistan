@@ -7,16 +7,17 @@ const BASE_URL = 'https://www.sulmantraders.com';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#b45309',
 };
 
 // Default metadata for the entire site
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Copper Sulphate Manufacturer Pakistan | Copper Oxide, Silver Nitrate - Sulman Traders',
+    default: 'Chemical Manufacturer & Supplier Pakistan | Copper Sulphate, Copper Oxide, Cobalt Oxide',
     template: '%s | Sulman Traders'
   },
-  description: 'Leading Copper Sulphate manufacturer in Pakistan. Buy high-purity Copper Sulphate (CuSO₄), Copper Oxide (CuO), Silver Nitrate (AgNO₃) in Lahore, Karachi, Islamabad. Agricultural & industrial grade available. 98%+ purity. Fast delivery across Pakistan since 1974.',
+  description: 'Sulman Traders is a Lahore-based chemical manufacturer and supplier in Pakistan. Buy Copper Sulphate / Neela Thotha, Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate, Silver Chloride, and Copper Carbonate with COA/SDS support and nationwide delivery.',
   keywords: [
     // Copper Oxide Keywords
     'copper oxide manufacturer pakistan',
@@ -40,6 +41,8 @@ export const defaultMetadata: Metadata = {
     // Copper Sulphate Keywords
     'copper sulphate manufacturer pakistan',
     'copper sulphate pakistan',
+    'neela thotha pakistan',
+    'neela thotha price pakistan',
     'CuSO4 pakistan',
     'blue vitriol pakistan',
     'copper sulphate agriculture pakistan',
@@ -61,9 +64,11 @@ export const defaultMetadata: Metadata = {
     'cobalt oxide pigment pakistan',
     // General Keywords
     'chemical manufacturer lahore',
+    'chemical supplier lahore',
+    'chemical supplier pakistan',
     'industrial chemicals pakistan',
     'laboratory chemicals pakistan',
-    'chemical supplier pakistan'
+    'bulk chemicals pakistan'
   ],
   authors: [{ name: 'Sulman Traders' }],
   creator: 'Sulman Traders',
@@ -76,16 +81,16 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Sulman Traders',
-    title: 'Copper Sulphate Manufacturer Pakistan | Buy Copper Oxide, Silver Nitrate',
-    description: 'Leading Copper Sulphate manufacturer in Pakistan. High-purity agricultural & industrial grade Copper Sulphate (CuSO₄), Copper Oxide (CuO), Silver Nitrate (AgNO₃). Available in Lahore, Karachi, Islamabad. 98%+ purity.',
+    title: 'Chemical Manufacturer & Supplier Pakistan | Sulman Traders',
+    description: 'Buy Copper Sulphate / Neela Thotha, Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Silver Chloride, and Copper Carbonate in Pakistan.',
     images: [`${BASE_URL}/copper-sulphate-banner.png`],
     url: BASE_URL,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Copper Sulphate Manufacturer Pakistan | Sulman Traders',
-    description: 'Buy high-purity Copper Sulphate (CuSO₄), Copper Oxide, Silver Nitrate in Pakistan. Agricultural & industrial grade. 98%+ purity. Fast delivery across Pakistan.',
+    title: 'Chemical Manufacturer & Supplier Pakistan | Sulman Traders',
+    description: 'Buy Copper Sulphate, Copper Oxide, Black Cobalt Oxide, Silver Nitrate, and industrial chemicals in Pakistan.',
     images: [`${BASE_URL}/copper-sulphate-banner.png`],
   },
   robots: {
@@ -110,7 +115,12 @@ export function generateProductMetadata(
   productId: string,
   additionalKeywords: string[] = []
 ): Metadata {
-  const url = `${BASE_URL}/products/${productId}`;
+  const canonicalPath: Record<string, string> = {
+    'copper-oxide': '/copper-oxide',
+    'silver-nitrate': '/silver-nitrate',
+    'copper-sulphate': '/copper-sulphate',
+  };
+  const url = `${BASE_URL}${canonicalPath[productId] || `/products/${productId}`}`;
 
   // Map existing images from public/ for accurate social previews
   const productOgImage: Record<string, string> = {
@@ -125,19 +135,19 @@ export function generateProductMetadata(
 
   const ctrMetadata: Record<string, { title: string; description: string }> = {
     'copper-oxide': {
-      title: 'Copper Oxide CuO Supplier Pakistan | 99.9% Black Powder',
+      title: 'Copper Oxide CuO Supplier Pakistan | PKR 3,000/kg',
       description:
-        'Buy Copper Oxide (CuO) in Pakistan from Sulman Traders. High-purity black powder for ceramics, glass, electroplating, pigments, and industry. COA/SDS available.',
+        'Buy Copper Oxide (CuO) in Pakistan from Sulman Traders. Current price PKR 3,000/kg, 25 kg packaging, 10 kg MOQ. COA/SDS available.',
     },
     'silver-nitrate': {
-      title: 'Silver Nitrate AgNO3 Supplier Pakistan | 99.9% Pure Crystals',
+      title: 'Silver Nitrate AgNO3 Supplier Pakistan | 25 g Price',
       description:
-        'Buy Silver Nitrate (AgNO3) in Pakistan for lab, pharmaceutical, water treatment, and industrial use. High purity, secure packaging, COA/SDS available.',
+        'Buy Silver Nitrate (AgNO3) in Pakistan. 99.9% grade PKR 12,000 per 25 g and 70% grade PKR 8,000 per 25 g. Prices vary with silver rates.',
     },
     'copper-sulphate': {
-      title: 'Copper Sulphate CuSO4 Supplier Pakistan | Blue Vitriol Price',
+      title: 'Copper Sulphate CuSO4 Supplier Pakistan | 25 kg Price',
       description:
-        'Buy Copper Sulphate (CuSO4) blue vitriol in Pakistan for agriculture, dairy footbaths, mining, water treatment, and industry. COA/SDS available.',
+        'Buy Copper Sulphate / Neela Thotha in Pakistan. 25 kg bags, lab grade PKR 1,200/kg, agri grade 20% PKR 900/kg, agri grade 15% PKR 750/kg.',
     },
     'silver-chloride': {
       title: 'AgCl Silver Chloride Supplier Pakistan | 99.9% Pure Powder',
@@ -145,14 +155,14 @@ export function generateProductMetadata(
         'Buy high-purity AgCl / Silver Chloride in Pakistan. Uses include electrodes, photography, lab chemistry, and silver recovery. COA/SDS and quote support available.',
     },
     'copper-carbonate': {
-      title: 'Copper Carbonate Supplier Pakistan | Basic Copper Carbonate Powder',
+      title: 'Copper Carbonate Supplier Pakistan | 55% Grade Price',
       description:
-        'Buy basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Blue-green powder with COA/SDS available.',
+        'Buy 55% basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Current price PKR 2,000/kg.',
     },
     'cobalt-oxide': {
       title: 'Black Cobalt Oxide Co3O4 Supplier Pakistan | 99.9% Pure',
       description:
-        'Buy 99.9% pure Black Cobalt Oxide (Co3O4) in Pakistan for ceramic glazes, tiles, cobalt blue glass, pigment manufacturing, catalysts, and technical applications. COA/SDS available.',
+        'Buy 99.9% pure Black Cobalt Oxide (Co3O4) in Pakistan for ceramic glazes, cobalt blue glass, pigments, and technical use. 2 kg MOQ.',
     },
   };
 

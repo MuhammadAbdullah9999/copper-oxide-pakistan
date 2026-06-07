@@ -6,15 +6,21 @@ import { Button } from "@/components/ui/button";
 import Cuso4ProductGallery from "@/components/sections/cuso4-product-gallery";
 import { Metadata } from 'next';
 import Script from 'next/script';
+import { productSalesInfo } from "@/lib/product-sales";
+
+const copperSulphateSales = productSalesInfo['copper-sulphate'];
 
 export const metadata: Metadata = {
-  title: 'Copper Sulphate (CuSO₄) Manufacturer Pakistan | Blue Vitriol - Sulman Traders',
-  description: 'Leading Copper Sulphate (CuSO₄) manufacturer in Pakistan. High-grade blue vitriol for agriculture, fungicide, mining, and industrial applications. 99% purity. Supplied from Lahore.',
+  title: 'Copper Sulphate / Neela Thotha Pakistan | Blue Vitriol Manufacturer',
+  description: 'Buy Copper Sulphate (CuSO₄), Blue Vitriol / Neela Thotha in Pakistan. 25 kg bags available in lab and agriculture grades from PKR 750-1,200 per kg.',
   keywords: [
     'copper sulphate pakistan',
     'copper sulphate manufacturer pakistan',
     'CuSO4 pakistan',
     'blue vitriol pakistan',
+    'neela thotha pakistan',
+    'neela thotha price pakistan',
+    'blue thotha pakistan',
     'copper sulphate lahore',
     'copper sulphate agriculture pakistan',
     'copper sulphate fungicide pakistan',
@@ -32,8 +38,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/copper-sulphate',
   },
   openGraph: {
-    title: 'Copper Sulphate Manufacturer Pakistan | Agricultural & Industrial Grade',
-    description: 'Premium Copper Sulphate (CuSO₄) manufactured in Pakistan for agriculture, fungicide, and industrial applications. 99% purity.',
+    title: 'Copper Sulphate / Neela Thotha Pakistan | Agricultural & Industrial Grade',
+    description: 'Premium Copper Sulphate (CuSO₄), Blue Vitriol / Neela Thotha in 25 kg bags. Lab grade and agriculture grades available from PKR 750-1,200 per kg.',
     url: 'https://www.sulmantraders.com/copper-sulphate',
     images: [
       {
@@ -48,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Copper Sulphate Manufacturer Pakistan | Blue Vitriol',
-    description: 'Leading manufacturer of Copper Sulphate in Pakistan. 99% purity.',
+    title: 'Copper Sulphate / Neela Thotha Pakistan | Blue Vitriol',
+    description: 'Buy Copper Sulphate / Neela Thotha in 25 kg bags. Lab and agriculture grades available.',
     images: ['https://www.sulmantraders.com/copper-sulphate-product.png'],
   },
 };
@@ -82,70 +88,19 @@ export default function CopperSulphatePage() {
             '@type': 'AggregateOffer',
             availability: 'https://schema.org/InStock',
             priceCurrency: 'PKR',
-            lowPrice: '100',
-            highPrice: '500',
-            offerCount: '4',
+            lowPrice: '750',
+            highPrice: '1200',
+            offerCount: '3',
             seller: {
               '@type': 'Organization',
               name: 'Sulman Traders'
             }
           },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '5.0',
-            reviewCount: '47',
-            bestRating: '5',
-            worstRating: '1'
-          },
-          review: [
-            {
-              '@type': 'Review',
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: '5',
-                bestRating: '5'
-              },
-              author: {
-                '@type': 'Person',
-                name: 'Ahmed Hassan'
-              },
-              reviewBody: 'Best quality copper sulphate in Pakistan! Using it for our rice farms in Punjab. Excellent results against fungal diseases.',
-              datePublished: '2024-10-15'
-            },
-            {
-              '@type': 'Review',
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: '5',
-                bestRating: '5'
-              },
-              author: {
-                '@type': 'Organization',
-                name: 'Malik Enterprises'
-              },
-              reviewBody: 'Reliable supplier for our agricultural business. High purity, competitive prices, and timely delivery to Multan.',
-              datePublished: '2024-10-20'
-            },
-            {
-              '@type': 'Review',
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: '5',
-                bestRating: '5'
-              },
-              author: {
-                '@type': 'Organization',
-                name: 'Zain Industries'
-              },
-              reviewBody: 'Using their copper sulphate for our water treatment facility. Consistent quality and excellent customer service.',
-              datePublished: '2024-11-01'
-            }
-          ],
           additionalProperty: [
             {
               '@type': 'PropertyValue',
-              name: 'Purity',
-              value: '99%'
+              name: 'Available grades',
+              value: 'Lab grade 25%, agriculture grade 20%, agriculture grade 15%'
             },
             {
               '@type': 'PropertyValue',
@@ -161,6 +116,16 @@ export default function CopperSulphatePage() {
               '@type': 'PropertyValue',
               name: 'Available in Cities',
               value: 'Lahore, Karachi, Islamabad, Faisalabad, Multan, Rawalpindi, Gujranwala'
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'Packaging',
+              value: copperSulphateSales.packaging
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'Minimum Order Quantity',
+              value: copperSulphateSales.moq
             }
           ],
           category: 'Agricultural Chemicals, Industrial Chemicals, Mining Chemicals'
@@ -174,10 +139,18 @@ export default function CopperSulphatePage() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'Is copper sulphate the same as Neela Thotha?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. In Pakistan, copper sulphate pentahydrate is commonly called Blue Vitriol or Neela Thotha. Sulman Traders supplies copper sulphate / Neela Thotha in lab and agriculture grades for agriculture, water treatment, mining, and industrial applications.'
+              }
+            },
+            {
+              '@type': 'Question',
               name: 'What is the price of copper sulphate in Pakistan?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Copper sulphate prices in Pakistan vary based on quantity and delivery location. Our product is 99% purity. Contact us at +92-321-4248968 for current pricing and bulk discounts.'
+                text: 'Sulman Traders currently lists copper sulphate lab grade 25% at PKR 1,200 per kg, agriculture grade 20% at PKR 900 per kg, and agriculture grade 15% at PKR 750 per kg. Standard packaging is 25 kg, and delivery charges are confirmed by city and quantity.'
               }
             },
             {
@@ -223,10 +196,10 @@ export default function CopperSulphatePage() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="container px-4 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Copper Sulphate Manufacturer Pakistan
+                  Copper Sulphate / Neela Thotha Pakistan
                 </h1>
                 <p className="text-xl text-white max-w-3xl mx-auto">
-                  Premium blue vitriol for agriculture, fungicide, mining, and industrial applications
+                  Premium blue vitriol for agriculture, fungicide, mining, water treatment, and industrial applications
                 </p>
               </div>
             </div>
@@ -258,8 +231,8 @@ export default function CopperSulphatePage() {
                   
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     <div className="bg-gray-50 p-4 rounded-lg">
-                      <h3 className="text-sm font-semibold text-amber-700 mb-1">Purity</h3>
-                      <p className="text-lg font-bold text-gray-900">99%</p>
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">Available Grades</h3>
+                      <p className="text-lg font-bold text-gray-900">25%, 20%, 15%</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="text-sm font-semibold text-amber-700 mb-1">Formula</h3>
@@ -271,7 +244,15 @@ export default function CopperSulphatePage() {
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="text-sm font-semibold text-amber-700 mb-1">Common Name</h3>
-                      <p className="text-lg font-bold text-gray-900">Blue Vitriol</p>
+                      <p className="text-lg font-bold text-gray-900">Blue Vitriol / Neela Thotha</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">Current Price</h3>
+                      <p className="text-lg font-bold text-gray-900">PKR 750-1,200/kg</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h3 className="text-sm font-semibold text-amber-700 mb-1">Packaging</h3>
+                      <p className="text-lg font-bold text-gray-900">25 kg bags</p>
                     </div>
                   </div>
 
@@ -323,7 +304,7 @@ export default function CopperSulphatePage() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <li className="flex items-start">
                     <span className="text-amber-700 mr-2">✓</span>
-                    <span className="text-gray-700">99% purity, consistent quality</span>
+                    <span className="text-gray-700">Lab grade 25% and agriculture grades 20% / 15% available</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-amber-700 mr-2">✓</span>
@@ -351,44 +332,37 @@ export default function CopperSulphatePage() {
               {/* Pricing & Bulk Orders Section */}
               <div className="mt-16 bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-lg">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Copper Sulphate Price in Pakistan - Bulk Orders Available
+                  Copper Sulphate Price in Pakistan - 25 kg Bags
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Purity &amp; packaging</h3>
+                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Current grade prices</h3>
                     <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-amber-700 mr-2 font-bold">•</span>
-                        <span className="text-gray-700"><strong>Purity:</strong> 99%</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-amber-700 mr-2 font-bold">•</span>
-                        <span className="text-gray-700"><strong>Standard bags:</strong> 25kg</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-amber-700 mr-2 font-bold">•</span>
-                        <span className="text-gray-700"><strong>Bulk orders:</strong> Customized packaging available</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-amber-700 mr-2 font-bold">•</span>
-                        <span className="text-gray-700"><strong>Minimum order:</strong> 25kg bag</span>
-                      </li>
+                      {copperSulphateSales.grades?.map((grade) => (
+                        <li key={grade} className="flex items-start">
+                          <span className="text-amber-700 mr-2 font-bold">•</span>
+                          <span className="text-gray-700">{grade}</span>
+                        </li>
+                      ))}
                     </ul>
+                    <p className="mt-4 text-gray-700">
+                      Standard packaging is 25 kg. Both agriculture grades are strong options for agri buyers; choose the 20% or 15% grade according to use, budget, and application advice.
+                    </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Special Offers</h3>
+                    <h3 className="text-xl font-semibold text-amber-800 mb-4">Packaging &amp; order details</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2 font-bold">✓</span>
-                        <span className="text-gray-700">Bulk discounts available for orders over 1000kg</span>
+                        <span className="text-gray-700"><strong>Packaging:</strong> {copperSulphateSales.packaging}</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2 font-bold">✓</span>
-                        <span className="text-gray-700">Delivery arranged nationwide — charges apply; contact us for a quote</span>
+                        <span className="text-gray-700"><strong>MOQ:</strong> {copperSulphateSales.moq}</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2 font-bold">✓</span>
-                        <span className="text-gray-700">Competitive wholesale rates for agricultural dealers</span>
+                        <span className="text-gray-700">Delivery arranged nationwide; charges are confirmed by city and quantity</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2 font-bold">✓</span>
@@ -448,41 +422,29 @@ export default function CopperSulphatePage() {
                 </div>
               </div>
 
-              {/* Customer Reviews/Testimonials */}
+              {/* Buyer guidance */}
               <div className="mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                  What Our Customers Say About Our Copper Sulphate
+                  Which Copper Sulphate Grade Should You Buy?
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div className="flex text-amber-500 mb-3">
-                      ★★★★★
-                    </div>
-                    <p className="text-gray-700 mb-4 italic">
-                      "Best quality copper sulphate in Pakistan! Using it for our rice farms in Punjab. Excellent results against fungal diseases."
+                    <h3 className="font-semibold text-gray-900 mb-2">Lab grade 25%</h3>
+                    <p className="text-gray-700">
+                      Choose lab grade when the application needs the strongest available grade, tighter checks, or laboratory and technical work.
                     </p>
-                    <p className="font-semibold text-gray-900">Ahmed Hassan</p>
-                    <p className="text-sm text-gray-600">Farmer, Sheikhupura</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div className="flex text-amber-500 mb-3">
-                      ★★★★★
-                    </div>
-                    <p className="text-gray-700 mb-4 italic">
-                      "Reliable supplier for our agricultural business. High purity, competitive prices, and timely delivery to Multan."
+                    <h3 className="font-semibold text-gray-900 mb-2">Agriculture grade 20%</h3>
+                    <p className="text-gray-700">
+                      A strong agriculture option for buyers who want higher grade material while keeping cost below lab grade.
                     </p>
-                    <p className="font-semibold text-gray-900">Malik Enterprises</p>
-                    <p className="text-sm text-gray-600">Agricultural Dealer, Multan</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div className="flex text-amber-500 mb-3">
-                      ★★★★★
-                    </div>
-                    <p className="text-gray-700 mb-4 italic">
-                      "Using their copper sulphate for our water treatment facility. Consistent quality and excellent customer service."
+                    <h3 className="font-semibold text-gray-900 mb-2">Agriculture grade 15%</h3>
+                    <p className="text-gray-700">
+                      A budget-friendly agriculture grade and one of the best options when price per kg is the main buying factor.
                     </p>
-                    <p className="font-semibold text-gray-900">Zain Industries</p>
-                    <p className="text-sm text-gray-600">Water Treatment, Lahore</p>
                   </div>
                 </div>
               </div>
@@ -495,10 +457,18 @@ export default function CopperSulphatePage() {
                 <div className="max-w-4xl mx-auto space-y-6">
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Is copper sulphate the same as Neela Thotha?
+                    </h3>
+                    <p className="text-gray-700">
+                      Yes. In Pakistan, copper sulphate pentahydrate is commonly called Blue Vitriol or Neela Thotha. Sulman Traders supplies copper sulphate / Neela Thotha in lab and agriculture grades for agriculture, water treatment, mining, and industrial applications.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       What is the price of copper sulphate in Pakistan?
                     </h3>
                     <p className="text-gray-700">
-                      Copper sulphate prices in Pakistan vary based on quantity and delivery location. We supply 99% purity copper sulphate. Contact us at +92-321-4248968 for current pricing and bulk discounts. We offer competitive wholesale rates throughout Pakistan.
+                      Current copper sulphate prices are PKR 1,200 per kg for lab grade 25%, PKR 900 per kg for agriculture grade 20%, and PKR 750 per kg for agriculture grade 15%. Standard packaging is 25 kg, and delivery charges are confirmed by city and quantity.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -527,10 +497,10 @@ export default function CopperSulphatePage() {
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      What purity is your copper sulphate?
+                      Which copper sulphate grades are available?
                     </h3>
                     <p className="text-gray-700">
-                      We supply copper sulphate at 99% purity. It is suitable for agriculture (e.g. fungicides, soil use), mining, water treatment, animal feed, and general industrial applications—always follow the correct dosage and use case for your sector.
+                      We currently offer lab grade 25%, agriculture grade 20%, and agriculture grade 15%. Both agriculture grades are popular for agri use. Choose the grade according to your application, required strength, and budget.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -538,7 +508,7 @@ export default function CopperSulphatePage() {
                       Can copper sulphate be used for swimming pool water treatment?
                     </h3>
                     <p className="text-gray-700">
-                      Yes, copper sulphate is effective for controlling algae in swimming pools and water bodies. Use 1-3 ppm (parts per million) for pool treatment. It acts as an algaecide and helps maintain clear water. Always test water pH and copper levels regularly. Our 99% copper sulphate is suitable for water treatment applications when used correctly.
+                      Yes, copper sulphate is effective for controlling algae in swimming pools and water bodies. Use 1-3 ppm (parts per million) for pool treatment. It acts as an algaecide and helps maintain clear water. Always test water pH and copper levels regularly and choose the correct grade for your water treatment application.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">

@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { Metadata } from 'next'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import Cuso4ProductGallery from '@/components/sections/cuso4-product-gallery'
 import { CUSO4_GALLERY_IMAGES } from '@/lib/cuso4-gallery-images'
 import { generateProductMetadata } from '@/lib/metadata'
+import { productSalesInfo } from '@/lib/product-sales'
 import Script from 'next/script'
 
 // Product data
@@ -27,7 +28,7 @@ const products: Record<string, Product> = {
     name: 'Copper Oxide (CuO)',
     image: '/black-powder.jpeg',
     description: 'High-purity copper oxide powder manufactured to meet the most demanding industrial requirements.',
-    purity: '99.5%+',
+    purity: '99.9%',
     specifications: {
       'Chemical Formula': 'CuO',
       'Appearance': 'Black Powder',
@@ -184,10 +185,11 @@ const products: Record<string, Product> = {
     name: 'Copper Carbonate (Basic)',
     image: '/copper-carbonate-powder.png',
     description: 'Basic copper carbonate powder for ceramic glazes, pigments, agriculture-related formulations, and chemical manufacturing.',
-    purity: '98%+',
+    purity: '55%',
     specifications: {
       'Chemical Formula': 'CuCO₃·Cu(OH)₂',
       'Appearance': 'Green-Blue Powder',
+      'Grade': '55%',
       'Molecular Weight': '221.12 g/mol',
       'Decomposition': '200°C',
       'Solubility': 'Insoluble in water'
@@ -320,9 +322,21 @@ export async function generateStaticParams() {
 
 export default async function ProductDetail({ params }: ProductPageProps) {
   const { productId } = await params;
+  const canonicalRedirects: Record<string, string> = {
+    'copper-oxide': '/copper-oxide',
+    'silver-nitrate': '/silver-nitrate',
+    'copper-sulphate': '/copper-sulphate',
+  };
+
+  if (canonicalRedirects[productId]) {
+    permanentRedirect(canonicalRedirects[productId]);
+  }
+
   const product = products[productId as keyof typeof products];
   
   if (!product) notFound();
+
+  const salesInfo = productSalesInfo[productId];
   
   // Define breadcrumb structure for structured data and UI
   const breadcrumbs = [
@@ -372,6 +386,7 @@ export default async function ProductDetail({ params }: ProductPageProps) {
             '@type': 'Offer',
             availability: 'https://schema.org/InStock',
             priceCurrency: 'PKR',
+            description: salesInfo?.priceLabel,
             priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
             seller: {
               '@type': 'Organization',
@@ -388,7 +403,26 @@ export default async function ProductDetail({ params }: ProductPageProps) {
               '@type': 'PropertyValue',
               name,
               value
-            }))
+            })),
+            ...(salesInfo
+              ? [
+                  {
+                    '@type': 'PropertyValue',
+                    name: 'Current Price',
+                    value: salesInfo.priceLabel,
+                  },
+                  {
+                    '@type': 'PropertyValue',
+                    name: 'Packaging',
+                    value: salesInfo.packaging,
+                  },
+                  {
+                    '@type': 'PropertyValue',
+                    name: 'Minimum Order Quantity',
+                    value: salesInfo.moq,
+                  },
+                ]
+              : [])
           ],
           category: applicationAreas.join(', ')
         })}
@@ -455,6 +489,22 @@ export default async function ProductDetail({ params }: ProductPageProps) {
                       <h4 className="text-sm font-semibold text-amber-700 mb-1">Purity</h4>
                       <p className="text-gray-800">{product.purity}</p>
                     </div>
+                    {salesInfo && (
+                      <>
+                        <div>
+                          <h4 className="text-sm font-semibold text-amber-700 mb-1">Current Price</h4>
+                          <p className="text-gray-800">{salesInfo.priceLabel}</p>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-amber-700 mb-1">Packaging</h4>
+                          <p className="text-gray-800">{salesInfo.packaging}</p>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-amber-700 mb-1">MOQ</h4>
+                          <p className="text-gray-800">{salesInfo.moq}</p>
+                        </div>
+                      </>
+                    )}
                     {Object.entries(product.specifications).map(([key, value]) => (
                       <div key={key}>
                         <h4 className="text-sm font-semibold text-amber-700 mb-1">{key}</h4>
@@ -490,6 +540,36 @@ export default async function ProductDetail({ params }: ProductPageProps) {
                     ? `As a Lahore-based chemical supplier and trader, we source and supply ${product.name.split('(')[0].trim()} for ceramic, glass, pigment, and selected technical customers across Pakistan. We focus on reliable bulk availability, practical documentation, and grade matching for the customer application.`
                     : `As a leading manufacturer based in Lahore, Pakistan, we have been producing premium ${product.name.split('(')[0].trim()} products for over five decades. Our advanced manufacturing processes ensure exceptional product quality, meeting both national and international standards.`}
                 </p>
+
+                {salesInfo && (
+                  <div className="mb-10 rounded-lg bg-amber-50 p-6">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      Price, Packaging, and MOQ
+                    </h2>
+                    <div className="grid gap-4 md:grid-cols-3">
+                      <div>
+                        <h3 className="text-sm font-semibold text-amber-700 mb-1">Current price</h3>
+                        <p className="text-gray-800">{salesInfo.priceLabel}</p>
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-amber-700 mb-1">Packaging</h3>
+                        <p className="text-gray-800">{salesInfo.packaging}</p>
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-amber-700 mb-1">MOQ</h3>
+                        <p className="text-gray-800">{salesInfo.moq}</p>
+                      </div>
+                    </div>
+                    {salesInfo.grades && (
+                      <ul className="mt-4 list-disc list-inside text-gray-700">
+                        {salesInfo.grades.map((grade) => (
+                          <li key={grade}>{grade}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {salesInfo.note && <p className="mt-4 text-gray-700">{salesInfo.note}</p>}
+                  </div>
+                )}
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Key Applications

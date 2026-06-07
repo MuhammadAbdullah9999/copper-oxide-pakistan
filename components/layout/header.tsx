@@ -16,9 +16,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const products = [
-    { name: "Copper Oxide", href: "/products/copper-oxide" },
-    { name: "Silver Nitrate", href: "/products/silver-nitrate" },
-    { name: "Copper Sulphate", href: "/products/copper-sulphate" },
+    { name: "Copper Oxide", href: "/copper-oxide" },
+    { name: "Silver Nitrate", href: "/silver-nitrate" },
+    { name: "Copper Sulphate", href: "/copper-sulphate" },
     { name: "Silver Chloride", href: "/products/silver-chloride" },
     { name: "Copper Carbonate", href: "/products/copper-carbonate" },
     { name: "Black Cobalt Oxide", href: "/products/cobalt-oxide" },

@@ -43,22 +43,22 @@ export default function HeroCarousel() {
     {
       image: "/copper-oxide-banner.png",
       title: "Premium Copper Oxide (CuO)",
-      description: "Pakistan's leading manufacturer of high-purity Copper Oxide powder. Ideal for ceramics, batteries, and industrial applications. 99.5%+ purity guaranteed.",
-      link: "/products/copper-oxide",
+      description: "Copper Oxide powder for ceramics, batteries, catalysts, and industry. Current price PKR 3,000/kg, 10 kg MOQ, 25 kg packaging recommended.",
+      link: "/copper-oxide",
       alt: "High purity Copper Oxide (CuO) powder manufacturing in Pakistan"
     },
     {
-      image: "/silver-nitrate-banner.png",
+      image: "/silver-nitrate-product.png",
       title: "Laboratory Grade Silver Nitrate",
-      description: "Premium Silver Nitrate (AgNO₃) crystals with 99.9%+ purity. Trusted by laboratories, medical facilities, and industries across Pakistan.",
-      link: "/products/silver-nitrate",
+      description: "Silver Nitrate in 25 g packaging. 99.9% grade is PKR 12,000 per 25 g and 70% grade is PKR 8,000 per 25 g.",
+      link: "/silver-nitrate",
       alt: "Premium Silver Nitrate (AgNO₃) crystals manufactured in Pakistan"
     },
     {
       image: "/copper-sulphate-banner-2.png",
       title: "Industrial Copper Sulphate",
-      description: "High-grade CuSO₄ for agricultural and industrial use",
-      link: "/products/copper-sulphate",
+      description: "Copper Sulphate / Neela Thotha in 25 kg bags. Lab grade 25% and agriculture grades 20% / 15% available.",
+      link: "/copper-sulphate",
       alt: "Industrial grade copper sulphate for agricultural applications"
     },
     // {

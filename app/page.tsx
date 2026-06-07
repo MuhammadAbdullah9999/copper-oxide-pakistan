@@ -29,7 +29,7 @@ export default function Home() {
     },
     {
       question: "What is the price of Copper Sulphate in Pakistan?",
-      answer: "Copper Sulphate prices in Pakistan vary based on grade (agricultural 98%+ or industrial 99%+), quantity, and delivery location. We offer competitive wholesale rates with bulk discounts for orders over 1000kg. Contact us for current pricing at +92-321-4248968. We manufacture in Lahore and deliver nationwide."
+      answer: "Current Copper Sulphate prices are PKR 1,200 per kg for lab grade 25%, PKR 900 per kg for agriculture grade 20%, and PKR 750 per kg for agriculture grade 15%. Standard packaging is 25 kg. Delivery charges and availability are confirmed by city and quantity."
     },
     {
       question: "What is Copper Sulphate (Blue Vitriol) used for in Pakistan?",
@@ -41,11 +41,11 @@ export default function Home() {
     },
     {
       question: "Do you supply Silver Nitrate for medical and laboratory use?",
-      answer: "Yes, our Silver Nitrate is pharmaceutical and laboratory grade with 99.9%+ purity. It's used in medical applications for antimicrobial treatments, in photography, in laboratory analysis and research, and in electronics manufacturing. We supply to hospitals, research labs, and industries across Pakistan."
+      answer: "Yes, we supply Silver Nitrate in 25 g packaging. The 99.9% grade is currently PKR 12,000 per 25 g, and the 70% grade is PKR 8,000 per 25 g. Silver nitrate prices may vary according to current silver market rates."
     },
     {
       question: "What are the applications of your Copper Oxide?",
-      answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production for high-performance applications, as catalysts in chemical reactions, and in electronic components. It's known for its consistent particle size and high chemical purity."
+      answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production, catalysts, and electronic components. Current price is PKR 3,000 per kg, standard packaging is 25 kg, minimum order is 10 kg, and 25 kg is recommended for better value."
     },
     {
       question: "What is Black Cobalt Oxide (Co3O4) used for?",

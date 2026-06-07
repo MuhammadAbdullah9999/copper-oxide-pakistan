@@ -132,17 +132,17 @@ export default function Footer() {
             <nav>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/products/copper-oxide" className="text-gray-300 hover:text-amber-200">
+                  <Link href="/copper-oxide" className="text-gray-300 hover:text-amber-200">
                     Copper Oxide
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/silver-nitrate" className="text-gray-300 hover:text-amber-200">
+                  <Link href="/silver-nitrate" className="text-gray-300 hover:text-amber-200">
                     Silver Nitrate
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/copper-sulphate" className="text-gray-300 hover:text-amber-200">
+                  <Link href="/copper-sulphate" className="text-gray-300 hover:text-amber-200">
                     Copper Sulphate
                   </Link>
                 </li>

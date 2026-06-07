@@ -1,4 +1,7 @@
+import { adsenseBlogPosts } from './adsense-blog-articles';
+
 export const blogPosts = [
+  ...adsenseBlogPosts,
   {
     id: 'cobalt-oxide-ceramics-glass-blue-colour',
     title: 'Black Cobalt Oxide in Ceramics, Tiles & Cobalt Blue Glass',

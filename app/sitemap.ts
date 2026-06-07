@@ -57,6 +57,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${BASE_URL}/copper-oxide-price-in-pakistan`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/copper-sulphate-price-in-pakistan`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/silver-nitrate-price-in-pakistan`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/copper-carbonate-price-in-pakistan`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
@@ -71,10 +95,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Define product pages
+  // Only include canonical product URLs here. Copper oxide, copper sulphate,
+  // and silver nitrate have dedicated canonical pages above.
   const productIds = [
-    'copper-oxide',
-    'silver-nitrate',
-    'copper-sulphate',
     'silver-chloride',
     'copper-carbonate',
     'cobalt-oxide',

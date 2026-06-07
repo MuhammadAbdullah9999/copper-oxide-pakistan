@@ -3,40 +3,43 @@ import { useState } from 'react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
-import Image from 'next/image'
 import Link from 'next/link'
 import { ProductCard } from "@/components/ui/product-card"
+import { productSalesInfo } from "@/lib/product-sales"
 
 const products = [
   {
     id: 'copper-oxide',
+    href: '/copper-oxide',
     name: 'Copper Oxide',
     chemical: 'CuO',
     image: '/black-powder.jpeg',
     description: 'High-purity copper oxide powder for industrial applications. Ideal for ceramics, batteries, and catalysts.',
-    purity: '99.5%+',
+    purity: '99.9%',
     applications: ['Ceramics', 'Batteries', 'Catalysts', 'Electronics'],
     keywords: ['copper oxide', 'CuO', 'copper oxide powder', 'copper oxide pakistan'],
     alt: 'High-purity black copper oxide powder manufactured by Sulman Traders'
   },
   {
     id: 'silver-nitrate',
+    href: '/silver-nitrate',
     name: 'Silver Nitrate',
     chemical: 'AgNO₃',
-    image: '/silver-nitrate.png',
-    description: 'Premium quality silver nitrate for laboratory and industrial use. Perfect for analytical chemistry and manufacturing.',
-    purity: '99.9%+',
+    image: '/silver-nitrate-product.png',
+    description: 'Silver nitrate in 25 g packaging for laboratory and industrial use. 99.9% and 70% grades available.',
+    purity: '99.9% / 70%',
     applications: ['Photography', 'Medicine', 'Electronics', 'Mirror Production'],
     keywords: ['silver nitrate', 'AgNO3', 'silver nitrate solution', 'silver nitrate pakistan'],
     alt: 'Pure silver nitrate crystals for laboratory and industrial applications'
   },
   {
     id: 'copper-sulphate',
+    href: '/copper-sulphate',
     name: 'Copper Sulphate',
     chemical: 'CuSO₄',
     image: '/images/products/copper sulphate-placed-on-paper-4.jpg',
-    description: 'High-grade copper sulphate for agricultural and industrial applications. Essential for farming and manufacturing.',
-    purity: '98%+',
+    description: 'Copper sulphate / Neela Thotha in 25 kg packaging for agricultural and industrial applications.',
+    purity: '25% / 20% / 15%',
     applications: ['Agriculture', 'Mining', 'Electroplating', 'Animal Feed'],
     keywords: ['copper sulphate', 'CuSO4', 'copper sulfate', 'blue vitriol pakistan'],
     alt: 'Blue copper sulphate crystals for agricultural applications'
@@ -57,8 +60,8 @@ const products = [
     name: 'Copper Carbonate',
     chemical: 'CuCO₃·Cu(OH)₂',
     image: '/copper-carbonate-powder.png',
-    description: 'Basic copper carbonate powder for pigments, ceramic glazes, formulations, and chemical manufacturing.',
-    purity: '98%+',
+    description: '55% basic copper carbonate powder for pigments, ceramic glazes, formulations, and chemical manufacturing.',
+    purity: '55%',
     applications: ['Pigments', 'Ceramics', 'Chemical Industry', 'Formulations'],
     keywords: ['copper carbonate', 'CuCO3', 'basic copper carbonate', 'copper carbonate pakistan'],
     alt: 'Blue-green copper carbonate powder for industrial applications'
@@ -118,8 +121,11 @@ export default function ProductsSection() {
               imageAlt={product.alt}
               chemical={product.chemical}
               applications={product.applications}
-              link={`/products/${product.id}`}
+              link={product.href || `/products/${product.id}`}
               purity={product.purity}
+              priceLabel={productSalesInfo[product.id]?.priceLabel}
+              packaging={productSalesInfo[product.id]?.packaging}
+              moq={productSalesInfo[product.id]?.moq}
             />
           ))}
           
