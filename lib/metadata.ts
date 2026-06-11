@@ -105,6 +105,9 @@ export const defaultMetadata: Metadata = {
     // Add your verification tokens here
     google: 'google-site-verification-token',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-1028357665079905',
+  },
   // Removed global canonical to allow correct per-page canonicals
 };
 
