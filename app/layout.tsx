@@ -1,5 +1,7 @@
 import type React from "react";
 import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/gtm";
 import WhatsAppFloat from "@/components/layout/whatsapp-float";
@@ -103,6 +105,8 @@ export default function RootLayout({
         <GoogleTagManager />
         <GoogleAnalytics />
         <VisitorIntelligence />
+        <Analytics />
+        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
