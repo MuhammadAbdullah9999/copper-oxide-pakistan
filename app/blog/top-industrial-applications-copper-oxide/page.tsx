@@ -34,7 +34,7 @@ export default function CopperOxideBlog() {
           },
           'headline': 'Top 10 Industrial Applications of Copper Oxide in 2024',
           'description': 'Discover the versatile applications of copper oxide in various industries including electronics, agriculture, catalysis, and more.',
-          'image': 'https://www.sulmantraders.com/copper-oxide-in-plate.jpeg',
+          'image': 'https://www.sulmantraders.com/copper-oxide-thumbnail.png',
           'author': {
             '@type': 'Person',
             'name': 'Muhammad Salmann'
@@ -57,9 +57,11 @@ export default function CopperOxideBlog() {
         {/* Hero Section */}
         <div className="relative h-96 overflow-hidden">
           <OptimizedImage 
-            src="/copper-oxide-banner.png"
+            src="/copper-oxide-thumbnail.png"
             alt="Industrial applications of copper oxide"
             fill
+            priority
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gray-900 opacity-50"></div>

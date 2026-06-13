@@ -32,7 +32,8 @@ export function OptimizedImage({
           className={`transition-opacity duration-500 ${
             isLoading ? 'opacity-0' : 'opacity-100'
           } ${className || ''}`}
-          loading={priority ? 'eager' : 'lazy'}
+          priority={priority || undefined}
+          loading={priority ? undefined : 'lazy'}
           quality={80}
           onLoad={() => setIsLoading(false)}
           onError={() => {
@@ -58,7 +59,8 @@ export function OptimizedImage({
         className={`transition-opacity duration-500 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         } object-cover`}
-        loading={priority ? 'eager' : 'lazy'}
+        priority={priority || undefined}
+        loading={priority ? undefined : 'lazy'}
         quality={80}
         onLoad={() => setIsLoading(false)}
         onError={() => {
