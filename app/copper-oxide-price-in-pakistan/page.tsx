@@ -26,7 +26,7 @@ export default function CopperOxidePricePage() {
       ]}
       buyerNotes={[
         "Confirm the required purity, particle size, and appearance before ordering.",
-        "Ask for COA/SDS support if your process requires documentation.",
+        "Ask for product specifications, MSDS support, and batch documents where available if your process requires documentation.",
         "Run a sample trial for colour-critical ceramic, glass, and pigment work.",
         "Confirm delivery charges by city before finalizing the order.",
       ]}

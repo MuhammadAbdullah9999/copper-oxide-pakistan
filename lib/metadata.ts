@@ -17,7 +17,7 @@ export const defaultMetadata: Metadata = {
     default: 'Chemical Manufacturer & Supplier Pakistan | Copper Sulphate, Copper Oxide, Cobalt Oxide',
     template: '%s | Sulman Traders'
   },
-  description: 'Sulman Traders is a Lahore-based chemical manufacturer and supplier in Pakistan. Buy Copper Sulphate / Neela Thotha, Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate, Silver Chloride, and Copper Carbonate with COA/SDS support and nationwide delivery.',
+  description: 'Sulman Traders is a Lahore-based chemical manufacturer and supplier in Pakistan. Buy Copper Sulphate / Neela Thotha, Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate, Silver Chloride, and Copper Carbonate with product specifications, MSDS support, and nationwide delivery.',
   keywords: [
     // Copper Oxide Keywords
     'copper oxide manufacturer pakistan',
@@ -138,9 +138,9 @@ export function generateProductMetadata(
 
   const ctrMetadata: Record<string, { title: string; description: string }> = {
     'copper-oxide': {
-      title: 'Copper Oxide CuO Supplier Pakistan | PKR 3,000/kg',
+      title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
       description:
-        'Buy Copper Oxide (CuO) in Pakistan from Sulman Traders. Current price PKR 3,000/kg, 25 kg packaging, 10 kg MOQ. COA/SDS available.',
+        'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,000/kg, 25 kg packaging, 10 kg MOQ.',
     },
     'silver-nitrate': {
       title: 'Silver Nitrate AgNO3 Supplier Pakistan | 25 g Price',
@@ -148,14 +148,14 @@ export function generateProductMetadata(
         'Buy Silver Nitrate (AgNO3) in Pakistan. 99.9% grade PKR 12,000 per 25 g and 70% grade PKR 8,000 per 25 g. Prices vary with silver rates.',
     },
     'copper-sulphate': {
-      title: 'Copper Sulphate CuSO4 Supplier Pakistan | 25 kg Price',
+      title: 'Copper Sulphate Price Pakistan | Neela Thotha 25 kg Bags',
       description:
-        'Buy Copper Sulphate / Neela Thotha in Pakistan. 25 kg bags, lab grade PKR 1,200/kg, agri grade 20% PKR 900/kg, agri grade 15% PKR 750/kg.',
+        'Buy Copper Sulphate / Neela Thotha in Pakistan. 25 kg bags: lab grade PKR 1,200/kg, agri 20% PKR 900/kg, agri 15% PKR 750/kg.',
     },
     'silver-chloride': {
       title: 'AgCl Silver Chloride Supplier Pakistan | 99.9% Pure Powder',
       description:
-        'Buy high-purity AgCl / Silver Chloride in Pakistan. Uses include electrodes, photography, lab chemistry, and silver recovery. COA/SDS and quote support available.',
+        'Buy high-purity AgCl / Silver Chloride in Pakistan. Uses include electrodes, photography, lab chemistry, and silver recovery. Product specs, MSDS, and quote support available.',
     },
     'copper-carbonate': {
       title: 'Copper Carbonate Supplier Pakistan | 55% Grade Price',

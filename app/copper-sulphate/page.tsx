@@ -11,8 +11,8 @@ import { productSalesInfo } from "@/lib/product-sales";
 const copperSulphateSales = productSalesInfo['copper-sulphate'];
 
 export const metadata: Metadata = {
-  title: 'Copper Sulphate / Neela Thotha Pakistan | Blue Vitriol Manufacturer',
-  description: 'Buy Copper Sulphate (CuSO₄), Blue Vitriol / Neela Thotha in Pakistan. 25 kg bags available in lab and agriculture grades from PKR 750-1,200 per kg.',
+  title: 'Copper Sulphate Price Pakistan | Neela Thotha 25 kg Bags',
+  description: 'Buy Copper Sulphate / Neela Thotha in Pakistan. 25 kg bags: lab grade PKR 1,200/kg, agri 20% PKR 900/kg, agri 15% PKR 750/kg.',
   keywords: [
     'copper sulphate pakistan',
     'copper sulphate manufacturer pakistan',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/copper-sulphate',
   },
   openGraph: {
-    title: 'Copper Sulphate / Neela Thotha Pakistan | Agricultural & Industrial Grade',
-    description: 'Premium Copper Sulphate (CuSO₄), Blue Vitriol / Neela Thotha in 25 kg bags. Lab grade and agriculture grades available from PKR 750-1,200 per kg.',
+    title: 'Copper Sulphate Price Pakistan | Neela Thotha 25 kg Bags',
+    description: 'Copper Sulphate (CuSO₄) / Neela Thotha in 25 kg bags. Lab grade and agriculture grades available from PKR 750-1,200 per kg.',
     url: 'https://www.sulmantraders.com/copper-sulphate',
     images: [
       {
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Copper Sulphate / Neela Thotha Pakistan | Blue Vitriol',
-    description: 'Buy Copper Sulphate / Neela Thotha in 25 kg bags. Lab and agriculture grades available.',
+    title: 'Copper Sulphate Price Pakistan | Neela Thotha',
+    description: 'Buy Copper Sulphate / Neela Thotha in 25 kg bags. Lab and agriculture grades from PKR 750-1,200/kg.',
     images: ['https://www.sulmantraders.com/copper-sulphate-product.png'],
   },
 };
@@ -101,6 +101,11 @@ export default function CopperSulphatePage() {
               '@type': 'PropertyValue',
               name: 'Available grades',
               value: 'Lab grade 25%, agriculture grade 20%, agriculture grade 15%'
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'Grade clarification',
+              value: 'The 25%, 20%, and 15% figures are commercial grade labels used for quotation. Buyers should confirm the exact assay/specification needed for their application before ordering.'
             },
             {
               '@type': 'PropertyValue',
@@ -163,18 +168,18 @@ export default function CopperSulphatePage() {
             },
             {
               '@type': 'Question',
-              name: 'How do I use copper sulphate as a fungicide?',
+              name: 'How should copper sulphate be used in agriculture or water treatment?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For fungicide applications, dissolve 200-500g of copper sulphate in 100 liters of water (0.2-0.5% solution). Mix with lime to create Bordeaux mixture for better adherence.'
+                text: 'Application rate depends on crop, formulation, water chemistry, target problem, and local guidance. Confirm the correct grade and follow qualified agronomic, technical, and label advice before use.'
               }
             },
             {
               '@type': 'Question',
-              name: 'Is copper sulphate safe for organic farming in Pakistan?',
+              name: 'Is copper sulphate suitable for agriculture in Pakistan?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes, copper sulphate is approved for use in organic farming when applied within recommended limits. Use should follow local regulations and good agricultural practice.'
+                text: 'Copper sulphate is used in some agriculture programs, but suitability depends on the grade, crop, formulation, local rules, and application method. Confirm technical guidance before use.'
               }
             }
           ]
@@ -258,7 +263,7 @@ export default function CopperSulphatePage() {
 
                   <Link href="/contact">
                     <Button className="bg-amber-700 hover:bg-amber-800 text-lg px-8 py-3">
-                      Get Agricultural Solutions
+                      Request 25 kg Bag Price
                     </Button>
                   </Link>
                 </div>
@@ -291,7 +296,7 @@ export default function CopperSulphatePage() {
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
                     <h3 className="text-lg font-semibold text-amber-700 mb-3">Animal Feed</h3>
-                    <p className="text-gray-700">Nutritional supplement providing essential copper in livestock feed formulations.</p>
+                    <p className="text-gray-700">Use only with confirmed feed-grade suitability, regulatory approval, and qualified formulation guidance.</p>
                   </div>
                 </div>
               </div>
@@ -347,6 +352,9 @@ export default function CopperSulphatePage() {
                     </ul>
                     <p className="mt-4 text-gray-700">
                       Standard packaging is 25 kg. Both agriculture grades are strong options for agri buyers; choose the 20% or 15% grade according to use, budget, and application advice.
+                    </p>
+                    <p className="mt-3 text-sm text-gray-600">
+                      The 25%, 20%, and 15% figures are commercial grade labels used for quotation. Confirm the exact assay/specification needed for your application before ordering.
                     </p>
                   </div>
                   <div>
@@ -468,7 +476,7 @@ export default function CopperSulphatePage() {
                       What is the price of copper sulphate in Pakistan?
                     </h3>
                     <p className="text-gray-700">
-                      Current copper sulphate prices are PKR 1,200 per kg for lab grade 25%, PKR 900 per kg for agriculture grade 20%, and PKR 750 per kg for agriculture grade 15%. Standard packaging is 25 kg, and delivery charges are confirmed by city and quantity.
+                      Current copper sulphate prices are PKR 1,200 per kg for lab grade 25%, PKR 900 per kg for agriculture grade 20%, and PKR 750 per kg for agriculture grade 15%. These percentages are commercial grade labels used for quotation. Standard packaging is 25 kg, and delivery charges are confirmed by city and quantity.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -481,18 +489,18 @@ export default function CopperSulphatePage() {
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      How do I use copper sulphate as a fungicide?
+                      How should copper sulphate be used in agriculture or water treatment?
                     </h3>
                     <p className="text-gray-700">
-                      For fungicide applications, dissolve 200-500g of copper sulphate in 100 liters of water (0.2-0.5% solution). Mix with lime to create Bordeaux mixture for better adherence. Apply as a foliar spray during early morning or evening. Always wear protective equipment and follow recommended dosage for your specific crop.
+                      Application rate depends on crop, formulation, target disease, water quality, and local agricultural guidance. Confirm the correct grade and follow qualified agronomic, technical, and label advice before use.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Is copper sulphate safe for organic farming in Pakistan?
+                      Is copper sulphate suitable for agriculture in Pakistan?
                     </h3>
                     <p className="text-gray-700">
-                      Yes, copper sulphate is approved for use in organic farming when applied within recommended limits. It's a naturally occurring mineral that provides essential copper nutrients and disease control. However, use should be judicious to prevent copper accumulation in soil. Follow local organic certification rules for your crop and region.
+                      Copper sulphate is used in some agriculture programs, but suitability depends on the grade, crop, formulation, local rules, and application method. Use should be controlled because excess copper can harm plants, soil, and water.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -508,7 +516,7 @@ export default function CopperSulphatePage() {
                       Can copper sulphate be used for swimming pool water treatment?
                     </h3>
                     <p className="text-gray-700">
-                      Yes, copper sulphate is effective for controlling algae in swimming pools and water bodies. Use 1-3 ppm (parts per million) for pool treatment. It acts as an algaecide and helps maintain clear water. Always test water pH and copper levels regularly and choose the correct grade for your water treatment application.
+                      Copper sulphate can be used in selected algae-control and water-treatment applications, but the correct rate depends on water chemistry, target organism, local rules, and whether fish or sensitive plants are present. Confirm the right grade and technical guidance before use.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">

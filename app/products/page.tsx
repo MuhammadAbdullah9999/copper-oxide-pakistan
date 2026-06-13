@@ -10,8 +10,8 @@ import { FadeIn } from "@/components/ui/fade-in"
 import { productSalesInfo } from "@/lib/product-sales"
 
 export const metadata: Metadata = {
-  title: 'Chemical Products Supplier Pakistan | Copper Oxide, Cobalt Oxide, Silver Nitrate',
-  description: 'Buy industrial chemicals in Pakistan from Sulman Traders: Copper Oxide, Black Cobalt Oxide Co3O4, Silver Nitrate, Copper Sulphate, Silver Chloride, and Copper Carbonate. COA/SDS support, bulk supply, and nationwide delivery.',
+  title: 'Industrial Chemical Supplier Pakistan | Prices, MOQ & MSDS',
+  description: 'Buy industrial chemicals in Pakistan from Sulman Traders: Copper Oxide, Copper Sulphate / Neela Thotha, Silver Nitrate, Silver Chloride, Copper Carbonate, and Black Cobalt Oxide for ceramics, glass, agriculture, lab, and pigment buyers.',
   keywords: [
     'chemical products Pakistan',
     'chemical supplier Pakistan',
@@ -45,10 +45,11 @@ export default function ProductsPage() {
       href: '/copper-oxide',
       name: 'Copper Oxide',
       formula: 'CuO',
-      purity: '99.9%',
+      specLabel: 'Declared spec',
+      spec: '99.9%',
       image: '/black-powder.jpeg',
-      shortDesc: 'High-purity black copper oxide powder',
-      applications: ['Ceramics & Glazes', 'Battery Manufacturing', 'Electronics', 'Catalysts'],
+      shortDesc: 'Black CuO powder for ceramics, glass, pigments, coatings, and technical use',
+      applications: ['Ceramics & Glazes', 'Glass Colouring', 'Pigments', 'Antifouling Coatings'],
       color: 'from-gray-700 to-gray-900',
       badge: 'Most Popular',
       badgeColor: 'bg-amber-500'
@@ -58,12 +59,13 @@ export default function ProductsPage() {
       href: '/silver-nitrate',
       name: 'Silver Nitrate',
       formula: 'AgNO₃',
-      purity: '99.9% / 70%',
+      specLabel: 'Available grades',
+      spec: '99.9% / 70%',
       image: '/silver-nitrate-product.png',
-      shortDesc: 'Silver nitrate in 25 g packaging; price varies with silver market rates',
-      applications: ['Medical & Healthcare', 'Laboratory Research', 'Photography', 'Electronics'],
+      shortDesc: 'Silver nitrate in 25 g packaging for laboratory, mirror, plating, and industrial buyers',
+      applications: ['Laboratory Use', 'Mirror Making', 'Silver Plating', 'Photography'],
       color: 'from-gray-300 to-gray-500',
-      badge: 'Medical Grade',
+      badge: 'Lab & Industrial',
       badgeColor: 'bg-green-500'
     },
     {
@@ -71,10 +73,11 @@ export default function ProductsPage() {
       href: '/copper-sulphate',
       name: 'Copper Sulphate',
       formula: 'CuSO₄·5H₂O',
-      purity: '25% / 20% / 15%',
+      specLabel: 'Available grades',
+      spec: '25% / 20% / 15%',
       image: '/copper-sulphate-product.png',
       shortDesc: 'Blue vitriol / Neela Thotha in 25 kg bags for agriculture, lab, and industry',
-      applications: ['Agriculture', 'Mining & Ore Processing', 'Water Treatment', 'Animal Feed'],
+      applications: ['Agriculture', 'Mining & Ore Processing', 'Water Treatment', 'Industrial Formulations'],
       color: 'from-orange-400 to-orange-600',
       badge: 'Best for Agriculture',
       badgeColor: 'bg-orange-500'
@@ -83,9 +86,10 @@ export default function ProductsPage() {
       id: 'silver-chloride',
       name: 'Silver Chloride',
       formula: 'AgCl',
-      purity: '99.9%',
+      specLabel: 'Declared spec',
+      spec: '99.9%',
       image: '/silver-chloride-product.png',
-      shortDesc: 'High-purity silver chloride for technical applications',
+      shortDesc: 'Silver chloride for electrodes, photography, lab chemistry, and silver recovery',
       applications: ['Photography', 'Electronics', 'Reference Electrodes', 'Optical Components'],
       color: 'from-amber-400 to-amber-600',
       badge: 'Technical Grade',
@@ -95,7 +99,8 @@ export default function ProductsPage() {
       id: 'copper-carbonate',
       name: 'Copper Carbonate',
       formula: 'CuCO₃·Cu(OH)₂',
-      purity: '55%',
+      specLabel: 'Available grade',
+      spec: '55%',
       image: '/copper-carbonate-powder.png',
       shortDesc: '55% blue-green basic copper carbonate powder',
       applications: ['Ceramic Glazes', 'Pigments', 'Copper Salts', 'Formulations'],
@@ -107,10 +112,11 @@ export default function ProductsPage() {
       id: 'cobalt-oxide',
       name: 'Black Cobalt Oxide',
       formula: 'Co₃O₄',
-      purity: '99.9%',
+      specLabel: 'Declared spec',
+      spec: '99.9%',
       image: '/cobalt-oxide-bulk.png',
       shortDesc: 'Black cobalt(II,III) oxide for ceramic glazes, glass, pigments, and technical materials',
-      applications: ['Ceramic Glazes', 'Cobalt Blue Glass', 'Pigments', 'Catalysts'],
+      applications: ['Ceramic Glazes', 'Cobalt Blue Glass', 'Pottery Colour', 'Pigments'],
       color: 'from-slate-800 to-blue-900',
       badge: 'Ceramic Colourant',
       badgeColor: 'bg-blue-700'
@@ -192,10 +198,10 @@ export default function ProductsPage() {
       },
       {
         '@type': 'Question',
-        name: 'Can I request COA and SDS documents?',
+        name: 'Can I request product documents?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Buyers can request Certificate of Analysis and Safety Data Sheet support for available products, along with packaging, grade, and application guidance.',
+          text: 'Yes. Buyers can request product specifications, MSDS support, packaging, grade, and application guidance. Batch-specific documents are provided where available for the selected product.',
         },
       },
       {
@@ -255,14 +261,14 @@ export default function ProductsPage() {
 
               {/* Description */}
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                High-purity industrial chemicals manufactured, sourced, and supplied in Pakistan. Lab-tested, documented, and trusted by 500+ companies across industries.
+                Industrial chemicals manufactured, sourced, and supplied in Pakistan with clear prices, packaging, declared grades, and MSDS support where available.
               </p>
 
               {/* Features */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700 font-medium">Lab Tested</span>
+                  <span className="text-gray-700 font-medium">Clear Prices</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
                   <CheckCircle className="w-5 h-5 text-green-600" />
@@ -293,7 +299,7 @@ export default function ProductsPage() {
                     <div className="relative h-72 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                       <Image
                         src={product.image}
-                        alt={`${product.name} (${product.formula}) - High purity chemical supplied by Sulman Traders in Pakistan`}
+                        alt={`${product.name} (${product.formula}) supplied by Sulman Traders in Pakistan`}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -310,10 +316,10 @@ export default function ProductsPage() {
                         </span>
                       </div>
 
-                      {/* Purity Badge */}
+                      {/* Specification Badge */}
                       <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-lg px-3 py-1 mb-4">
                         <Beaker className="w-4 h-4 text-green-600" />
-                        <span className="text-sm font-semibold text-green-700">{product.purity} Purity</span>
+                        <span className="text-sm font-semibold text-green-700">{product.specLabel}: {product.spec}</span>
                       </div>
 
                       {/* Description */}
@@ -407,7 +413,7 @@ export default function ProductsPage() {
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-gray-900">Documents on Request</h3>
                   <p className="leading-relaxed text-gray-700">
-                    Ask for COA, SDS, purity, appearance, packaging, and buyer checks before placing a bulk order. For cobalt oxide, we clearly position it as traded and supplied material.
+                    Ask for specifications, MSDS, declared grade, appearance, packaging, and buyer checks before placing a bulk order. For cobalt oxide, we clearly position it as traded and supplied material.
                   </p>
                 </div>
               </div>
@@ -444,7 +450,7 @@ export default function ProductsPage() {
                       How do I choose the right product grade?
                     </h3>
                     <p className="text-gray-700">
-                      Share your application, required purity, packaging size, and any COA/SDS requirements. Ceramic, agriculture, laboratory, battery, and technical customers often need different grade checks.
+                      Share your application, required grade or specification, packaging size, and any document requirements. Ceramic, agriculture, laboratory, glass, pigment, and technical customers often need different checks.
                     </p>
                   </div>
                 </div>
@@ -470,10 +476,10 @@ export default function ProductsPage() {
           <div className="container mx-auto px-4 relative z-10">
             <FadeIn direction="up" className="text-center max-w-3xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Need Custom Chemical Solutions?
+                Need Industrial Chemical Supply?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                We can manufacture custom chemical formulations according to your specific requirements. Contact our technical team for consultation.
+                Share your product, grade, quantity, city, and application. Our team will confirm availability, packaging, current price, and delivery options.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">

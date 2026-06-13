@@ -5,8 +5,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Copper Oxide (CuO) Pakistan | PKR 3,000/kg | 25 kg Packaging',
-  description: 'Buy Copper Oxide (CuO) in Pakistan at PKR 3,000 per kg. 25 kg standard packaging, 10 kg MOQ, and 25 kg recommended for better value. Sulman Traders Lahore.',
+  title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
+  description: 'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,000/kg, 25 kg packaging, 10 kg MOQ.',
   keywords: [
     'copper oxide Pakistan',
     'copper oxide manufacturer Pakistan',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/copper-oxide',
   },
   openGraph: {
-    title: 'Copper Oxide (CuO) Pakistan | PKR 3,000/kg',
-    description: 'Copper Oxide black powder in Pakistan. 25 kg packaging, 10 kg MOQ, COA/SDS support, and nationwide delivery coordination.',
+    title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
+    description: 'Black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. 25 kg packaging, 10 kg MOQ, and nationwide delivery coordination.',
     url: 'https://www.sulmantraders.com/copper-oxide',
     images: [
       {
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Copper Oxide (CuO) Pakistan | Sulman Traders',
-    description: 'Buy Copper Oxide at PKR 3,000/kg. 25 kg packaging and 10 kg MOQ.',
+    title: 'Copper Oxide Supplier Pakistan | CuO Powder',
+    description: 'Buy black Copper Oxide at PKR 3,000/kg. 25 kg packaging and 10 kg MOQ.',
     images: ['https://www.sulmantraders.com/black-powder.jpeg'],
   },
 };
@@ -116,7 +116,7 @@ export default function Main(){
                             name: 'What documents should I request before buying Copper Oxide?',
                             acceptedAnswer: {
                                 '@type': 'Answer',
-                                text: 'Buyers should request purity, appearance, particle size where available, Certificate of Analysis, Safety Data Sheet, packaging information, and sample testing for colour-critical ceramic or glass use.'
+                                text: 'Buyers should request purity, appearance, particle size where available, product specifications, MSDS, packaging information, and sample testing for colour-critical ceramic or glass use.'
                             }
                         }
                     ]

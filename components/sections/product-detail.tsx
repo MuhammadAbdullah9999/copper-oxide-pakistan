@@ -26,10 +26,10 @@ export default function ProductDetails() {
           {/* Product Info */}
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Premium Copper Oxide Powder
+              Copper Oxide (CuO) Powder in Pakistan
             </h1>
             <p className="text-gray-700 mb-6">
-              With over 50 years of manufacturing excellence, we produce high-purity copper oxide (CuO) tailored for a wide range of industrial applications. Our copper oxide is trusted by leading industries for its superior quality, consistency, and performance.
+              Buy black copper oxide powder from Sulman Traders in Lahore for ceramics, glass colouring, pigments, coatings, catalysts, and industrial formulations. Current listed price is {copperOxideSales.priceLabel} with {copperOxideSales.packaging}.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -127,7 +127,7 @@ export default function ProductDetails() {
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="font-semibold text-gray-900 mb-2">Request documents</h3>
-              <p className="text-gray-700">Request purity, appearance, packaging size, Certificate of Analysis, and Safety Data Sheet before bulk ordering.</p>
+              <p className="text-gray-700">Request purity, appearance, packaging size, product specifications, and MSDS before bulk ordering.</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="font-semibold text-gray-900 mb-2">Run a sample trial</h3>
