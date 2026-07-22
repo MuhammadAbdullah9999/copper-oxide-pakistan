@@ -138,9 +138,9 @@ export function generateProductMetadata(
 
   const ctrMetadata: Record<string, { title: string; description: string }> = {
     'copper-oxide': {
-      title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
+      title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,500/kg',
       description:
-        'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,000/kg, 25 kg packaging, 10 kg MOQ.',
+        'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,500/kg, 25 kg packaging, 10 kg MOQ.',
     },
     'silver-nitrate': {
       title: 'Silver Nitrate AgNO3 Supplier Pakistan | 25 g Price',

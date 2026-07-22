@@ -209,7 +209,7 @@ export default function ProductsPage() {
         name: 'What are the current product prices and MOQ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Current listed prices include Copper Oxide at PKR 3,000 per kg with 10 kg MOQ, Copper Sulphate at PKR 750-1,200 per kg in 25 kg bags, Silver Nitrate at PKR 12,000 per 25 g for 99.9% and PKR 8,000 per 25 g for 70%, and Copper Carbonate at PKR 2,000 per kg. Silver Nitrate prices may vary with silver market rates.',
+          text: 'Current listed prices include Copper Oxide at PKR 3,500 per kg with 10 kg MOQ, Copper Sulphate at PKR 750-1,200 per kg in 25 kg bags, Silver Nitrate at PKR 12,000 per 25 g for 99.9% and PKR 8,000 per 25 g for 70%, and Copper Carbonate at PKR 2,000 per kg. Silver Nitrate prices may vary with silver market rates.',
         },
       },
     ],
@@ -442,7 +442,7 @@ export default function ProductsPage() {
                       What are your current product prices and MOQ?
                     </h3>
                     <p className="text-gray-700">
-                      Copper Oxide is PKR 3,000/kg with 10 kg MOQ and 25 kg recommended packaging. Copper Sulphate is PKR 750-1,200/kg in 25 kg bags depending on grade. Silver Nitrate is sold in 25 g packs at PKR 12,000 for 99.9% and PKR 8,000 for 70%, with prices varying by silver market rates. Copper Carbonate 55% is PKR 2,000/kg. Cobalt Oxide and Silver Chloride prices are confirmed at quotation.
+                      Copper Oxide is PKR 3,500/kg with 10 kg MOQ and 25 kg recommended packaging. Copper Sulphate is PKR 750-1,200/kg in 25 kg bags depending on grade. Silver Nitrate is sold in 25 g packs at PKR 12,000 for 99.9% and PKR 8,000 for 70%, with prices varying by silver market rates. Copper Carbonate 55% is PKR 2,000/kg. Cobalt Oxide and Silver Chloride prices are confirmed at quotation.
                     </p>
                   </div>
                   <div>

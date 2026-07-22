@@ -8,7 +8,7 @@ export type ProductSalesInfo = {
 
 export const productSalesInfo: Record<string, ProductSalesInfo> = {
   'copper-oxide': {
-    priceLabel: 'PKR 3,000 per kg',
+    priceLabel: 'PKR 3,500 per kg',
     packaging: '25 kg standard packaging',
     moq: '10 kg minimum order; 25 kg recommended',
     note: 'Best value is usually the full 25 kg pack.',

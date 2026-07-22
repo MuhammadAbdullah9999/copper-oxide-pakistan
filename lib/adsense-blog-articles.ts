@@ -105,7 +105,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         heading: 'Copper Oxide Price and Packaging in Pakistan',
         body: [
-          'Sulman Traders currently lists copper oxide at PKR 3,000 per kg. Standard packaging is 25 kg, the minimum order is 10 kg, and 25 kg is recommended because it is usually the practical pack size for industrial buyers.',
+          'Sulman Traders currently lists copper oxide at PKR 3,500 per kg. Standard packaging is 25 kg, the minimum order is 10 kg, and 25 kg is recommended because it is usually the practical pack size for industrial buyers.',
           'Final delivered cost can change with city, quantity, and delivery method. A Lahore buyer collecting material may have a different total cost from a buyer shipping to Karachi, Faisalabad, Multan, Hyderabad, or Islamabad.',
         ],
         note: {
@@ -139,7 +139,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         question: 'What is the current copper oxide price in Pakistan?',
         answer:
-          'Sulman Traders currently lists copper oxide at PKR 3,000 per kg with 25 kg standard packaging, 10 kg MOQ, and 25 kg recommended.',
+          'Sulman Traders currently lists copper oxide at PKR 3,500 per kg with 25 kg standard packaging, 10 kg MOQ, and 25 kg recommended.',
       },
       {
         question: 'Is copper oxide soluble in water?',
@@ -206,7 +206,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         heading: 'Price, MOQ, and Practical Ordering',
         body: [
-          'Sulman Traders currently lists copper oxide at PKR 3,000 per kg. The standard pack is 25 kg, with a 10 kg minimum order and 25 kg recommended for industrial use.',
+          'Sulman Traders currently lists copper oxide at PKR 3,500 per kg. The standard pack is 25 kg, with a 10 kg minimum order and 25 kg recommended for industrial use.',
           'For glaze factories, the full pack helps reduce repeated small-order variation. For new recipes, a trial quantity is useful before bulk buying.',
         ],
       },
@@ -366,7 +366,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         heading: 'Price and Packaging Difference',
         body: [
-          'Sulman Traders currently lists copper oxide at PKR 3,000 per kg, with 10 kg MOQ and 25 kg recommended packaging. Copper sulphate is listed from PKR 750 to PKR 1,200 per kg depending on grade, usually in 25 kg bags.',
+          'Sulman Traders currently lists copper oxide at PKR 3,500 per kg, with 10 kg MOQ and 25 kg recommended packaging. Copper sulphate is listed from PKR 750 to PKR 1,200 per kg depending on grade, usually in 25 kg bags.',
           'The price difference comes from chemical type, grade, market demand, and production or sourcing cost. Buyers should compare by suitability, not only by price per kilogram.',
         ],
       },
@@ -551,7 +551,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
     slug: 'copper-oxide-price-in-pakistan-guide',
     title: 'Copper Oxide Price in Pakistan: What Affects CuO Cost?',
     description:
-      'Understand copper oxide price in Pakistan, including current PKR 3,000/kg listing, MOQ, packaging, grade, particle size, delivery, and buyer checks.',
+      'Understand copper oxide price in Pakistan, including current PKR 3,500/kg listing, MOQ, packaging, grade, particle size, delivery, and buyer checks.',
     category: 'Price Guide',
     datePublished: '2026-06-07',
     dateLabel: 'June 7, 2026',
@@ -565,13 +565,13 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
     productLink: { href: '/copper-oxide-price-in-pakistan', label: 'Copper Oxide price page' },
     intro: [
       'Copper oxide price searches usually come from buyers who already know they need black CuO powder. They want to compare supplier price, MOQ, packaging, and whether the material is suitable for ceramics, glass, coatings, catalysts, or technical work.',
-      'Sulman Traders currently lists copper oxide at PKR 3,000 per kg, with 25 kg packaging, a 10 kg minimum order, and 25 kg recommended for better value.',
+      'Sulman Traders currently lists copper oxide at PKR 3,500 per kg, with 25 kg packaging, a 10 kg minimum order, and 25 kg recommended for better value.',
     ],
     sections: [
       {
         heading: 'Current Price and MOQ',
         body: [
-          'The current listed copper oxide price is PKR 3,000 per kg. The minimum order quantity is 10 kg, but 25 kg is recommended because it matches standard packaging and works better for production buyers.',
+          'The current listed copper oxide price is PKR 3,500 per kg. The minimum order quantity is 10 kg, but 25 kg is recommended because it matches standard packaging and works better for production buyers.',
           'If you are comparing prices, ask whether the quote is ex-warehouse or delivered. Delivery charges can change total cost significantly for buyers outside Lahore.',
         ],
       },
@@ -601,7 +601,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         question: 'What is the copper oxide price at Sulman Traders?',
         answer:
-          'The current listed price is PKR 3,000 per kg.',
+          'The current listed price is PKR 3,500 per kg.',
       },
       {
         question: 'What is the copper oxide MOQ?',
@@ -811,7 +811,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
         heading: 'Buying Checks for Glass Producers',
         body: [
           'Ask for price, MOQ, packaging, colour performance, COA/SDS support, and supplier experience with glass applications.',
-          'For copper oxide, current listed price is PKR 3,000 per kg. For cobalt oxide, price is confirmed at quotation and MOQ is 2 kg.',
+          'For copper oxide, current listed price is PKR 3,500 per kg. For cobalt oxide, price is confirmed at quotation and MOQ is 2 kg.',
         ],
       },
     ],
@@ -955,7 +955,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         heading: 'How to Order Correctly',
         body: [
-          'Tell the supplier the formula, colour, grade, application, and any COA/SDS needs. For Sulman Traders copper oxide, current listed CuO price is PKR 3,000 per kg.',
+          'Tell the supplier the formula, colour, grade, application, and any COA/SDS needs. For Sulman Traders copper oxide, current listed CuO price is PKR 3,500 per kg.',
           'For technical applications, request a sample and test before bulk order.',
         ],
       },
@@ -1310,7 +1310,7 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       {
         heading: 'Ask for Price, MOQ, and Packaging',
         body: [
-          'Clear price and MOQ save time. Sulman Traders lists key buyer details such as copper oxide PKR 3,000/kg, copper sulphate grade prices, silver nitrate 25 g prices, and cobalt oxide MOQ.',
+          'Clear price and MOQ save time. Sulman Traders lists key buyer details such as copper oxide PKR 3,500/kg, copper sulphate grade prices, silver nitrate 25 g prices, and cobalt oxide MOQ.',
           'Delivery charges should be confirmed separately by city and quantity.',
         ],
       },

@@ -45,7 +45,7 @@ export default function Home() {
     },
     {
       question: "What are the applications of your Copper Oxide?",
-      answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production, catalysts, and electronic components. Current price is PKR 3,000 per kg, standard packaging is 25 kg, minimum order is 10 kg, and 25 kg is recommended for better value."
+      answer: "Our Copper Oxide is widely used in ceramics manufacturing for coloring and glazing, battery production, catalysts, and electronic components. Current price is PKR 3,500 per kg, standard packaging is 25 kg, minimum order is 10 kg, and 25 kg is recommended for better value."
     },
     {
       question: "What is Black Cobalt Oxide (Co3O4) used for?",

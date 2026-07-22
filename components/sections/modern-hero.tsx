@@ -24,7 +24,7 @@ const productImages = [
     src: "/copper-oxide-in-plate.jpeg",
     alt: "High purity Copper Oxide (CuO) manufactured in Pakistan by Sulman Traders",
     title: "Copper Oxide (CuO)",
-    description: "PKR 3,000/kg • 25 kg Pack"
+    description: "PKR 3,500/kg • 25 kg Pack"
   },
   {
     src: "/silver-nitrate-product.png",
@@ -227,7 +227,7 @@ export default function ModernHero() {
                   className="rounded-lg mb-2"
                 />
                 <h4 className="font-semibold text-sm">Copper Oxide</h4>
-                <p className="text-xs text-gray-500">CuO • PKR 3,000/kg</p>
+                <p className="text-xs text-gray-500">CuO • PKR 3,500/kg</p>
               </div>
 
               <div className="absolute -right-6 bottom-32 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-[200px] z-20">

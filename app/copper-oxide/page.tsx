@@ -5,8 +5,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
-  description: 'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,000/kg, 25 kg packaging, 10 kg MOQ.',
+  title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,500/kg',
+  description: 'Buy black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. PKR 3,500/kg, 25 kg packaging, 10 kg MOQ.',
   keywords: [
     'copper oxide Pakistan',
     'copper oxide manufacturer Pakistan',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.sulmantraders.com/copper-oxide',
   },
   openGraph: {
-    title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,000/kg',
+    title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,500/kg',
     description: 'Black Copper Oxide (CuO) powder in Pakistan for ceramics, glass, pigments, and industrial use. 25 kg packaging, 10 kg MOQ, and nationwide delivery coordination.',
     url: 'https://www.sulmantraders.com/copper-oxide',
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Copper Oxide Supplier Pakistan | CuO Powder',
-    description: 'Buy black Copper Oxide at PKR 3,000/kg. 25 kg packaging and 10 kg MOQ.',
+    description: 'Buy black Copper Oxide at PKR 3,500/kg. 25 kg packaging and 10 kg MOQ.',
     images: ['https://www.sulmantraders.com/black-powder.jpeg'],
   },
 };
@@ -76,7 +76,7 @@ export default function Main(){
                         '@type': 'Offer',
                         availability: 'https://schema.org/InStock',
                         priceCurrency: 'PKR',
-                        price: '3000',
+                        price: '3500',
                         unitCode: 'KGM',
                         seller: { '@type': 'Organization', name: 'Sulman Traders' }
                     },

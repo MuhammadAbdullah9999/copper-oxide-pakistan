@@ -43,7 +43,7 @@ export default function HeroCarousel() {
     {
       image: "/copper-oxide-banner.png",
       title: "Premium Copper Oxide (CuO)",
-      description: "Copper Oxide powder for ceramics, batteries, catalysts, and industry. Current price PKR 3,000/kg, 10 kg MOQ, 25 kg packaging recommended.",
+      description: "Copper Oxide powder for ceramics, batteries, catalysts, and industry. Current price PKR 3,500/kg, 10 kg MOQ, 25 kg packaging recommended.",
       link: "/copper-oxide",
       alt: "High purity Copper Oxide (CuO) powder manufacturing in Pakistan"
     },
