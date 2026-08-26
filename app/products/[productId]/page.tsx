@@ -274,6 +274,52 @@ const products: Record<string, Product> = {
       'Oxidation catalysts, emission-control materials, and process catalyst research',
       'Gas sensor materials and electronic ceramic components'
     ]
+  },
+  'tin-sulphate': {
+    name: 'Tin Sulphate (SnSO₄)',
+    image: '/tin-sulphate-product.png',
+    description: 'Tin(II) sulphate (stannous sulphate) sourced and supplied for tin electroplating baths, textile mordanting, reducing-agent use, and manufacture of other tin salts.',
+    purity: 'Technical / plating grade',
+    specifications: {
+      'Chemical Formula': 'SnSO₄',
+      'Other Names': 'Stannous sulphate, tin(II) sulphate',
+      'Appearance': 'White to off-white crystalline powder',
+      'Molecular Weight': '214.77 g/mol',
+      'Solubility': '~33 g per 100 mL water at 25°C (deliquescent)',
+      'Decomposition': '~378°C (decomposes to SnO₂ and SO₂)'
+    },
+    applications: [
+      {
+        title: 'Tin Electroplating',
+        description: 'The primary source of Sn²⁺ ions in acid tin electroplating baths used to deposit protective, solderable tin coatings on steel, copper, and other base metals, including tinplate and PCB/electronics finishing.'
+      },
+      {
+        title: 'Textile Dyeing & Mordanting',
+        description: 'Used as a mordant in textile dyeing to improve dye fixation and colour fastness on fabrics.'
+      },
+      {
+        title: 'Reducing Agent',
+        description: 'Valued for its reducing properties in analytical chemistry, colorimetric determination of metal ions, and selected organic synthesis steps.'
+      },
+      {
+        title: 'Tin Salt & Chemical Manufacturing',
+        description: 'A convenient, tin(IV)-free source of tin(II) ions for producing other stannous compounds and specialty tin chemicals.'
+      }
+    ],
+    benefits: [
+      'Reliable Sn²⁺ source uncontaminated by tin(IV) species',
+      'Good aqueous solubility for plating bath and process use',
+      'Suitable for electroplating, textile, and laboratory buyers',
+      'Sourced and supplied with application guidance on request'
+    ],
+    uses: [
+      'Bright and matte acid tin electroplating baths',
+      'Tinplate, busbar, and connector surface finishing',
+      'PCB and electronic component tin/solder finishing',
+      'Mordant for dyeing and textile colour fixation',
+      'Reducing agent in analytical and colorimetric methods',
+      'Feedstock for manufacturing other tin(II) salts'
+    ]
   }
 }
 
@@ -299,6 +345,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     ? ['copper carbonate powder', 'basic copper carbonate', 'copper carbonate Pakistan', 'copper carbonate ceramics', 'copper carbonate pigment']
     : productId === 'cobalt-oxide'
     ? ['black cobalt oxide', 'Co3O4 supplier Pakistan', 'cobalt oxide ceramic glaze', 'cobalt oxide blue glass', 'cobalt oxide pigment', 'cobalt oxide battery material']
+    : productId === 'tin-sulphate'
+    ? ['tin sulphate Pakistan', 'stannous sulphate Pakistan', 'SnSO4 supplier Pakistan', 'tin electroplating chemical Pakistan', 'tin sulphate price Pakistan', 'stannous sulphate electroplating']
     : ['high purity chemicals', 'technical grade chemicals'];
 
   return generateProductMetadata(
@@ -317,6 +365,7 @@ export async function generateStaticParams() {
     { productId: 'silver-chloride' },
     { productId: 'copper-carbonate' },
     { productId: 'cobalt-oxide' },
+    { productId: 'tin-sulphate' },
   ];
 }
 
@@ -368,7 +417,7 @@ export default async function ProductDetail({ params }: ProductPageProps) {
             '@type': 'Brand',
             name: 'Sulman Traders'
           },
-          ...(productId === 'cobalt-oxide'
+          ...(productId === 'cobalt-oxide' || productId === 'tin-sulphate'
             ? {}
             : {
                 manufacturer: {
@@ -538,6 +587,8 @@ export default async function ProductDetail({ params }: ProductPageProps) {
                 <p className="text-gray-700 leading-relaxed mb-6">
                   {productId === 'cobalt-oxide'
                     ? `As a Lahore-based chemical supplier and trader, we source and supply ${product.name.split('(')[0].trim()} for ceramic, glass, pigment, and selected technical customers across Pakistan. We focus on reliable bulk availability, practical documentation, and grade matching for the customer application.`
+                    : productId === 'tin-sulphate'
+                    ? `As a Lahore-based chemical supplier and trader, we source and supply ${product.name.split('(')[0].trim()} for electroplating, textile, and technical customers across Pakistan. We focus on reliable bulk availability, practical documentation, and grade matching for the customer application.`
                     : `As a leading manufacturer based in Lahore, Pakistan, we have been producing premium ${product.name.split('(')[0].trim()} products for over five decades. Our advanced manufacturing processes ensure exceptional product quality, meeting both national and international standards.`}
                 </p>
 

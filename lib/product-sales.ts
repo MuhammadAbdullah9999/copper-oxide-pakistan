@@ -31,10 +31,16 @@ export const productSalesInfo: Record<string, ProductSalesInfo> = {
     note: 'Silver nitrate prices may vary with current silver market rates.',
   },
   'copper-carbonate': {
-    priceLabel: 'PKR 2,000 per kg',
+    priceLabel: 'PKR 2,400 per kg',
     packaging: 'Packaging confirmed at quotation',
     moq: 'MOQ confirmed at quotation',
     grades: ['55% grade'],
+  },
+  'tin-sulphate': {
+    priceLabel: 'Price on request',
+    packaging: 'Packaging confirmed at quotation',
+    moq: 'MOQ confirmed at quotation',
+    note: 'Tin(II) sulphate is sourced and supplied; current price depends on tin market rates and order quantity.',
   },
   'silver-chloride': {
     priceLabel: 'Price on request',

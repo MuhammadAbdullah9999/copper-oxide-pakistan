@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/tin-sulphate-price-in-pakistan`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
@@ -101,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'silver-chloride',
     'copper-carbonate',
     'cobalt-oxide',
+    'tin-sulphate',
   ];
 
   const productRoutes = productIds.map(id => ({

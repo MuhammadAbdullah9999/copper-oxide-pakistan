@@ -22,6 +22,7 @@ export default function Header() {
     { name: "Silver Chloride", href: "/products/silver-chloride" },
     { name: "Copper Carbonate", href: "/products/copper-carbonate" },
     { name: "Black Cobalt Oxide", href: "/products/cobalt-oxide" },
+    { name: "Tin Sulphate", href: "/products/tin-sulphate" },
   ]
   const phone = "+92 321 4248968"
   const phoneHref = "tel:+923214248968"

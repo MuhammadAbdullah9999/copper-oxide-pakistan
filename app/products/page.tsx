@@ -120,6 +120,19 @@ export default function ProductsPage() {
       color: 'from-slate-800 to-blue-900',
       badge: 'Ceramic Colourant',
       badgeColor: 'bg-blue-700'
+    },
+    {
+      id: 'tin-sulphate',
+      name: 'Tin Sulphate',
+      formula: 'SnSO₄',
+      specLabel: 'Material type',
+      spec: 'Tin(II) sulphate',
+      image: '/tin-sulphate-product.png',
+      shortDesc: 'Stannous sulphate for tin electroplating baths, textile mordanting, and reducing-agent use',
+      applications: ['Tin Electroplating', 'Textile Mordant', 'Reducing Agent', 'Tin Salt Production'],
+      color: 'from-slate-400 to-slate-600',
+      badge: 'Electroplating Grade',
+      badgeColor: 'bg-slate-600'
     }
   ]
 
@@ -144,6 +157,11 @@ export default function ProductsPage() {
       href: '/copper-carbonate-price-in-pakistan',
       text: productSalesInfo['copper-carbonate'].priceLabel,
     },
+    {
+      title: 'Tin Sulphate Price in Pakistan',
+      href: '/tin-sulphate-price-in-pakistan',
+      text: productSalesInfo['tin-sulphate'].priceLabel,
+    },
   ]
 
   const productListJsonLd = {
@@ -151,7 +169,7 @@ export default function ProductsPage() {
     '@type': 'CollectionPage',
     name: 'Chemical Products Supplier Pakistan',
     description:
-      'Industrial chemicals supplied by Sulman Traders in Pakistan, including Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, and Copper Carbonate.',
+      'Industrial chemicals supplied by Sulman Traders in Pakistan, including Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, and Tin Sulphate.',
     url: 'https://www.sulmantraders.com/products',
     mainEntity: {
       '@type': 'ItemList',
@@ -185,7 +203,7 @@ export default function ProductsPage() {
         name: 'Which industrial chemicals does Sulman Traders supply in Pakistan?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sulman Traders supplies Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, and related industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, and pigment customers.',
+          text: 'Sulman Traders supplies Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, Tin Sulphate, and related industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, and pigment customers.',
         },
       },
       {
@@ -209,7 +227,7 @@ export default function ProductsPage() {
         name: 'What are the current product prices and MOQ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Current listed prices include Copper Oxide at PKR 3,500 per kg with 10 kg MOQ, Copper Sulphate at PKR 750-1,200 per kg in 25 kg bags, Silver Nitrate at PKR 12,000 per 25 g for 99.9% and PKR 8,000 per 25 g for 70%, and Copper Carbonate at PKR 2,000 per kg. Silver Nitrate prices may vary with silver market rates.',
+          text: 'Current listed prices include Copper Oxide at PKR 3,500 per kg with 10 kg MOQ, Copper Sulphate at PKR 750-1,200 per kg in 25 kg bags, Silver Nitrate at PKR 12,000 per 25 g for 99.9% and PKR 8,000 per 25 g for 70%, and Copper Carbonate at PKR 2,400 per kg. Tin Sulphate is priced on request. Silver Nitrate and Tin Sulphate prices may vary with metal market rates.',
         },
       },
     ],
@@ -393,7 +411,7 @@ export default function ProductsPage() {
                   Industrial Chemical Supplier in Pakistan
                 </h2>
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Sulman Traders supplies industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, pigments, and technical applications across Pakistan. Our product range includes Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate (AgNO3), Copper Sulphate (CuSO4), Silver Chloride (AgCl), and Copper Carbonate.
+                  Sulman Traders supplies industrial chemicals for manufacturers, traders, laboratories, agriculture, ceramics, glass, pigments, and technical applications across Pakistan. Our product range includes Copper Oxide (CuO), Black Cobalt Oxide (Co3O4), Silver Nitrate (AgNO3), Copper Sulphate (CuSO4), Silver Chloride (AgCl), Copper Carbonate, and Tin Sulphate (SnSO4).
                 </p>
               </div>
 
@@ -426,7 +444,7 @@ export default function ProductsPage() {
                       Which chemicals can I buy from Sulman Traders?
                     </h3>
                     <p className="text-gray-700">
-                      You can request Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, and related industrial chemical supply.
+                      You can request Copper Oxide, Black Cobalt Oxide, Silver Nitrate, Copper Sulphate, Silver Chloride, Copper Carbonate, Tin Sulphate, and related industrial chemical supply.
                     </p>
                   </div>
                   <div>
@@ -442,7 +460,7 @@ export default function ProductsPage() {
                       What are your current product prices and MOQ?
                     </h3>
                     <p className="text-gray-700">
-                      Copper Oxide is PKR 3,500/kg with 10 kg MOQ and 25 kg recommended packaging. Copper Sulphate is PKR 750-1,200/kg in 25 kg bags depending on grade. Silver Nitrate is sold in 25 g packs at PKR 12,000 for 99.9% and PKR 8,000 for 70%, with prices varying by silver market rates. Copper Carbonate 55% is PKR 2,000/kg. Cobalt Oxide and Silver Chloride prices are confirmed at quotation.
+                      Copper Oxide is PKR 3,500/kg with 10 kg MOQ and 25 kg recommended packaging. Copper Sulphate is PKR 750-1,200/kg in 25 kg bags depending on grade. Silver Nitrate is sold in 25 g packs at PKR 12,000 for 99.9% and PKR 8,000 for 70%, with prices varying by silver market rates. Copper Carbonate 55% is PKR 2,400/kg. Cobalt Oxide, Silver Chloride, and Tin Sulphate prices are confirmed at quotation.
                     </p>
                   </div>
                   <div>

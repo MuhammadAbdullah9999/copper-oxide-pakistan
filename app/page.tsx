@@ -37,7 +37,7 @@ export default function Home() {
     },
     {
       question: "What chemical products do you manufacture or supply in Pakistan?",
-      answer: "We manufacture selected industrial chemicals and also trade/supply requested products such as Black Cobalt Oxide (Co₃O₄). Our range includes Copper Sulphate (CuSO₄), Copper Oxide (CuO), Black Cobalt Oxide, Silver Nitrate (AgNO₃), Silver Chloride (AgCl), and Copper Carbonate for agriculture, ceramics, glass, pigments, laboratories, and industrial use. Copper Sulphate is our most popular product for agricultural use."
+      answer: "We manufacture selected industrial chemicals and also trade/supply requested products such as Black Cobalt Oxide (Co₃O₄) and Tin Sulphate (SnSO₄). Our range includes Copper Sulphate (CuSO₄), Copper Oxide (CuO), Black Cobalt Oxide, Silver Nitrate (AgNO₃), Silver Chloride (AgCl), Copper Carbonate, and Tin Sulphate for agriculture, ceramics, glass, pigments, electroplating, textiles, laboratories, and industrial use. Copper Sulphate is our most popular product for agricultural use."
     },
     {
       question: "Do you supply Silver Nitrate for medical and laboratory use?",

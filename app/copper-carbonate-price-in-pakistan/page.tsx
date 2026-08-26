@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Copper Carbonate Price in Pakistan | 55% Grade | Sulman Traders",
   description:
-    "Copper Carbonate price in Pakistan: 55% basic copper carbonate at PKR 2,000 per kg for ceramics, pigments, formulations, and copper salts.",
+    "Copper Carbonate price in Pakistan: 55% basic copper carbonate at PKR 2,400 per kg for ceramics, pigments, formulations, and copper salts.",
   alternates: {
     canonical: "https://www.sulmantraders.com/copper-carbonate-price-in-pakistan",
   },
@@ -15,7 +15,7 @@ export default function CopperCarbonatePricePage() {
     <ProductPriceGuide
       productId="copper-carbonate"
       title="Copper Carbonate Price in Pakistan"
-      subtitle="Current Copper Carbonate 55% grade price is PKR 2,000 per kg. Packaging and MOQ are confirmed at quotation."
+      subtitle="Current Copper Carbonate 55% grade price is PKR 2,400 per kg. Packaging and MOQ are confirmed at quotation."
       productName="Copper Carbonate"
       productUrl="/products/copper-carbonate"
       useCases={[

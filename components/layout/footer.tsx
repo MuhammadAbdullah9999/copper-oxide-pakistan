@@ -162,6 +162,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/products/tin-sulphate" className="text-gray-300 hover:text-amber-200">
+                    Tin Sulphate
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Custom Products
                   </Link>

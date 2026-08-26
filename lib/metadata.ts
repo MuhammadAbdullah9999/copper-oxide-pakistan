@@ -62,6 +62,13 @@ export const defaultMetadata: Metadata = {
     'Co3O4 pakistan',
     'cobalt oxide ceramic glaze',
     'cobalt oxide pigment pakistan',
+    // Tin Sulphate Keywords
+    'tin sulphate pakistan',
+    'stannous sulphate pakistan',
+    'SnSO4 supplier pakistan',
+    'tin sulphate price pakistan',
+    'tin electroplating chemical pakistan',
+    'stannous sulphate electroplating',
     // General Keywords
     'chemical manufacturer lahore',
     'chemical supplier lahore',
@@ -133,6 +140,7 @@ export function generateProductMetadata(
     'silver-chloride': '/silver-chloride-product.png',
     'copper-carbonate': '/copper-carbonate-powder.png',
     'cobalt-oxide': '/cobalt-oxide-bulk.png',
+    'tin-sulphate': '/tin-sulphate-product.png',
   };
   const imageUrl = `${BASE_URL}${productOgImage[productId] || '/og-image.jpg'}`;
 
@@ -160,7 +168,12 @@ export function generateProductMetadata(
     'copper-carbonate': {
       title: 'Copper Carbonate Supplier Pakistan | 55% Grade Price',
       description:
-        'Buy 55% basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Current price PKR 2,000/kg.',
+        'Buy 55% basic Copper Carbonate in Pakistan for ceramic glazes, pigments, copper salts, and formulations. Current price PKR 2,400/kg.',
+    },
+    'tin-sulphate': {
+      title: 'Tin Sulphate SnSO4 Supplier Pakistan | Stannous Sulphate',
+      description:
+        'Buy Tin Sulphate (SnSO4 / stannous sulphate) in Pakistan for tin electroplating, textile mordanting, and reducing-agent use. Price on request.',
     },
     'cobalt-oxide': {
       title: 'Black Cobalt Oxide Co3O4 Supplier Pakistan | 99.9% Pure',
