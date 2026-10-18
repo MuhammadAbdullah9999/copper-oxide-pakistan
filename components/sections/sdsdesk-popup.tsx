@@ -74,19 +74,18 @@ export default function SdsDeskPopup() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="sdsdesk-popup-title"
-        className="relative grid max-h-[92vh] w-full max-w-3xl overflow-hidden rounded-3xl bg-gray-950 shadow-[0_30px_80px_-10px_rgba(245,158,11,0.45)] ring-1 ring-amber-500/40 animate-in zoom-in-95 slide-in-from-bottom-6 duration-500 md:grid-cols-[1.1fr_1fr]"
+        className="relative grid max-h-[92vh] w-full max-w-3xl overflow-hidden rounded-3xl bg-gray-950 shadow-[0_30px_80px_-10px_rgba(245,158,11,0.45)] animate-in zoom-in-95 slide-in-from-bottom-6 duration-500 md:grid-cols-[1.1fr_1fr]"
       >
-        <span className="absolute left-4 top-4 z-10 rounded bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white/60">Ad</span>
+        <span className="absolute left-9 top-5 z-10 rounded bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white/60">Ad</span>
         <button ref={closeRef} type="button" onClick={close} aria-label="Close" className="absolute right-3 top-3 z-10 rounded-full bg-black/40 p-1.5 text-white/80 hover:bg-black/70 hover:text-white">
           <X className="h-5 w-5" />
         </button>
 
         {/* Offer side */}
         <div className="relative flex flex-col justify-center px-6 pb-6 pt-14 text-white md:px-9 md:py-10">
-          <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-amber-500/25 blur-3xl" aria-hidden="true" />
           <div className="relative">
             <span className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-gray-950">
-              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" /> 7 days free
+              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" /> 3 days free
             </span>
             <h2 id="sdsdesk-popup-title" className="mt-4 text-3xl font-extrabold leading-[1.05] md:text-4xl">
               Exporting chemicals?{' '}

@@ -19,7 +19,7 @@ type ChemDocsPromoProps = {
 
 const defaults = {
   title: 'Selling chemicals? Create your own SDS and GHS labels.',
-  body: 'SDS Desk is the Safety Data Sheet software we built for chemical traders and manufacturers: GHS-classified 16-section SDS, hazard labels and certificates of analysis, exported as PDF. 7-day free trial.',
+  body: 'SDS Desk is the Safety Data Sheet software we built for chemical traders and manufacturers: GHS-classified 16-section SDS, hazard labels and certificates of analysis, exported as PDF. 3-day free trial.',
   cta: 'Try SDS Desk free',
 }
 
