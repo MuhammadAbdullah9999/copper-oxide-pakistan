@@ -1,8 +1,36 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import Script from 'next/script';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { OptimizedImage } from '@/components/ui/optimized-image';
+import ChemDocsPromo from '@/components/sections/chemdocs-promo';
+import { sdsDeskUrl } from '@/lib/sdsdesk';
+
+const MD_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+// Body strings may carry [label](url) links. sdsdesk.com links get UTM tags so
+// referral traffic from each article is attributable.
+function renderText(text: string, linkClass: string) {
+  const out: ReactNode[] = [];
+  let last = 0;
+  for (const m of text.matchAll(MD_LINK)) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    const [, label, url] = m;
+    const cls = `${linkClass} underline hover:no-underline`;
+    if (url.startsWith('https://sdsdesk.com')) {
+      const u = new URL(url);
+      out.push(<a key={m.index} href={sdsDeskUrl(u.pathname === '/' ? '/' : u.pathname, 'blog-body')} className={cls} target="_blank" rel="noopener">{label}</a>);
+    } else if (url.startsWith('http')) {
+      out.push(<a key={m.index} href={url} className={cls} rel="noopener">{label}</a>);
+    } else {
+      out.push(<Link key={m.index} href={url} className={cls}>{label}</Link>);
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
 
 type ArticleSection = {
   heading: string;
@@ -47,6 +75,8 @@ type ChemicalBlogArticleProps = {
   checklistTitle?: string;
   checklistItems?: string[];
   conclusion?: string[];
+  /** Overrides the default SDS Desk cross-promo card shown in the article. */
+  promo?: { path?: string; title?: string; body?: string; cta?: string };
 };
 
 const accentClasses = {
@@ -99,6 +129,7 @@ export default function ChemicalBlogArticle({
     'Ask whether the grade matches your use: ceramic, lab, agriculture, electroplating, or general industrial.',
     'Run a small production trial before scaling to full batch use.',
   ],
+  promo,
   conclusion = [
     'The best chemical purchase is not only about price per kilogram. It is about purity, consistency, documentation, and choosing the grade that matches your process. Sulman Traders supplies industrial chemicals across Pakistan with practical support for manufacturers, traders, laboratories, and production teams.',
   ],
@@ -190,7 +221,7 @@ export default function ChemicalBlogArticle({
 
               <div className="prose prose-lg max-w-none">
                 {intro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{renderText(paragraph, styles.link)}</p>
                 ))}
 
                 <div className="my-8 overflow-hidden rounded-xl shadow-sm">
@@ -214,21 +245,24 @@ export default function ChemicalBlogArticle({
                     </h2>
                     {section.body.map((paragraph) => (
                       <p key={paragraph} className="mt-4">
-                        {paragraph}
+                        {renderText(paragraph, styles.link)}
                       </p>
                     ))}
                     {section.bullets && (
                       <ul className="mt-3 list-disc space-y-1 pl-6">
                         {section.bullets.map((bullet) => (
-                          <li key={bullet}>{bullet}</li>
+                          <li key={bullet}>{renderText(bullet, styles.link)}</li>
                         ))}
                       </ul>
                     )}
                     {section.note && (
                       <div className={`my-6 rounded-r-lg border-l-4 p-4 ${styles.note}`}>
                         <p className="font-semibold">{section.note.title}</p>
-                        <p className="mt-1">{section.note.body}</p>
+                        <p className="mt-1">{renderText(section.note.body, styles.link)}</p>
                       </div>
+                    )}
+                    {index === 2 && (
+                      <ChemDocsPromo variant="card" placement="blog-mid" {...promo} />
                     )}
                     {index === 1 && secondaryImages.length > 0 && (
                       <div className="my-8 overflow-hidden rounded-xl shadow-sm">
@@ -358,6 +392,11 @@ export default function ChemicalBlogArticle({
                         </Link>
                       </li>
                     ))}
+                    <li>
+                      <a href={sdsDeskUrl('/blog', 'blog-related')} target="_blank" rel="noopener" className={`${styles.link} underline hover:no-underline`}>
+                        SDS and GHS compliance guides on SDS Desk
+                      </a>
+                    </li>
                   </ul>
                 </section>
 
@@ -373,7 +412,7 @@ export default function ChemicalBlogArticle({
                 <h2 className="mt-10 mb-4 text-2xl font-bold text-gray-800">Conclusion</h2>
                 {conclusion.map((paragraph) => (
                   <p key={paragraph} className="mt-4">
-                    {paragraph}
+                    {renderText(paragraph, styles.link)}
                   </p>
                 ))}
                 <p className="mt-4">
@@ -391,6 +430,8 @@ export default function ChemicalBlogArticle({
                   </Link>{' '}
                   for availability, pricing, packaging, and technical documents.
                 </p>
+
+                <ChemDocsPromo variant="inline" placement="blog-end" path={promo?.path} cta={promo?.cta} />
 
                 <div className="mt-12 rounded-xl bg-gray-50 p-6">
                   <h3 className="mb-6 text-2xl font-bold">Frequently Asked Questions</h3>

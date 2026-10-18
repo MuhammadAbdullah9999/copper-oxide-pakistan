@@ -9,6 +9,8 @@ import { defaultMetadata, viewport } from "@/lib/metadata";
 import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieConsent from "@/components/CookieConsent";
+import SdsDeskPopup from "@/components/sections/sdsdesk-popup";
+import SdsDeskBanner from "@/components/sections/sdsdesk-banner";
 import VisitorIntelligence from "@/components/VisitorIntelligence";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-5MBRGK5MJX";
@@ -116,6 +118,8 @@ export default function RootLayout({
           {children}
           <WhatsAppFloat />
           <CookieConsent />
+          <SdsDeskPopup />
+          <SdsDeskBanner />
         </ThemeProvider>
       </body>
     </html>

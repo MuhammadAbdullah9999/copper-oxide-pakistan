@@ -10,6 +10,7 @@ import Footer from "@/components/layout/footer"
 import { Metadata } from 'next'
 import Script from "next/script"
 import { defaultMetadata } from "@/lib/metadata"
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 // Use the default metadata for consistency
 export const metadata: Metadata = {
@@ -117,6 +118,8 @@ export default function Home() {
         {/* CTA Section */}
         <CTAModern />
         
+        <ChemDocsPromo variant="banner" placement="home" />
+
         {/* FAQ Section for SEO */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">

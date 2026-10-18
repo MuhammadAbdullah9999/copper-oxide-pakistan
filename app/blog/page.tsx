@@ -6,6 +6,7 @@ import Script from 'next/script';
 import { OptimizedImage } from '@/components/ui/optimized-image';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/blog-posts';
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 export const metadata: Metadata = {
   title: 'Chemical Industry Blog - Sulman Traders',
@@ -119,6 +120,10 @@ export default function BlogPage() {
               ))}
             </div>
             
+            <div className="mt-16 max-w-3xl mx-auto">
+              <ChemDocsPromo variant="card" placement="blog-index" path="/blog" title="Free SDS and GHS guides for chemical sellers" body="Practical guides on writing Safety Data Sheets, GHS labels, mixture classification and export documents, from the SDS Desk team." cta="Read the SDS Desk guides" />
+            </div>
+
             {/* Email Subscription */}
             <div className="mt-16 bg-amber-50 p-8 rounded-lg max-w-3xl mx-auto">
               <h2 className="text-2xl font-bold mb-4 text-center">Subscribe to Our Newsletter</h2>

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, CheckCircle, Sparkles } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import { productSalesInfo } from "@/lib/product-sales"
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 export const metadata: Metadata = {
   title: 'Industrial Chemical Supplier Pakistan | Prices, MOQ & MSDS',
@@ -518,6 +519,7 @@ export default function ProductsPage() {
             </FadeIn>
           </div>
         </section>
+        <div className="container mx-auto px-4 pb-12"><ChemDocsPromo variant="card" placement="products-index" path="/samples" title="Need an SDS or GHS label for your own product?" body="Reselling or exporting chemicals? Generate a 16-section Safety Data Sheet, GHS hazard label and certificate of analysis with SDS Desk. See sample documents first." cta="See sample SDS documents" /></div>
       </main>
       <Footer />
     </div>

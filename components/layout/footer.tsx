@@ -2,6 +2,7 @@ import Link from "next/link"
 import { FlaskRoundIcon as Flask } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Script from "next/script"
+import { sdsDeskUrl } from "@/lib/sdsdesk"
 
 export default function Footer() {
   return (
@@ -122,6 +123,16 @@ export default function Footer() {
                   <Link href="/contact" className="text-gray-300 hover:text-amber-200">
                     Contact
                   </Link>
+                </li>
+                <li>
+                  <a href={sdsDeskUrl('/', 'footer')} target="_blank" rel="noopener" className="text-gray-300 hover:text-amber-200">
+                    SDS Desk: SDS &amp; GHS label software
+                  </a>
+                </li>
+                <li>
+                  <a href={sdsDeskUrl('/blog', 'footer')} target="_blank" rel="noopener" className="text-gray-300 hover:text-amber-200">
+                    SDS &amp; GHS guides
+                  </a>
                 </li>
               </ul>
             </nav>

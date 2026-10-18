@@ -80,8 +80,13 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pulse-soft": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(251,191,36,0.55)" },
+          "50%": { boxShadow: "0 0 0 10px rgba(251,191,36,0)" },
+        },
       },
       animation: {
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

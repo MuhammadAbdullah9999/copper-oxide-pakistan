@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { productSalesInfo } from "@/lib/product-sales";
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 const silverNitrateSales = productSalesInfo['silver-nitrate'];
 
@@ -326,6 +327,7 @@ export default function SilverNitratePage() {
               </div>
             </div>
           </section>
+        <div className="container mx-auto px-4 pb-12"><ChemDocsPromo variant="card" placement="silver-nitrate" path="/samples" title="Need an SDS or GHS label for your own product?" body="Reselling or exporting chemicals? Generate a 16-section Safety Data Sheet, GHS hazard label and certificate of analysis with SDS Desk. See sample documents first." cta="See sample SDS documents" /></div>
         </main>
         <Footer />
       </div>

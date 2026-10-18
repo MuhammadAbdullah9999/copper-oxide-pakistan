@@ -86,6 +86,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
       checklistTitle={article.checklistTitle}
       checklistItems={article.checklistItems}
       conclusion={article.conclusion}
+      promo={article.promo}
     />
   );
 }

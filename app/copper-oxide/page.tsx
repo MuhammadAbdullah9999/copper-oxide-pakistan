@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import ProductDetails from "@/components/sections/product-detail";
 import { Metadata } from 'next';
 import Script from 'next/script';
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 export const metadata: Metadata = {
   title: 'Copper Oxide Supplier Pakistan | CuO Powder PKR 3,500/kg',
@@ -124,6 +125,7 @@ export default function Main(){
             </Script>
             <Header></Header>
             <ProductDetails></ProductDetails>
+            <div className="container mx-auto px-4 pb-12"><ChemDocsPromo variant="card" placement="copper-oxide" path="/samples" title="Need an SDS or GHS label for your own product?" body="Reselling or exporting chemicals? Generate a 16-section Safety Data Sheet, GHS hazard label and certificate of analysis with SDS Desk. See sample documents first." cta="See sample SDS documents" /></div>
             <Footer></Footer>
         </div>
     )

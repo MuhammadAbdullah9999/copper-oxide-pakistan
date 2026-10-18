@@ -7,6 +7,7 @@ import Cuso4ProductGallery from "@/components/sections/cuso4-product-gallery";
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { productSalesInfo } from "@/lib/product-sales";
+import ChemDocsPromo from '@/components/sections/chemdocs-promo'
 
 const copperSulphateSales = productSalesInfo['copper-sulphate'];
 
@@ -546,6 +547,7 @@ export default function CopperSulphatePage() {
               </div>
             </div>
           </section>
+        <div className="container mx-auto px-4 pb-12"><ChemDocsPromo variant="card" placement="copper-sulphate" path="/samples" title="Need an SDS or GHS label for your own product?" body="Reselling or exporting chemicals? Generate a 16-section Safety Data Sheet, GHS hazard label and certificate of analysis with SDS Desk. See sample documents first." cta="See sample SDS documents" /></div>
         </main>
         <Footer />
       </div>

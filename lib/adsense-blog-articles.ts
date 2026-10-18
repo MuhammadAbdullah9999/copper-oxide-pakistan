@@ -44,6 +44,7 @@ export type AdsenseBlogArticle = {
   checklistTitle?: string;
   checklistItems?: string[];
   conclusion?: string[];
+  promo?: { path?: string; title?: string; body?: string; cta?: string };
 };
 
 const defaultBuyerChecklist = [
@@ -1713,6 +1714,319 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
           'Confirm current quote, MOQ, packaging, delivery charges, and validity before ordering.',
       },
     ],
+  },
+  {
+    slug: 'sds-for-chemical-exporters-pakistan',
+    title: 'Safety Data Sheets for Pakistani Chemical Traders and Exporters: What Foreign Buyers Ask For',
+    description:
+      'What a Safety Data Sheet must contain, why overseas buyers and freight forwarders ask for one, and how small Pakistani chemical traders can prepare a compliant SDS without hiring a consultant for every product.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-18',
+    dateLabel: 'October 18, 2026',
+    readTime: '9 min read',
+    heroImage: '/banner.png',
+    heroAlt: 'Chemical trader preparing Safety Data Sheet documents for export',
+    accent: 'slate',
+    author: 'Muhammad Salman',
+    tags: ['SDS', 'export', 'GHS', 'chemical traders', 'Pakistan'],
+    keywords: [
+      'SDS for chemical export Pakistan',
+      'safety data sheet Pakistan',
+      'MSDS Pakistan chemical supplier',
+      'GHS SDS exporter',
+      'how to make SDS for chemical product',
+    ],
+    intro: [
+      'If you sell chemicals to a buyer outside Pakistan, the first document request is rarely the price list. It is the Safety Data Sheet. Importers, freight forwarders, shipping lines and the buyer\'s own safety team all want to see one before they accept the cargo.',
+      'This guide explains what an SDS is, what overseas buyers look for in it, and the practical ways a small trader or manufacturer can produce a correct one. It is written by the team behind Sulman Traders, which supplies copper, silver and cobalt chemicals in Pakistan and also built [SDS Desk](https://sdsdesk.com), software for preparing these documents.',
+    ],
+    sections: [
+      {
+        heading: 'What a Safety Data Sheet Is',
+        body: [
+          'A Safety Data Sheet is a standard document that tells the people handling a chemical what the hazards are and what to do about them. Under the UN Globally Harmonized System (GHS) it has 16 fixed sections, from product identification and hazard identification through to transport and regulatory information. Our plain-language walkthrough is here: [The 16 sections of a Safety Data Sheet explained](https://sdsdesk.com/blog/sds-16-sections-explained).',
+          'The older name MSDS (Material Safety Data Sheet) is still common in Pakistan, but most overseas buyers now expect the GHS-format SDS. The differences are covered in [SDS vs MSDS: what changed](https://sdsdesk.com/blog/sds-vs-msds-differences).',
+        ],
+      },
+      {
+        heading: 'Why Overseas Buyers and Forwarders Ask for It',
+        body: [
+          'Different markets enforce the requirement in different ways. The EU expects suppliers to provide an SDS for hazardous substances and mixtures under REACH and CLP. The United States expects it under OSHA HazCom. Shipping lines and freight forwarders ask for it to decide how a container must be declared and stowed. Local rules at the destination are what count, so check the buyer\'s market first.',
+          'In practice the request arrives before the first order is confirmed. A supplier who can send a clean, current, correctly formatted SDS the same day looks like a serious supplier. One who sends a scanned MSDS from an unrelated product loses the deal or, worse, ships a document that is wrong.',
+          'For the market-by-market detail, see [EU CLP and REACH SDS requirements](https://sdsdesk.com/blog/eu-clp-reach-sds-requirements) and the [exporter\'s SDS and labelling checklist](https://sdsdesk.com/blog/sds-for-exporting-chemicals-checklist).',
+        ],
+      },
+      {
+        heading: 'What Buyers Check First in Your SDS',
+        body: [
+          'Reviewers do not read all 16 sections. They tend to check a handful of things quickly, and a mistake in any of them undermines trust in the rest.',
+        ],
+        bullets: [
+          'Product name, CAS number and supplier details in Section 1 match your invoice and label.',
+          'Section 2 carries a signal word, hazard pictograms and H-statements that are consistent with the composition.',
+          'Section 3 lists the ingredients with CAS numbers and concentration ranges.',
+          'Section 14 transport information (UN number, class, packing group) agrees with how you are shipping.',
+          'The revision date is recent and the document is in the buyer\'s working language.',
+        ],
+        note: {
+          title: 'Do not copy an old SDS',
+          body: 'Reusing the SDS of a similar product silently carries over its classification, which may be wrong for your grade or concentration. Classification belongs to the exact substance or mixture you are selling.',
+        },
+      },
+      {
+        heading: 'Three Ways to Get a Compliant SDS',
+        body: [
+          'A consultant writing each SDS is accurate but slow and priced per document, which adds up for a trader with many products. Copying a competitor\'s document is cheap and risky. The third option is software that works from sourced hazard data and fixed regulatory wording rather than free-form text.',
+          'SDS Desk was built for the third case: you enter the composition, it looks up the harmonised classification of each component, calculates the classification of the mixture with the GHS rules, and produces a 16-section SDS, a GHS label and a certificate of analysis as PDFs. You can look at real output first on the [sample documents page](https://sdsdesk.com/samples), and check any substance on the [chemical database](https://sdsdesk.com/chemicals).',
+          'Whichever route you pick, a competent person should review the document before it is issued. Software helps with consistency and speed; it does not remove responsibility for what you ship.',
+        ],
+      },
+      {
+        heading: 'A Practical Routine for Small Traders',
+        body: [
+          'Keep one SDS per product grade, not one per chemical name. Record the revision date and set a reminder to review it at least every few years or whenever the composition, supplier data or regulations change. Our guide on [how often an SDS should be updated](https://sdsdesk.com/blog/how-often-should-an-sds-be-updated) lists the triggers.',
+          'Send the SDS together with the certificate of analysis, but remember they answer different questions: the SDS covers hazards and handling, the CoA covers quality. See [CoA vs SDS vs TDS](https://sdsdesk.com/blog/certificate-of-analysis-vs-sds-vs-tds).',
+          'Before you issue anything, run it through the free [SDS readiness checker](https://sdsdesk.com/tools/sds-readiness-checker) to catch missing sections.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Do I need an SDS to export chemicals from Pakistan?',
+        answer:
+          'Overseas buyers, importers and shipping lines almost always ask for one, and destination countries such as the EU and US require suppliers to provide it for hazardous products. Check the rules of the destination market.',
+      },
+      {
+        question: 'Is an MSDS still acceptable?',
+        answer:
+          'Many people still say MSDS, but most buyers expect the GHS-format 16-section SDS. An old MSDS in a different format can be rejected.',
+      },
+      {
+        question: 'Can I use another supplier\'s SDS for my product?',
+        answer:
+          'Not safely. Classification depends on the exact substance, grade and concentration you supply, and a copied document may carry the wrong hazard statements.',
+      },
+      {
+        question: 'How long does it take to create an SDS with software?',
+        answer:
+          'With the composition and a sourced classification on hand, a draft can be generated in minutes. It should still be reviewed by a competent person before it is issued.',
+      },
+    ],
+    checklistTitle: 'Export SDS Checklist',
+    checklistItems: [
+      'One current SDS per product grade, in the buyer\'s language.',
+      'All 16 sections present, with a revision date.',
+      'Label matches the SDS: same signal word, pictograms and H-statements.',
+      'Transport section agrees with the shipping documents.',
+      'Certificate of analysis sent alongside, for the same batch.',
+    ],
+    promo: {
+      path: '/samples',
+      title: 'See a real SDS before you decide',
+      body: 'Download sample SDS, GHS label and certificate of analysis PDFs generated by SDS Desk, then try it free for 7 days.',
+      cta: 'View sample documents',
+    },
+  },
+  {
+    slug: 'ghs-labels-pictograms-chemical-packaging-pakistan',
+    title: 'GHS Labels for Chemical Packaging: Pictograms, Signal Words and Hazard Statements',
+    description:
+      'A practical guide for chemical sellers on what must appear on a GHS label: product identifier, pictograms, signal word, hazard and precautionary statements and supplier details.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-18',
+    dateLabel: 'October 18, 2026',
+    readTime: '8 min read',
+    heroImage: '/banner.png',
+    heroAlt: 'Labelled chemical packaging showing hazard pictograms',
+    accent: 'amber',
+    author: 'Muhammad Salman',
+    tags: ['GHS', 'labels', 'pictograms', 'chemical packaging', 'Pakistan'],
+    keywords: [
+      'GHS label requirements',
+      'GHS pictograms meaning',
+      'chemical label Pakistan',
+      'signal word danger warning',
+      'hazard statements H codes',
+    ],
+    intro: [
+      'A chemical bag or drum without a proper label is a problem for everyone downstream: the warehouse worker, the transporter and the end user. The GHS label is the short, visual version of the Safety Data Sheet, and it has a fixed set of elements.',
+      'This guide covers those elements and the mistakes we see most often. For the formal rules and examples, the SDS Desk team has written a longer reference: [GHS label requirements: pictograms, signal words and hazard statements](https://sdsdesk.com/blog/ghs-label-requirements-pictograms-signal-words).',
+    ],
+    sections: [
+      {
+        heading: 'The Six Elements of a GHS Label',
+        body: [
+          'A GHS label for a hazardous product normally carries the following, all legible and durable on the package:',
+        ],
+        bullets: [
+          'Product identifier: the chemical name and, for mixtures, the hazardous ingredients.',
+          'Signal word: "Danger" for more severe hazards or "Warning" for less severe ones.',
+          'Hazard pictograms: red-bordered diamonds with a black symbol.',
+          'Hazard statements: the standard H-statements such as H302 "Harmful if swallowed".',
+          'Precautionary statements: the P-statements covering prevention, response, storage and disposal.',
+          'Supplier identification: name, address and telephone number.',
+        ],
+      },
+      {
+        heading: 'The Nine GHS Pictograms',
+        body: [
+          'There are nine pictograms: exploding bomb, flame, flame over circle, gas cylinder, corrosion, skull and crossbones, exclamation mark, health hazard and environment. Each stands for a family of hazards, and a product may show several. A visual reference with meanings is on the free [GHS pictogram guide](https://sdsdesk.com/tools/ghs-pictograms).',
+          'Pictograms are decided by the classification, not by taste. Adding a symbol you think "looks safer" or leaving one off to avoid a hazard impression is a labelling error.',
+        ],
+      },
+      {
+        heading: 'Where the Hazard Statements Come From',
+        body: [
+          'H-statements are standard sentences attached to each hazard class and category. You do not write them yourself; you derive them from the classification. If you want to check what an H-code means, use the [H-statement lookup](https://sdsdesk.com/tools/h-statement-lookup).',
+          'For a mixture, the classification is calculated from the components using the GHS mixture rules, not copied from the main ingredient. The method is explained in [GHS mixture classification, explained](https://sdsdesk.com/blog/ghs-mixture-classification-explained).',
+        ],
+      },
+      {
+        heading: 'Common Labelling Mistakes',
+        body: [
+          'The most frequent problems are labels that do not match the SDS, outdated hazard statements, missing supplier contact details, and print that rubs off in transit. A label that says "Warning" while the SDS says "Danger" will be spotted by any inspector.',
+          'Small packs need the same elements as big ones; if the pack is too small, check whether the rules of your market allow a fold-out or attached label.',
+        ],
+        note: {
+          title: 'Label and SDS must agree',
+          body: 'Generate both from the same classification record so the signal word, pictograms and statements cannot drift apart.',
+        },
+      },
+      {
+        heading: 'Making Labels Without Starting From Scratch',
+        body: [
+          'SDS Desk produces the GHS label as a PDF from the same classification data as the Safety Data Sheet, so the two documents stay consistent. See an example on the [sample documents page](https://sdsdesk.com/samples), or read [how it works](https://sdsdesk.com/how-it-works).',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the difference between "Danger" and "Warning"?',
+        answer:
+          '"Danger" is the signal word for more severe hazard categories and "Warning" for less severe ones. Only one signal word appears on a label.',
+      },
+      {
+        question: 'How many pictograms can a label have?',
+        answer:
+          'As many as the classification requires, though some pictograms take precedence over others and replace them under the GHS rules.',
+      },
+      {
+        question: 'Can I make my own hazard statements?',
+        answer:
+          'No. H-statements and P-statements use standard wording assigned by the GHS or the local regulation.',
+      },
+      {
+        question: 'Does the label replace the SDS?',
+        answer:
+          'No. The label is the immediate warning on the package; the SDS carries the full detail. Both are needed.',
+      },
+    ],
+    promo: {
+      path: '/tools/ghs-pictograms',
+      title: 'Check what each GHS pictogram means',
+      body: 'Use the free GHS pictogram guide and H-statement lookup from SDS Desk, then generate matching labels and SDS documents.',
+      cta: 'Open the pictogram guide',
+    },
+  },
+  {
+    slug: 'how-to-read-a-safety-data-sheet-chemical-buyers',
+    title: 'How to Read a Safety Data Sheet: A Buyer\'s Guide to the Sections That Matter',
+    description:
+      'A practical guide for chemical buyers on reading an SDS quickly: the sections to check first, what the hazard codes mean, and red flags that suggest the document is outdated or wrong.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-18',
+    dateLabel: 'October 18, 2026',
+    readTime: '8 min read',
+    heroImage: '/banner.png',
+    heroAlt: 'Buyer reviewing a chemical Safety Data Sheet',
+    accent: 'blue',
+    author: 'Muhammad Salman',
+    tags: ['SDS', 'chemical buyers', 'hazard statements', 'safety', 'Pakistan'],
+    keywords: [
+      'how to read a safety data sheet',
+      'SDS sections explained',
+      'chemical buyer SDS checklist',
+      'H statements meaning',
+      'SDS red flags',
+    ],
+    intro: [
+      'A 16-section Safety Data Sheet can feel like a wall of text. A buyer does not need to read it all in order, but a few sections tell you most of what you need to know before a chemical arrives at your site.',
+      'This guide shows where to look first. For the full section-by-section reference, see [The 16 sections of a Safety Data Sheet explained](https://sdsdesk.com/blog/sds-16-sections-explained).',
+    ],
+    sections: [
+      {
+        heading: 'Start With Sections 1 and 2',
+        body: [
+          'Section 1 confirms what you are holding: the product name, intended use and supplier contact. Section 2 is the heart of the document. It gives the signal word, pictograms and hazard statements, in other words the headline hazards.',
+          'If you do not recognise an H-code, look it up with the free [H-statement lookup](https://sdsdesk.com/tools/h-statement-lookup) rather than guessing.',
+        ],
+      },
+      {
+        heading: 'Check Composition in Section 3',
+        body: [
+          'Section 3 lists the substance or the hazardous ingredients with CAS numbers. The CAS number is the reliable identifier; names vary. You can verify an identifier against the [chemical database](https://sdsdesk.com/chemicals).',
+          'For mixtures, concentration ranges tell you how much of each hazardous component is present, which is why two products with the same name can carry different classifications.',
+        ],
+      },
+      {
+        heading: 'Read Handling, Storage and Exposure Sections',
+        body: [
+          'Sections 7 and 8 are the ones your warehouse and production staff use daily: safe handling, storage conditions, incompatible materials, ventilation and personal protective equipment. Sections 4 to 6 cover first aid, fire fighting and accidental release, which your emergency plan should reflect.',
+          'For powders such as metal oxides, look for dust and inhalation guidance. For oxidisers and light-sensitive salts, look for storage and incompatibility notes. Always rely on the SDS for the exact product you buy rather than a general article.',
+        ],
+      },
+      {
+        heading: 'Red Flags That Suggest a Bad SDS',
+        body: [
+          'A few signs suggest the document should not be trusted:',
+        ],
+        bullets: [
+          'No revision date, or a date many years old.',
+          'Titled "MSDS" with the old 8-to-12-section layout, or fewer than 16 sections.',
+          'Sections filled with "not available" for hazards you would expect to see.',
+          'Product name or CAS number that does not match the product on your invoice.',
+          'Signal word and pictograms that do not match the listed hazard statements.',
+        ],
+        note: {
+          title: 'When in doubt, ask for a new one',
+          body: 'A supplier who stands behind a product can issue a current SDS quickly. If one cannot, treat that as information about the supplier.',
+        },
+      },
+      {
+        heading: 'If You Resell or Export',
+        body: [
+          'Once you pass the product on, you become responsible for supplying a correct SDS to your own customers, in the format and language their market expects. Use the [SDS readiness checker](https://sdsdesk.com/tools/sds-readiness-checker) to test a draft, and see [how to write a Safety Data Sheet](https://sdsdesk.com/blog/how-to-write-a-safety-data-sheet) for the step-by-step process.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Which SDS sections should I read first?',
+        answer:
+          'Sections 1 (identification), 2 (hazards) and 3 (composition), then 7 and 8 for handling, storage and protective equipment.',
+      },
+      {
+        question: 'What does an H-code like H302 mean?',
+        answer:
+          'H-codes are standard hazard statements. H302 means "Harmful if swallowed". Use an H-statement lookup for others.',
+      },
+      {
+        question: 'How do I know if an SDS is out of date?',
+        answer:
+          'Check the revision date and the format. A document without a date or in the old MSDS layout is a warning sign.',
+      },
+      {
+        question: 'Who is responsible for the accuracy of the SDS?',
+        answer:
+          'The supplier that issues it. If you resell the product, you are the supplier to your customers.',
+      },
+    ],
+    promo: {
+      path: '/tools/sds-readiness-checker',
+      title: 'Test your own SDS in two minutes',
+      body: 'Run a draft SDS through the free readiness checker from SDS Desk to see which of the 16 sections are missing.',
+      cta: 'Open the SDS readiness checker',
+    },
   },
 ];
 
