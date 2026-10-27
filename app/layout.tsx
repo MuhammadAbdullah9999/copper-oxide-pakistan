@@ -8,7 +8,6 @@ import WhatsAppFloat from "@/components/layout/whatsapp-float";
 import { defaultMetadata, viewport } from "@/lib/metadata";
 import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import CookieConsent from "@/components/CookieConsent";
 import SdsDeskPopup from "@/components/sections/sdsdesk-popup";
 import SdsDeskBanner from "@/components/sections/sdsdesk-banner";
 import VisitorIntelligence from "@/components/VisitorIntelligence";
@@ -117,7 +116,6 @@ export default function RootLayout({
         >
           {children}
           <WhatsAppFloat />
-          <CookieConsent />
           <SdsDeskPopup />
           <SdsDeskBanner />
         </ThemeProvider>

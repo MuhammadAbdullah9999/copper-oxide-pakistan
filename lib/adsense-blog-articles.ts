@@ -2028,6 +2028,369 @@ export const adsenseBlogArticles: AdsenseBlogArticle[] = [
       cta: 'Open the SDS readiness checker',
     },
   },
+  {
+    slug: 'copper-sulphate-sds-ghs-label-hazards',
+    title: 'Copper Sulphate SDS and GHS Label: Hazards, Pictograms and Safe Handling',
+    description:
+      'What the Safety Data Sheet and GHS label for copper sulphate pentahydrate (CAS 7758-99-8) should show: hazard statements, pictograms, first aid, storage and transport as UN3077.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-28',
+    dateLabel: 'October 28, 2026',
+    readTime: '8 min read',
+    heroImage: '/copper-sulphate-product.png',
+    heroAlt: 'Blue copper sulphate pentahydrate crystals',
+    accent: 'blue',
+    author: 'Muhammad Salman',
+    tags: ['copper sulphate', 'SDS', 'GHS label', 'CuSO4', 'safety'],
+    keywords: [
+      'copper sulphate SDS',
+      'copper sulphate MSDS',
+      'copper sulphate GHS label',
+      'CuSO4 hazards',
+      'CAS 7758-99-8',
+    ],
+    productLink: { href: '/copper-sulphate', label: 'Copper Sulphate product page' },
+    intro: [
+      'Copper sulphate is one of the most widely traded chemicals in Pakistan, used in agriculture, livestock foot baths, electroplating, pigments and laboratories. Because it is sold in such volume, buyers and exporters regularly ask us for its Safety Data Sheet and the correct hazard label for the bags.',
+      'This guide explains what the SDS and GHS label for copper sulphate pentahydrate (CuSO4·5H2O, CAS 7758-99-8) should contain. It is written by the Sulman Traders team, who also built [SDS Desk](https://sdsdesk.com) to prepare these documents. The current sourced classification is on the [SDS Desk copper sulphate page](https://sdsdesk.com/chemicals/copper-sulphate-pentahydrate-7758-99-8).',
+    ],
+    sections: [
+      {
+        heading: 'Hazard Classification at a Glance',
+        body: [
+          'Copper sulphate is harmful if swallowed, damaging to the eyes and very toxic to aquatic life with long-lasting effects. The classification on the SDS Desk record, sourced from public regulatory data, includes:',
+        ],
+        bullets: [
+          'H302 Harmful if swallowed (acute oral toxicity).',
+          'H318 Causes serious eye damage.',
+          'H400 Very toxic to aquatic life.',
+          'H410 Very toxic to aquatic life with long lasting effects.',
+          'Signal word: Danger.',
+          'Pictograms: corrosion (GHS05), exclamation mark (GHS07) and environment (GHS09).',
+        ],
+        note: {
+          title: 'Check the current classification',
+          body: 'Classifications are revised from time to time, and older documents for copper sulphate often show "Warning" with eye irritation rather than eye damage. Always check the current sourced record before printing labels.',
+        },
+      },
+      {
+        heading: 'What the Label on a 25 kg Bag Should Show',
+        body: [
+          'A GHS label for copper sulphate needs the product name and CAS number, the signal word, the three pictograms, the hazard statements, the main precautionary statements (for example wear eye protection, avoid release to the environment, and if in eyes rinse cautiously with water) and the supplier\'s name, address and phone number.',
+          'For bag sizes, the EU sets minimum label dimensions by package volume, and pictograms must be large enough to read. The details are in the SDS Desk guide to [GHS label size requirements](https://sdsdesk.com/blog/ghs-label-size-requirements).',
+        ],
+      },
+      {
+        heading: 'Handling and First Aid',
+        body: [
+          'Copper sulphate dust irritates the nose and throat and can seriously damage the eyes. Wear safety goggles and gloves when opening bags or preparing solutions, avoid making dust, and wash hands before eating or drinking. Keep it away from food, feed and drinking water.',
+          'If it gets in the eyes, rinse with plenty of clean water for several minutes, remove contact lenses if easy, and get medical help. If swallowed, rinse the mouth and get medical advice; do not induce vomiting unless a doctor says so.',
+        ],
+      },
+      {
+        heading: 'Storage and Environmental Care',
+        body: [
+          'Store copper sulphate in sealed, labelled bags in a dry, covered area, away from moisture, iron and steel surfaces (it corrodes them), and away from strong bases. Do not let spills or rinse water reach drains, canals or fish ponds; sweep up spills dry and reuse or dispose of them properly. Its aquatic toxicity is the reason it carries the environment pictogram.',
+        ],
+      },
+      {
+        heading: 'Shipping Copper Sulphate',
+        body: [
+          'For transport, copper sulphate is usually shipped as UN3077, ENVIRONMENTALLY HAZARDOUS SUBSTANCE, SOLID, N.O.S. (copper sulphate), class 9, packing group III, and as a marine pollutant by sea. Section 14 of the SDS must show this. The fields are explained in [SDS Section 14 explained](https://sdsdesk.com/blog/sds-section-14-transport-information).',
+          'For more on the chemical itself, the SDS Desk team has written [copper sulphate uses, hazards and SDS](https://sdsdesk.com/blog/copper-sulphate-uses-hazards-sds).',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is copper sulphate hazardous?',
+        answer:
+          'Yes. It is harmful if swallowed, can cause serious eye damage, and is very toxic to aquatic life with long-lasting effects.',
+      },
+      {
+        question: 'What pictograms go on a copper sulphate label?',
+        answer: 'Corrosion (GHS05), exclamation mark (GHS07) and environment (GHS09), with the signal word Danger.',
+      },
+      {
+        question: 'What is the UN number for copper sulphate?',
+        answer: 'It is usually shipped as UN3077, environmentally hazardous substance, solid, N.O.S., class 9, packing group III.',
+      },
+      {
+        question: 'Can I get an SDS when I buy copper sulphate from Sulman Traders?',
+        answer: 'Yes. Ask our team for the SDS and certificate of analysis with your order.',
+      },
+    ],
+    promo: {
+      path: '/chemicals/copper-sulphate-pentahydrate-7758-99-8',
+      title: 'Need a copper sulphate SDS under your own company name?',
+      body: 'SDS Desk generates a 16-section SDS, GHS bag label and certificate of analysis for copper sulphate from sourced classification data. Try it free for 3 days.',
+      cta: 'Open copper sulphate on SDS Desk',
+    },
+  },
+  {
+    slug: 'silver-nitrate-sds-ghs-hazards-handling',
+    title: 'Silver Nitrate SDS: GHS Hazards, Label and Safe Handling Guide',
+    description:
+      'What the Safety Data Sheet for silver nitrate (CAS 7761-88-8) must cover: oxidiser and corrosive hazards, GHS pictograms, PPE, storage away from organics, and UN1493 transport.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-28',
+    dateLabel: 'October 28, 2026',
+    readTime: '8 min read',
+    heroImage: '/silver-nitrate-banner.png',
+    heroAlt: 'Silver nitrate crystals in laboratory packaging',
+    accent: 'slate',
+    author: 'Muhammad Salman',
+    tags: ['silver nitrate', 'SDS', 'oxidiser', 'GHS', 'laboratory safety'],
+    keywords: [
+      'silver nitrate SDS',
+      'silver nitrate MSDS',
+      'silver nitrate hazards',
+      'AgNO3 GHS',
+      'CAS 7761-88-8',
+    ],
+    productLink: { href: '/silver-nitrate', label: 'Silver Nitrate product page' },
+    intro: [
+      'Silver nitrate is used in laboratories, mirror and glass work, photography, electroplating and medical applications. It is also one of the more hazardous products we sell: an oxidiser that can intensify a fire, corrosive to skin and eyes, and very toxic to aquatic life.',
+      'This guide explains what its Safety Data Sheet and label should say and how to handle it safely. The current sourced classification is on the [SDS Desk silver nitrate page](https://sdsdesk.com/chemicals/silver-nitrate-7761-88-8).',
+    ],
+    sections: [
+      {
+        heading: 'GHS Classification',
+        body: ['Silver nitrate (AgNO3, CAS 7761-88-8) carries the following hazards:'],
+        bullets: [
+          'H272 May intensify fire; oxidiser.',
+          'H314 Causes severe skin burns and eye damage.',
+          'H400 Very toxic to aquatic life.',
+          'H410 Very toxic to aquatic life with long lasting effects.',
+          'Signal word: Danger.',
+          'Pictograms: flame over circle (GHS03), corrosion (GHS05) and environment (GHS09).',
+        ],
+      },
+      {
+        heading: 'Why It Stains Skin Black',
+        body: [
+          'Silver nitrate reacts with proteins in skin and is reduced to silver by light, leaving dark brown or black stains that last until the skin renews. The staining is a sign of chemical contact, not a harmless side effect. At higher concentrations it burns skin and can cause permanent eye damage.',
+        ],
+        note: {
+          title: 'Eye contact is an emergency',
+          body: 'Rinse immediately with plenty of water for at least 15 minutes, holding the eyelids open, and get medical help without delay.',
+        },
+      },
+      {
+        heading: 'Protective Equipment and Handling',
+        body: [
+          'Wear chemical goggles, nitrile gloves and a lab coat or apron. Handle the solid with a clean scoop and avoid creating dust. Prepare solutions with distilled water, because tap water chloride precipitates silver chloride. Keep work areas clean, since spilt crystals darken and stain benches and floors.',
+        ],
+      },
+      {
+        heading: 'Storage: Keep It Away From Organics',
+        body: [
+          'As an oxidiser, silver nitrate must be stored away from combustible and organic materials, reducing agents, ammonia and alcohols. Keep it in its original tightly closed, light-proof container in a cool, dry place. Our guide on [how to store silver nitrate safely](/blog/how-to-store-silver-nitrate-safely) covers storage in more detail, and the SDS Desk [chemical storage compatibility guide](https://sdsdesk.com/blog/chemical-storage-compatibility-guide) shows what not to store together.',
+        ],
+      },
+      {
+        heading: 'Transport',
+        body: [
+          'Silver nitrate ships as UN1493, SILVER NITRATE, class 5.1 (oxidiser), packing group II, and is a marine pollutant by sea. Courier and air shipments need dangerous goods paperwork. Section 14 fields are explained in [SDS Section 14 explained](https://sdsdesk.com/blog/sds-section-14-transport-information).',
+          'For uses and more chemistry, see [silver nitrate uses, hazards and SDS](https://sdsdesk.com/blog/silver-nitrate-uses-hazards-sds) on SDS Desk.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is silver nitrate dangerous?',
+        answer: 'Yes. It is an oxidiser, causes severe skin burns and eye damage, and is very toxic to aquatic life.',
+      },
+      {
+        question: 'What pictograms does silver nitrate need?',
+        answer: 'Flame over circle (GHS03), corrosion (GHS05) and environment (GHS09), with the signal word Danger.',
+      },
+      {
+        question: 'How do I remove silver nitrate stains from skin?',
+        answer:
+          'Stains fade as the skin renews over days. Prevent them by wearing gloves; do not scrub with harsh chemicals.',
+      },
+      {
+        question: 'What is the UN number for silver nitrate?',
+        answer: 'UN1493, class 5.1, packing group II.',
+      },
+    ],
+    promo: {
+      path: '/chemicals/silver-nitrate-7761-88-8',
+      title: 'Make a silver nitrate SDS and label in minutes',
+      body: 'SDS Desk builds the 16-section SDS and GHS label for silver nitrate, or a solution you blend from it, using sourced data and the GHS mixture rules. 3-day free trial.',
+      cta: 'Open silver nitrate on SDS Desk',
+    },
+  },
+  {
+    slug: 'copper-oxide-sds-safe-handling-storage',
+    title: 'Copper Oxide SDS: Hazards, Dust Control and Safe Storage',
+    description:
+      'What the Safety Data Sheet for black copper oxide (CuO, CAS 1317-38-0) should cover: aquatic hazards, dust control, PPE, storage and how it ships, for ceramic and industrial users in Pakistan.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-28',
+    dateLabel: 'October 28, 2026',
+    readTime: '7 min read',
+    heroImage: '/copper-oxide-bags.jpeg',
+    heroAlt: 'Bags of black copper oxide powder ready for dispatch',
+    accent: 'amber',
+    author: 'Muhammad Salman',
+    tags: ['copper oxide', 'CuO', 'SDS', 'dust control', 'ceramics'],
+    keywords: [
+      'copper oxide SDS',
+      'copper oxide MSDS',
+      'CuO hazards',
+      'copper oxide safety',
+      'CAS 1317-38-0',
+    ],
+    productLink: { href: '/copper-oxide', label: 'Copper Oxide product page' },
+    intro: [
+      'Black copper oxide (copper(II) oxide, CuO, CAS 1317-38-0) is a fine powder used in ceramic glazes, glass colouring, batteries, catalysts and copper salt production. It is less dramatic than an acid or an oxidiser, which is exactly why its hazards are often overlooked in small workshops.',
+      'This guide covers what the copper oxide SDS should say and the practical precautions for people who handle it every day.',
+    ],
+    sections: [
+      {
+        heading: 'Hazard Classification',
+        body: [
+          'Copper(II) oxide has no harmonised EU classification, so suppliers classify it themselves from available data. Most supplier SDSs classify it as very toxic to aquatic life with long-lasting effects (H400 and H410, environment pictogram), and many also include H302 Harmful if swallowed with the signal word Warning.',
+          'Because the classification is supplier-made, check that the SDS you receive states its data source and matches the label on the bag. If you need to prepare your own, SDS Desk shows the source of every classification and flags data that needs manual confirmation, as explained in [why SDS Desk does not let AI invent hazard data](https://sdsdesk.com/blog/why-we-dont-let-an-llm-invent-hazard-data).',
+        ],
+      },
+      {
+        heading: 'Dust Is the Main Workplace Risk',
+        body: [
+          'Copper oxide is a fine, heavy black powder. Breathing the dust over time irritates the airways, and copper fume from heating can cause metal fume fever. In glaze and colour workshops the dust also spreads onto every surface.',
+        ],
+        bullets: [
+          'Weigh and mix in a ventilated area or under local extraction.',
+          'Wear a dust mask (at least FFP2/N95), safety glasses and gloves.',
+          'Clean up with a damp cloth or vacuum, not a dry brush.',
+          'Do not eat, drink or smoke where the powder is handled.',
+        ],
+      },
+      {
+        heading: 'Storage',
+        body: [
+          'Keep copper oxide in sealed, labelled bags in a dry place, away from acids (it dissolves to form copper salts), strong reducing agents and food or feed. Our general guide to [industrial chemical storage in Pakistan](/blog/industrial-chemical-storage-pakistan) covers warehouse layout.',
+        ],
+      },
+      {
+        heading: 'Transport and Disposal',
+        body: [
+          'Where it is classified as environmentally hazardous, copper oxide ships as UN3077, ENVIRONMENTALLY HAZARDOUS SUBSTANCE, SOLID, N.O.S. (copper oxide), class 9, packing group III. Spills and wash water must not reach drains or water courses. See [SDS Section 14 explained](https://sdsdesk.com/blog/sds-section-14-transport-information) for how the transport section is filled in.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is copper oxide toxic?',
+        answer:
+          'It is usually classified as very toxic to aquatic life and often as harmful if swallowed. The dust irritates the airways, so control dust when handling it.',
+      },
+      {
+        question: 'Does copper oxide need a GHS label?',
+        answer: 'Where it is classified as hazardous, which most suppliers do for its aquatic toxicity, yes.',
+      },
+      {
+        question: 'What mask should I use for copper oxide powder?',
+        answer: 'At least an FFP2 or N95 dust mask, together with good ventilation or local extraction.',
+      },
+    ],
+    promo: {
+      path: '/how-it-works',
+      title: 'See how SDS Desk handles chemicals without a harmonised classification',
+      body: 'Every classification shows its source, and missing data is flagged instead of guessed. Make your copper oxide SDS and label with a 3-day free trial.',
+      cta: 'See how SDS Desk works',
+    },
+  },
+  {
+    slug: 'what-does-an-sds-tell-you-chemical-buyers-pakistan',
+    title: 'What Does an SDS Tell You? A Simple Guide for Chemical Buyers in Pakistan',
+    description:
+      'A simple explanation of what a Safety Data Sheet (SDS, or MSDS) tells a chemical buyer in Pakistan: hazards, first aid, storage, PPE and transport, and how to use it in your workshop or factory.',
+    category: 'SDS & GHS',
+    datePublished: '2026-10-28',
+    dateLabel: 'October 28, 2026',
+    readTime: '7 min read',
+    heroImage: '/banner.png',
+    heroAlt: 'Chemical buyer reading a Safety Data Sheet',
+    accent: 'green',
+    author: 'Muhammad Salman',
+    tags: ['SDS', 'MSDS', 'chemical buyers', 'workplace safety', 'Pakistan'],
+    keywords: [
+      'what does an SDS tell you',
+      'what is MSDS in Pakistan',
+      'SDS meaning',
+      'safety data sheet information',
+      'MSDS for chemicals',
+    ],
+    intro: [
+      'When you buy chemicals for a factory, workshop, farm or lab, the supplier should be able to give you a Safety Data Sheet, often still called an MSDS in Pakistan. Many buyers file it away without reading it. That is a mistake, because the SDS is the instruction manual for using the chemical safely.',
+      'In simple terms, an SDS tells you eight things: what the product is, how it can hurt people or the environment, what to do if someone is exposed, what to do in a fire or spill, how to handle and store it, its properties, the evidence behind its hazards, and how to dispose of and ship it. The full breakdown is in the SDS Desk guide [What does an SDS tell you?](https://sdsdesk.com/blog/what-does-an-sds-tell-you).',
+    ],
+    sections: [
+      {
+        heading: 'The Three Sections Every Worker Should Know',
+        body: [
+          'You do not need to memorise all 16 sections. Make sure the people who use the chemical know where to find these three:',
+        ],
+        bullets: [
+          'Section 2, hazards: the warning word, pictograms and hazard statements.',
+          'Section 4, first aid: what to do if it gets in eyes, on skin, is breathed in or swallowed.',
+          'Section 8, protection: which gloves, goggles, masks and ventilation are needed.',
+        ],
+      },
+      {
+        heading: 'How to Use the SDS in a Small Factory or Workshop',
+        body: [
+          'Keep a printed copy of the SDS for every chemical near where it is used, not only in the office. Translate the first-aid and PPE points into Urdu for workers if needed and put them on the wall. Buy the protective equipment the SDS asks for before the chemical arrives, and train new staff on it.',
+          'Use Section 7 to plan storage: which chemicals must be kept apart, and which need a cool, dry or ventilated place. The SDS Desk [chemical storage compatibility guide](https://sdsdesk.com/blog/chemical-storage-compatibility-guide) helps with mixed stores.',
+        ],
+      },
+      {
+        heading: 'MSDS or SDS: Which One Should You Ask For?',
+        body: [
+          'Ask for the current 16-section GHS Safety Data Sheet with a recent revision date. An old MSDS may have a different layout and outdated hazard information. The differences are explained in [SDS vs MSDS](https://sdsdesk.com/blog/sds-vs-msds-differences).',
+        ],
+        note: {
+          title: 'If a supplier cannot give you an SDS',
+          body: 'Treat it as a warning about the supplier. A serious chemical supplier can provide a current SDS and a certificate of analysis for each product.',
+        },
+      },
+      {
+        heading: 'If You Resell or Export',
+        body: [
+          'Once you sell the chemical on, especially under your own name or abroad, your customers will ask you for the SDS. The SDS Desk guide [who needs a Safety Data Sheet](https://sdsdesk.com/blog/who-needs-a-safety-data-sheet) explains when you must provide your own, and our article on [SDS for Pakistani exporters](/blog/sds-for-chemical-exporters-pakistan) covers what foreign buyers check.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is an SDS used for?',
+        answer:
+          'It tells people how to use, store, transport and dispose of a chemical safely and what to do in an emergency.',
+      },
+      {
+        question: 'Is MSDS the same as SDS?',
+        answer: 'MSDS is the older name and format. The current standard is the 16-section GHS Safety Data Sheet.',
+      },
+      {
+        question: 'Does Sulman Traders provide an SDS with its chemicals?',
+        answer: 'Yes. Ask for the SDS and certificate of analysis when you order.',
+      },
+      {
+        question: 'Can I make an SDS for my own product?',
+        answer:
+          'Yes. Software such as SDS Desk can build the SDS from sourced data, and a competent person should review it before you issue it.',
+      },
+    ],
+    promo: {
+      path: '/samples',
+      title: 'See what a proper 16-section SDS looks like',
+      body: 'Download sample SDS, GHS label and certificate of analysis PDFs made with SDS Desk, then create your own with a 3-day free trial.',
+      cta: 'View SDS samples',
+    },
+  },
 ];
 
 export const adsenseBlogPosts = adsenseBlogArticles.map((article) => ({
