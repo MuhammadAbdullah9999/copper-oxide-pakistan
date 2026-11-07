@@ -5,7 +5,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { OptimizedImage } from '@/components/ui/optimized-image';
 import ChemDocsPromo from '@/components/sections/chemdocs-promo';
-import { sdsDeskUrl } from '@/lib/sdsdesk';
+import { sdsDeskLink } from '@/lib/sdsdesk';
 
 const MD_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
 
@@ -20,7 +20,7 @@ function renderText(text: string, linkClass: string) {
     const cls = `${linkClass} underline hover:no-underline`;
     if (url.startsWith('https://sdsdesk.com')) {
       const u = new URL(url);
-      out.push(<a key={m.index} href={sdsDeskUrl(u.pathname === '/' ? '/' : u.pathname, 'blog-body')} className={cls} target="_blank" rel="noopener">{label}</a>);
+      out.push(<a key={m.index} href={sdsDeskLink(u.pathname)} className={cls} target="_blank" rel="noopener">{label}</a>);
     } else if (url.startsWith('http')) {
       out.push(<a key={m.index} href={url} className={cls} rel="noopener">{label}</a>);
     } else {
@@ -393,7 +393,7 @@ export default function ChemicalBlogArticle({
                       </li>
                     ))}
                     <li>
-                      <a href={sdsDeskUrl('/blog', 'blog-related')} target="_blank" rel="noopener" className={`${styles.link} underline hover:no-underline`}>
+                      <a href={sdsDeskLink('/blog')} target="_blank" rel="noopener" className={`${styles.link} underline hover:no-underline`}>
                         SDS and GHS compliance guides on SDS Desk
                       </a>
                     </li>

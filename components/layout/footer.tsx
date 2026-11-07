@@ -2,7 +2,7 @@ import Link from "next/link"
 import { FlaskRoundIcon as Flask } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Script from "next/script"
-import { sdsDeskUrl } from "@/lib/sdsdesk"
+import { sdsDeskLink } from "@/lib/sdsdesk"
 
 export default function Footer() {
   return (
@@ -125,12 +125,27 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href={sdsDeskUrl('/', 'footer')} target="_blank" rel="noopener" className="text-gray-300 hover:text-amber-200">
+                  <a href={sdsDeskLink('/')} className="text-gray-300 hover:text-amber-200">
                     SDS Desk: SDS &amp; GHS label software
                   </a>
                 </li>
                 <li>
-                  <a href={sdsDeskUrl('/blog', 'footer')} target="_blank" rel="noopener" className="text-gray-300 hover:text-amber-200">
+                  <a href={sdsDeskLink('/sds-generator')} className="text-gray-300 hover:text-amber-200">
+                    SDS generator
+                  </a>
+                </li>
+                <li>
+                  <a href={sdsDeskLink('/sds-template')} className="text-gray-300 hover:text-amber-200">
+                    Free SDS template
+                  </a>
+                </li>
+                <li>
+                  <a href={sdsDeskLink('/tools')} className="text-gray-300 hover:text-amber-200">
+                    Free GHS tools
+                  </a>
+                </li>
+                <li>
+                  <a href={sdsDeskLink('/blog')} className="text-gray-300 hover:text-amber-200">
                     SDS &amp; GHS guides
                   </a>
                 </li>

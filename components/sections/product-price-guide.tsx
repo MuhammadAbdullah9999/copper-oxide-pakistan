@@ -1,3 +1,4 @@
+import SdsDeskSafetyLinks from '@/components/sections/sdsdesk-safety-links'
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -131,6 +132,7 @@ export default function ProductPriceGuide({
             </div>
           </div>
         </section>
+        <SdsDeskSafetyLinks productId={productId} productName={productName} />
       </main>
       <Footer />
     </div>

@@ -2,7 +2,7 @@
 
 import { ArrowRight, FileText, ShieldCheck } from 'lucide-react'
 import { event } from '@/lib/analytics'
-import { sdsDeskUrl } from '@/lib/sdsdesk'
+import { sdsDeskLink } from '@/lib/sdsdesk'
 
 type Variant = 'banner' | 'card' | 'inline'
 
@@ -31,7 +31,7 @@ export default function ChemDocsPromo({
   body = defaults.body,
   cta = defaults.cta,
 }: ChemDocsPromoProps) {
-  const href = sdsDeskUrl(path, placement)
+  const href = sdsDeskLink(path)
   const track = () => event({ action: 'click_sdsdesk', category: 'cross_promo', label: placement })
 
   if (variant === 'inline') {

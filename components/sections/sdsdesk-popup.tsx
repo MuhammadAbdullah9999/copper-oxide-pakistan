@@ -104,7 +104,7 @@ export default function SdsDeskPopup() {
             <a
               href={href}
               style={{ cursor: 'default' }} target="_blank"
-              rel="noopener"
+              rel="sponsored noopener"
               onClick={() => { event({ action: 'click_sdsdesk', category: 'cross_promo', label: 'popup' }); write(localStorage, KEY_SNOOZE, String(Date.now() + 30 * 86_400_000)) }}
               className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-3.5 text-base font-bold text-gray-950 shadow-lg shadow-amber-500/30 transition-transform hover:scale-[1.02] animate-pulse-soft"
             >
